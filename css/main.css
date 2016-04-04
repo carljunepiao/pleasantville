@@ -1,0 +1,77 @@
+body {
+	font-size: 19px;
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+	color: rgb(200,200,200);
+	background: rgb(15,15,15);
+	background-image: url("../images/bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2% 6% 6% 6%;
+}
+
+.blur {
+	background: rgb(15,15,15);
+	background: rgba(15,15,15,0.80);
+	padding: 30px;
+}
+
+.logo {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+}
+
+	.logo img {
+		width: 150px;
+	}
+
+h1, h2, h3, h4{
+	font-family: Arial;
+}
+
+h1 {
+	font-size: 3.3684em;
+	line-height: 1.2656em;
+	margin: auto 0.4219em auto 0;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 1.2558em;
+	margin: auto 0.4219em auto 0;
+}
+
+h3 {
+	font-size: 1.5263em;
+	font-weight: normal;
+	line-height: 1.8621em;
+	margin: auto 0.9310em auto 0;
+}
+
+h4 {
+	font-size: 1em;
+	line-height: 1.8621em;
+	margin: auto 0.9310em auto 0;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.4211em;
+	margin: auto 0.4211em auto 0;
+}
+
+
+a {
+	color: blue;
+}
+
+footer {
+	padding: 10px 0;
+}
+
+h5 {
+	margin: 0;
+	font-size: 1em;
+}
