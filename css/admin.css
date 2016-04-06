@@ -1,55 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-image: url("../images/adminbg2.jpg");
-	/*overflow-y: hidden;*/
-	padding: 5%;
+	padding: 3% 15%;
 	margin: 0;
 }
 
 .logo {
-	display: block;
 	margin: 0 auto;
 	width: 150px;
-	border: 3px solid blue;
+	border: 2px solid white;
 	border-radius: 50%;
 }
 
 .container {
-	height: 100%;
-	color: rgb(80,80,255);
-	padding: 100px;
+	background: rgba(100,100,100,0.1);
 }
 
-.main-navigation {
-	margin-top: 10%;
-	border-bottom: 1px solid blue;
+.main-navigation a {
+	color: rgb(100, 100, 100);
+	background: rgba(200,200,200,0.1);
+	border: 1px solid rgb(150,150,150);
 }
-
-.main-navigation a:hover {
-	color: rgb(80,80,255);
-	border: 1px solid blue;
-}
+	.main-navigation a:hover {
+		color: rgb(255,255,255);
+		background: rgba(100,100,100,0.1);
+		border: 1px solid rgb(255,255,255);
+	}
 
 h1 {
+	margin: 0;
+	padding: 0;
 	font-size: 45px;
-	color: blue;
-}
-
-h2 {
-	color: rgb(80,80,255);
-}
-
-h3 {
-	color: rgb(80,80,255);
-}
-
-footer {
-	color: rgb(80,80,255);
+	color: white;
+	border: none;
 }
 
 .highlight h3 {
-	border-bottom: 1px solid blue;
+	border-bottom: 1px solid white;
 }
 
 footer {
-	margin-top: 20%;
+	color: rgb(255,255,255);
+	margin-top: 13%;
 }
