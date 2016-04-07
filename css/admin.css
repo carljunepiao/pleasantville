@@ -5,12 +5,12 @@
 
 body {
 	background-image: url("../images/adminbg2.jpg");
-	padding: 3% 15%;
+	padding: 3% 35% 3% 5%;
 	margin: 0;
 }
 
 .logo {
-	margin: 0 auto;
+	margin: 15px auto;
 	width: 150px;
 	border: 2px solid white;
 	border-radius: 50%;
@@ -18,17 +18,24 @@ body {
 
 .container {
 	background: rgba(100,100,100,0.1);
+	float: left;
+	width: 95%;
 }
 
 .main-navigation a {
 	color: rgb(100, 100, 100);
 	background: rgba(200,200,200,0.1);
-	border: 1px solid rgb(150,150,150);
+	border: 1px dotted rgb(150,150,150);
 }
+	.main-navigation li {
+		float: none;
+		margin-bottom: 30px;
+		margin-left: 118%;
+	}
 	.main-navigation a:hover {
 		color: rgb(255,255,255);
 		background: rgba(100,100,100,0.1);
-		border: 1px solid rgb(255,255,255);
+		border: 1px dotted rgb(255,255,255);
 	}
 
 h1 {
@@ -45,5 +52,5 @@ h1 {
 
 footer {
 	color: rgb(255,255,255);
-	margin-top: 13%;
+	margin-top: 7%;
 }

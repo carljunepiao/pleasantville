@@ -1,5 +1,6 @@
 .highlight h3 {
-	border-bottom: 1px solid gold;
+	border-bottom: 1px dotted gold;
+	margin-top: 100px;
 }
 
 .highlight p {
