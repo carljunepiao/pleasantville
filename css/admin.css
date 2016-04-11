@@ -4,6 +4,7 @@
 }
 
 body {
+	background: #000;
 	background-image: url("../images/adminbg2.jpg");
 	padding: 3% 35% 3% 5%;
 	margin: 0;

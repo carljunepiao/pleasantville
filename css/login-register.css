@@ -5,8 +5,7 @@ body {
 	background-attachment: fixed;
 	background-color: #A5681A;
 
-	margin: 0 35%;
-	padding: 0;
+	padding: 0 25%;
 	font-size: 19px;
 	font-family: Arial;
 	text-align: center;
@@ -23,14 +22,14 @@ body {
 .container {
 	background: rgba(0,0,0,0.3);
 	padding: 2% 6% 6% 6%;
-	height: 300px;
+	height: auto;
 }
 
 a {
 	display: block;
 	padding: 3%;
 	background-color: rgba(0,0,0,0.3);
-	margin-top: 3%;
+	margin: 2% 0 15% 0;
 	text-decoration: none;
 	color: white;
 
@@ -45,7 +44,7 @@ a {
 .enter {
 	width: 200px;
 	height: 50px;
-	margin-top: 10%;
+	margin-top: 50px;
 	background-color: rgba(0,0,0,0.2);
 	color: white;
 	border: none;
@@ -66,4 +65,8 @@ p {
 input {
 	width: 75%;
 	height: 30px;
+}
+
+.attribute {
+	/*display: block;*/
 }
