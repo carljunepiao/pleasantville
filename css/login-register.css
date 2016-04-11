@@ -19,3 +19,51 @@ body {
 	border: 2px dotted gold;
 	border-radius: 50%;
 }
+
+.container {
+	background: rgba(0,0,0,0.3);
+	padding: 2% 6% 6% 6%;
+	height: 300px;
+}
+
+a {
+	display: block;
+	padding: 3%;
+	background-color: rgba(0,0,0,0.3);
+	margin-top: 3%;
+	text-decoration: none;
+	color: white;
+
+	transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+	a:hover {
+		background-color: rgba(0,0,0,0.7);
+	}
+
+.enter {
+	width: 200px;
+	height: 50px;
+	margin-top: 10%;
+	background-color: rgba(0,0,0,0.2);
+	color: white;
+	border: none;
+
+	transition-property: border, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+	.enter:hover {
+		color: white;
+		background-color: rgba(0,0,0,0.7);
+	}
+
+p {
+	color: white;
+}
+
+input {
+	width: 75%;
+	height: 30px;
+}
