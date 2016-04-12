@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+	background-image: url("../images/adminbg2.jpg");
+	padding: 3% 25%;
+	margin: 0;
+	font-family: Arial;
+}
+
+.logo {
+	margin: 15px auto;
+	width: 150px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.container {
+	background: rgba(100,100,100,0.1);
+	width: auto;
+	height: 100%;
+}
+
+.main-navigation a {
+	color: rgb(100, 100, 100);
+	background: rgba(200,200,200,0.1);
+	border: 1px dotted rgb(150,150,150);
+}
+	.main-navigation li {
+		float: none;
+		margin-bottom: 30px;
+		margin-left: 118%;
+	}
+	.main-navigation a:hover {
+		color: rgb(255,255,255);
+		background: rgba(100,100,100,0.1);
+		border: 1px dotted rgb(255,255,255);
+	}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 45px;
+	color: white;
+	border: none;
+}
+
+.highlight h3 {
+	border-bottom: 1px solid white;
+}
+
+footer {
+	color: rgb(255,255,255);
+	margin-top: 7%;
+}
+
+.textbox {
+    border: 1px dotted #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:25px; 
+    width: 275px; 
+    padding-left:10px; 
+    padding-right:10px;
+    margin: 2% auto 0px auto;
+}
