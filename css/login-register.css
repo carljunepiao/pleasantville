@@ -43,6 +43,12 @@ a {
 		background-color: rgba(0,0,0,0.7);
 	}
 
+.attribute {
+	display: block;
+	float: left;
+	width: 150px;
+}
+
 .enter {
 	width: 200px;
 	height: 50px;
@@ -63,10 +69,23 @@ a {
 
 p {
 	color: white;
+	margin: 0;
+	padding-top: 15px;
 }
 
 input {
-	width: 75%;
+	width: 55%;
 	height: 30px;
 	border-radius: 10px;
+	margin: 10px auto;
+	border: 1px solid gold;
+}
+
+::-webkit-input-placeholder {
+   color: gold;
+   text-align: center;
+}
+
+h1 {
+	color: white;
 }

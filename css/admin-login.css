@@ -1,44 +1,22 @@
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	background: #000;
 	background-image: url("../images/adminbg2.jpg");
-	padding: 3% 25%;
-	margin: 0;
+	background-repeat: no-repeat;
+	padding: 0% 25%;
 	font-family: Arial;
 }
 
 .logo {
 	margin: 15px auto;
 	width: 150px;
-	border: 2px solid white;
+	border: 1px solid white;
 	border-radius: 50%;
 }
 
 .container {
-	background: rgba(100,100,100,0.1);
-	width: auto;
-	height: 100%;
+	background: rgba(0,0,0,0.6);
 }
-
-.main-navigation a {
-	color: rgb(100, 100, 100);
-	background: rgba(200,200,200,0.1);
-	border: 1px dotted rgb(150,150,150);
-}
-	.main-navigation li {
-		float: none;
-		margin-bottom: 30px;
-		margin-left: 118%;
-	}
-	.main-navigation a:hover {
-		color: rgb(255,255,255);
-		background: rgba(100,100,100,0.1);
-		border: 1px dotted rgb(255,255,255);
-	}
 
 h1 {
 	margin: 0;
@@ -57,15 +35,57 @@ footer {
 	margin-top: 7%;
 }
 
-.textbox {
-    border: 1px dotted #848484; 
-    -webkit-border-radius: 30px; 
-    -moz-border-radius: 30px; 
-    border-radius: 30px; 
-    outline:0; 
-    height:25px; 
-    width: 275px; 
-    padding-left:10px; 
-    padding-right:10px;
-    margin: 2% auto 0px auto;
+input {
+	display: block;
+	margin: 0 auto;
+    margin: 3% auto 0px auto;
+	height:25px;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+
+	transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+	.enter {
+		width: 100px;
+		border-radius: 10px;
+		border: none;
+		background-color: rgba(100,100,100,0.5);
+		color: black;
+	}
+	.enter:hover {
+		background-color: rgba(255,255,255,1.6);
+	}
+	.textbox {
+	    border: 1px dotted #848484; 
+	    -webkit-border-radius: 30px; 
+	    -moz-border-radius: 30px; 
+	    border-radius: 30px; 
+	    outline:0; 
+	    width: 275px; 
+	    padding-left:10px; 
+	    padding-right:10px;
+	}
+
+.test a {
+	color: white;
+	font-size: 14px;
+	background: rgba(0,0,0,0.6);
+	margin: 10px 0;
+	text-align: center;
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;
+
+	transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+	.test a:hover {
+		background: rgba(0,0,0,1);
+	}
+
+::-webkit-input-placeholder {
+   text-align: center;
 }
