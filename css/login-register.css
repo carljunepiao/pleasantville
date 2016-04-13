@@ -89,3 +89,21 @@ input {
 h1 {
 	color: white;
 }
+
+::-webkit-datetime-edit { 
+	text-align: center;
+	color: gold;
+}
+::-webkit-datetime-edit-text {
+	padding: 0 2px;
+}
+::-webkit-inner-spin-button { 
+	display: none;
+}
+::-webkit-calendar-picker-indicator {
+	background: #E4DFCF;
+	color: gold;
+	height: 20px;
+	width: 25px;
+	padding: 5px;
+}
