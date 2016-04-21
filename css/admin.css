@@ -115,3 +115,12 @@ nav {
 		color: rgb(255,255,255);
 		border: 1px solid rgba(150,150,150,0.7);
 	}
+
+.administrate {
+	padding: 15px 5%;
+	margin-top: 5%;
+	height: auto;
+	width: 90%;
+	background: rgba(155,155,155,0.1);
+	border-radius: 10px;
+}
