@@ -3,7 +3,7 @@
 $host= 'localhost';
 $user= 'root';
 $pass='';
-$db= 'PleasantVille';
+$db= 'pleasantvilledatabase';
 
 $con = mysqli_connect($host,$user,$pass,$db);
 
@@ -18,7 +18,7 @@ $bday = $_POST['bday'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql="insert into Registration(fname,lname,contact,address,bday,username,password) values ('$fname', '$lname', '$contact', '$address', '$bday', '$username', '$password')";
+$sql="insert into users('Fname', 'Lname', 'Contact_No', 'Username', 'Password') values ('$fname', '$lname', '$contact','$username','$password')";
 
 
 $query=mysqli_query($con,$sql);

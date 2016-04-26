@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2016 at 04:51 AM
+-- Generation Time: Apr 26, 2016 at 04:31 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -156,9 +156,10 @@ ALTER TABLE `member`
 -- Indexes for table `play`
 --
 ALTER TABLE `play`
-  ADD PRIMARY KEY (`Playwright`),
+  ADD PRIMARY KEY (`Playwright`,`Title`),
   ADD KEY `Playwright` (`Playwright`),
-  ADD KEY `Playwright_2` (`Playwright`);
+  ADD KEY `Playwright_2` (`Playwright`),
+  ADD KEY `Title` (`Title`);
 
 --
 -- Indexes for table `production`
@@ -224,6 +225,12 @@ ALTER TABLE `member`
 ALTER TABLE `casts`
   ADD CONSTRAINT `casts_ibfk_1` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `casts_ibfk_2` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `play`
+--
+ALTER TABLE `play`
+  ADD CONSTRAINT `play_ibfk_1` FOREIGN KEY (`Title`) REFERENCES `production` (`Title`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `seats`
