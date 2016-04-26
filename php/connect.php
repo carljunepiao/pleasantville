@@ -14,17 +14,16 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $contact = $_POST['contact'];
 $address = $_POST['address'];
-$bday = $_POST['bday'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql="insert into Registration(fname,lname,contact,address,bday,username,password) values ('$fname', '$lname', '$contact', '$address', '$bday', '$username', '$password')";
+$sql="insert into Registration(fname,lname,contact_no,address,username,password) values ($fname', '$lname', '$contact', '$address', '$username', '$password')";
 
 
 $query=mysqli_query($con,$sql);
 
 if($query)
-	echo 'data inserted successfully';
+	echo 'Registration Complete';
 else
-	echo 'nope';
+	echo 'A problem has been encountered. Pls ';
 ?>

@@ -5,7 +5,7 @@
 (member)
 	memberID*-fname-minit-lname-contactno
 (play)
-	playwright*-title-time-poster
+	playwright*-title*^-time-poster
 (sponsorship)
 	title*^-date*^-userID*^-datedonation-amountdonation
 (cast)
