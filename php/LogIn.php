@@ -8,12 +8,12 @@ $db= 'PleasantVille';
 $con = mysqli_connect($host,$user,$pass,$db);
 
 if($con)
-	echo 'connected successfully to PlasantVille database';
+    echo 'connected successfully to PlasantVille database';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT  '$username' , '$password' FROM user";
+$sql = "SELECT count(*) FROM users WHERE Username = '$username' and Password = '$password' ";
 
 $query = mysqli_query($con,$sql);
 

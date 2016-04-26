@@ -13,7 +13,7 @@ if($con)
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT  '$username' , '$password' FROM user";
+$sql = "SELECT count(*) FROM users WHERE Username = '$username' and Password = '$password' ";
 
 $query=mysqli_query($con,$sql);
 
