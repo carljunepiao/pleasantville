@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2016 at 04:31 AM
+-- Generation Time: Apr 26, 2016 at 05:36 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -42,7 +42,6 @@ CREATE TABLE `casts` (
 CREATE TABLE `member` (
   `MemberID` int(20) UNSIGNED NOT NULL,
   `FName` varchar(40) NOT NULL,
-  `MInit` varchar(40) NOT NULL,
   `LName` varchar(40) NOT NULL,
   `ContactNo` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -202,20 +201,6 @@ ALTER TABLE `users`
   ADD KEY `UserID` (`UserID`);
 
 --
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `casts`
---
-ALTER TABLE `casts`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `member`
---
-ALTER TABLE `member`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
---
 -- Constraints for dumped tables
 --
 
@@ -223,8 +208,8 @@ ALTER TABLE `member`
 -- Constraints for table `casts`
 --
 ALTER TABLE `casts`
-  ADD CONSTRAINT `casts_ibfk_1` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `casts_ibfk_2` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `casts_ibfk_2` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `casts_ibfk_3` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `play`
