@@ -140,3 +140,10 @@ nav {
 	width: 25px;
 	padding: 5px;
 }
+
+.blob {
+	padding: 2px;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+}
