@@ -15,10 +15,18 @@ $password = $_POST['password'];
 
 $sql = "SELECT  '$username' , '$password' FROM user";
 
-$query=mysqli_query($con,$sql);
+$query = mysqli_query($con,$sql);
 
-if($query)
+if($query){
 	echo 'The account exists';
-else
+        $login = "UPDATE users SET Log_In = 1; WHERE Username = '$username'";
+        $setLogIn = mysqli_query($con,$login);
+        if($setLogIn)
+            echo 'You have logged in';
+        else
+            echo 'Unable to Log In';
+}
+else{
 	echo 'The account does not exist';
+}
 ?>
