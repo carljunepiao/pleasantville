@@ -1,0 +1,16 @@
+(User)
+	userID*-type(T=Patron,F=Sponsor)-fname-lname-contactno-username-password-login?(T=true,F=false)
+(production)
+	title*-date*-revenue
+(member)
+	memberID*-fname-minit-lname-contactno
+(play)
+	playwright*-title-time-poster
+(sponsorship)
+	title*^-date*^-userID*^-datedonation-amountdonation
+(cast)
+	memberID*^-title*^-date*^-memberjob
+(seats)
+	seatno*-location*-title*^-date*^-taken(T=Taken,F=NotTaken)
+ticket
+	ticketID*-userID*^-seatno^-title^-date^-cost

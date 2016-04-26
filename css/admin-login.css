@@ -68,13 +68,13 @@ input {
 	    border: 1px solid white;
 	}
 	.textbox {
-	    border: 1px solid rgba(150,150,150,0.5); 
-	    -webkit-border-radius: 30px; 
-	    -moz-border-radius: 30px; 
-	    border-radius: 30px; 
-	    outline: 0; 
-	    width: 275px; 
-	    padding-left:10px; 
+	    border: 1px solid rgba(150,150,150,0.5);
+	    -webkit-border-radius: 30px;
+	    -moz-border-radius: 30px;
+	    border-radius: 30px;
+	    outline: 0;
+	    width: 275px;
+	    padding-left:10px;
 	    padding-right:10px;
 	}
 
