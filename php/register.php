@@ -12,6 +12,7 @@
 	<h1>Pleasantville Registration</h1>
 
 	<div class="container">
+                //connects to php
 		<form action="connect.php" method="post" />
 
 			<p class="attribute">First Name</p>
@@ -26,14 +27,12 @@
 			<p class="attribute">Address</p>
 			<input class="address" type="address" placeholder="address" name="address">
 
-			<p class="attribute">Birthday</p>
-			<input class="bday" type="date" name="bday">
-
 			<p class="attribute">Username</p><input class="log" type="text" placeholder="username" name="username">
 			<p class="attribute">Password</p><input class="log" type="password" placeholder="password" name="password">
 			<input class="enter" type="submit" value="Submit">
 
 		</form>
+                
 
 	</div>
 
