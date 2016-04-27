@@ -16,8 +16,8 @@ $contact = $_POST['contact'];
 $address = $_POST['address'];
 $username = $_POST['username'];
 $password = $_POST['password'];
-
-$sql="insert into Registration(fname,lname,contact_no,address,username,password) values ($fname', '$lname', '$contact', '$address', '$username', '$password')";
+//mga bai sure na registration ang table diri? user man tingali ni - alfi
+$sql=" INSERT into user(fname,lname,contact_no,address,username,password) values ($fname', '$lname', '$contact', '$address', '$username', '$password')";
 
 
 $query=mysqli_query($con,$sql);
