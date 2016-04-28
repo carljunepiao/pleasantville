@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2016 at 05:36 AM
+-- Generation Time: Apr 28, 2016 at 05:01 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -122,7 +122,7 @@ CREATE TABLE `tickets` (
 
 CREATE TABLE `users` (
   `UserID` int(20) NOT NULL,
-  `Type` tinyint(1) NOT NULL,
+  `Type` varchar(10) NOT NULL,
   `Fname` varchar(20) NOT NULL,
   `Lname` varchar(20) NOT NULL,
   `Contact_No` int(15) NOT NULL,
@@ -130,6 +130,14 @@ CREATE TABLE `users` (
   `Password` varchar(25) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Triggers `users`
+--
+DELIMITER $$
+CREATE TRIGGER `setUserID` BEFORE INSERT ON `users` FOR EACH ROW INSERT INTO users (UserID) VALUES (1234)
+$$
+DELIMITER ;
 
 --
 -- Indexes for dumped tables
