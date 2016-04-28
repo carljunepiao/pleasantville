@@ -1,32 +1,52 @@
 <?php
 
-$host= 'localhost';
-$user= 'root';
-$pass='';
-$db= 'PleasantVille';
+	$cookie_name = "loggedin";
 
-$con = mysqli_connect($host,$user,$pass,$db);
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$database = "PleasantVille";
 
-if($con)
-    echo 'connected successfully to PlasantVille database';
+	$conn = mysqli_connect($servername, $username, $password, $database);
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+	if(!$conn){
+		die("Database connection failed: ".mysqli_connect_error());
+	}else{
+		echo "Connected to databasse successfully!";
+	}
 
-$sql = "SELECT count(*) FROM users WHERE Username = '$username' and Password = '$password' ";
+	if (isset($_POST['login'])){
+		$user = $_POST['username'];
+		$pass = $_POST['password'];
 
-$query = mysqli_query($con,$sql);
+		$phash = sha1(sha1($pass."salt")."salt");
 
-if($query){
-	echo 'The account exists';
-        $login = "UPDATE users SET Log_In = 1; WHERE Username = '$username'";
-        $setLogIn = mysqli_query($con,$login);
-        if($setLogIn)
-            echo 'You have logged in';
-        else
-            echo 'Unable to Log In';
-}
-else{
-	echo 'The account does not exist';
-}
+		//phash should be used but errors occur. (modify)
+		$sql = "SELECT * FROM users WHERE Username = '$user' AND Password = '$phash';";
+
+		$result = mysqli_query($conn, $sql);
+		$count = mysqli_num_rows($result);
+
+	if($result){
+		echo "process cool!";
+	}
+	else{
+		echo "Shit!";
+	}
+		echo "<br/> $user, $pass , $phash";
+		echo "<br/> $sql";
+		echo "<br/> $count";
+		// echo "<br/> $result";
+		echo "<br/>Entering login!<br />";
+
+
+		if($count == 1){
+			$cookie_value = $user;
+			setcookie($cookie_name,$cookie_value, time() + (180), "/");
+			header("Location: personal.php");
+		}else{
+			echo "Username or password is incorrect!";
+		}
+	}
+
 ?>
