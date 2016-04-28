@@ -17,7 +17,7 @@ body {
 
 .container {
 	background: rgba(0,0,0,0.6);
-	border: 1px solid rgba(150,150,150,0.5);
+	border: 1px solid rgba(255,255,255,0.1);
 	border-radius: 10px;
 }
 
@@ -88,7 +88,7 @@ input {
 	display: block;
 	padding: 15px 0;
 	text-decoration: none;
-	border: 1px solid rgba(150,150,150,0.5);
+	border: 1px solid rgba(255,255,255,0.1);
 	border-radius: 10px;
 
 	transition-property: background-color;
