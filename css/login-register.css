@@ -1,6 +1,6 @@
 body {
 	background-repeat: no-repeat;
-	background-image: url("../images/lrbg3.jpg");
+	background-image: url("../images/bg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: #A5681A;
@@ -52,9 +52,8 @@ a {
 .enter {
 	width: 200px;
 	height: 30px;
-	margin-top: 5px;
+	margin-top: 20px;
 	background-color: rgba(0,0,0,0.2);
-	color: white;
 	border: none;
 	border-radius: 5px;
 
@@ -63,18 +62,7 @@ a {
     transition-timing-function: ease;
 }
 	.enter:hover {
-		color: white;
 		background-color: rgba(0,0,0,0.7);
-	}
-
-.enter-container {
-	margin-top: 20px;
-}
-	.enter-container a {
-		padding: 0;
-		margin: 0;
-		width: 200px;
-		background-color: rgba(0,0,0,0);
 	}
 
 p {

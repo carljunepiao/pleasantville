@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
 
@@ -19,29 +19,30 @@
 	<div class="container">
 		<header>
 			<h1>Admin</h1>
-			<img class="logo" src="../images/adminicon3.jpg" alt="PleasantvilleLogo">
+			<img class="logo" src="../images/adminicon.jpg" alt="PleasantvilleLogo">
 		</header>
 
-		<!-- //////////////////////////////// USER ////////////////////////////////////// -->
-
-		<div class="admin br">
-			<h5>Add User</h5>
-			<div class="box">
-				<div class="properties">
-					<input type="text" placeholder="fname"></input>
-					<input type="text" placeholder="lname"></input>
-					<input type="number" placeholder="contact"></input>
-					<input type="text" placeholder="username"></input>
-					<input type="password" placeholder="password"></input>
-					<select placeholder="select">
-						<option value="" disabled selected="">Select User Type</option>
-					  	<option value="patron">Patron</option>
-					  	<option value="sponsor">Sponsor</option>
-					</select>
+		<!-- /////////////////// USER /////////////////////// -->
+		<form action="../php/adduser.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br">
+				<h5>Add User</h5>
+				<div class="box">
+					<div class="properties">
+						<input type="text" placeholder="fname"></input>
+						<input type="text" placeholder="lname"></input>
+						<input type="number" placeholder="contact"></input>
+						<input type="text" placeholder="username"></input>
+						<input type="password" placeholder="password"></input>
+						<select placeholder="select">
+							<option value="" disabled selected="">Select User Type</option>
+						  	<option value="patron">Patron</option>
+						  	<option value="sponsor">Sponsor</option>
+						</select>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-				<input class="enter" type="submit" value="Submit"></input>
 			</div>
-		</div>
+		</form>
 
 		<div class="admin">
 			<h5>Delete User</h5>
@@ -53,19 +54,22 @@
 			</div>
 		</div>
 
-		<!-- ///////////////////////////////// PRODUCTION /////////////////////////////// -->
 
-		<div class="admin br">
-			<h5>Add Production</h5>
-			<div class="box">
-				<div class="properties">
-					<input type="text" placeholder="title"></input>
-					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
-					<input type="number" placeholder="revenue"></input>
+
+		<!-- /////////////////// PRODUCTION ////////////////////// -->
+		<form action="../php/addproduction.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br">
+				<h5>Add Production</h5>
+				<div class="box">
+					<div class="properties">
+						<input type="text" placeholder="title"></input>
+						<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
+						<input type="number" placeholder="revenue"></input>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-				<input class="enter" type="submit" value="Submit"></input>
 			</div>
-		</div>
+		</form>
 
 		<div class="admin">
 			<h5>Delete Production</h5>
@@ -78,20 +82,23 @@
 			</div>
 		</div>
 
-		<!-- ///////////////////////////////// MEMBER /////////////////////////////////// -->
 
-		<div class="admin br">
-			<h5>Add Member</h5>
-			<div class="box">
-				<div class="properties">
-					<input class="textbox" type="text" placeholder="fname"></input>
-					<input class="textbox" type="text" placeholder="lname"></input>
-					<input class="number" type="text" placeholder="contact"></input>
-					<input class="textbox" type="text" placeholder="address"></input>
+
+		<!-- ////////////////// MEMBER /////////////////// -->
+		<form action="../php/addmember.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br">
+				<h5>Add Member</h5>
+				<div class="box">
+					<div class="properties">
+						<input class="textbox" type="text" placeholder="fname"></input>
+						<input class="textbox" type="text" placeholder="lname"></input>
+						<input class="number" type="text" placeholder="contact"></input>
+						<input class="textbox" type="text" placeholder="address"></input>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-				<input class="enter" type="submit" value="Submit"></input>
 			</div>
-		</div>
+		</form>
 
 		<div class="admin">
 			<h5>Delete Member</h5>
@@ -103,21 +110,24 @@
 			</div>
 		</div>
 
-		<!-- ///////////////////////////////// PLAY ///////////////////////////////////// -->
 
-		<div class="admin br">
-			<h5>Add Play</h5>
-			<div class="box">
-				<div class="properties">
-					<input type="text" placeholder="playwright"></input>
-					<input type="text" placeholder="title"></input>
-					<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')"/>
-					<input required="" type="text" class="form-control"
-					placeholder="choose poster" onfocus="(this.type='file')"/>
+
+		<!-- ////////////////// PLAY ///////////////////// -->
+		<form action="../php/addplay.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br">
+				<h5>Add Play</h5>
+				<div class="box">
+					<div class="properties">
+						<input type="text" placeholder="playwright"></input>
+						<input type="text" placeholder="title"></input>
+						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')"/>
+						<input required="" type="text" class="form-control"
+						placeholder="choose poster" onfocus="(this.type='file')"/>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-				<input class="enter" type="submit" value="Submit"></input>
 			</div>
-		</div>
+		</form>
 
 		<div class="admin">
 			<h5>Delete Play</h5>
@@ -130,20 +140,23 @@
 			</div>
 		</div>
 
-		<!-- ///////////////////////////////// SPONSORSHIP /////////////////////////////// -->
 
-		<div class="admin br">
-			<h5>Add Sponsorship</h5>
-			<div class="box">
-				<div class="properties">
-					<input type="text" placeholder="title"></input>
-					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
-					<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')"/>
-					<input type="number" placeholder="amount"></input>
+
+		<!-- ///////////// SPONSORSHIP /////////////////// -->
+		<form action="../php/addsponsorship.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br">
+				<h5>Add Sponsorship</h5>
+				<div class="box">
+					<div class="properties">
+						<input type="text" placeholder="title"></input>
+						<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
+						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')"/>
+						<input type="number" placeholder="amount"></input>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-				<input class="enter" type="submit" value="Submit"></input>
 			</div>
-		</div>
+		</form>
 
 		<div class="admin">
 			<h5>Delete Sponsorship</h5>
@@ -157,7 +170,7 @@
 			</div>
 		</div>
  
-		<!-- ///////////////////////////////////////////////////////////////////// -->
+		<!-- /////////////////////////////////// -->
 
 		<footer>
 			<p>`Maestro Productions</p>
@@ -166,6 +179,6 @@
 		</footer>
 	</div>
 
-
 </body>
+
 </html>
