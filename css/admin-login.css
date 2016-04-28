@@ -51,7 +51,7 @@ input {
 	background-color: rgba(0,0,0,0.5);
 	color: white;
 
-	transition-property: background-color, color, border;
+	transition-property: background-color, color, border, border-color;
     transition-duration: 1s;
     transition-timing-function: ease;
 }
@@ -62,11 +62,14 @@ input {
 		background-color: background: rgba(0,0,0,0.5);
 	    border: 1px solid rgba(150,150,150,0.5);
 	    color: rgb(150,150,150);
+		border: none;
+		border-top: 1px solid rgba(255,255,255,0.5);
+		border-bottom: 1px solid rgba(255,255,255,0.5);
 	}
 	.enter:hover {
 		background-color: rgba(0,0,0,1.5);
 	    color: white;
-	    border: 1px solid white;
+	    border-color: white;
 	}
 	.textbox {
 	    border: 1px solid rgba(150,150,150,0.5);
