@@ -11,7 +11,7 @@ if($con)
 
 $playwright = $_POST['playwright'];
 $playtitle = $_POST['title'];
-$time = $_POST['time'];
+$time = $_POST['playtime'];
 $poster = $_POST['poster'];
 //di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
 $sql="INSERT into play(playwright, title, time, poster) values ($playwright, $playtitle, $time, $poster)";
@@ -19,7 +19,7 @@ $sql="INSERT into play(playwright, title, time, poster) values ($playwright, $pl
 $query=mysqli_query($con,$sql);
 
 if($query)
-    echo 'Registration Complete';
+    echo 'Adding play complete!';
 else
-    echo 'A problem has been encountered. Pls ';
+    echo 'A problem has been encountered. Pls check addplay.';
 ?>

@@ -9,18 +9,19 @@ $con = mysqli_connect($host,$user,$pass,$db);
 if($con)
     echo 'connected successfully to PlasantVille database';
 
+$userID = $_POST['userid'];
 $title = $_POST['title'];
-$proddate = $_POST['production date'];//pwede ra ba ni? naay space sa variable name? check palihug japs-alfi
-$donationdate = $_POST['donation date'];
+$proddate = $_POST['proddate'];
+$donationdate = $_POST['donationdate'];
 $amount = $_POST['amount'];
-//di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
-$sql="INSERT into sponsorship (title, date, date_of_donation, amount_of_) values ($title, $proddate, $donationdate, $amount)";
+
+$sql="INSERT into sponsorship (userid, title, date, date_of_donation, amount_of_donation) values ($userID, $title, $proddate, $donationdate, $amount)";
 
 
 $query=mysqli_query($con,$sql);
 
 if($query)
-    echo 'Registration Complete';
+    echo 'Successfully added in Sponsorship';
 else
     echo 'A problem has been encountered. Pls ';
 ?>

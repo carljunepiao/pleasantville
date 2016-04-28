@@ -27,12 +27,12 @@
 				<h5>Add User</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="fname"></input>
-						<input required type="text" placeholder="lname"></input>
-						<input type="number" placeholder="contact"></input>
-						<input required type="text" placeholder="username"></input>
-						<input required type="password" placeholder="password"></input>
-						<select required placeholder="select">
+						<input required type="text" placeholder="fname" name="firstname"></input>
+						<input required type="text" placeholder="lname" name="lastname"></input>
+						<input type="number" placeholder="contact" name="contact"></input>
+						<input required type="text" placeholder="username" name="username"></input>
+						<input required type="password" placeholder="password" name="password"></input>
+						<select required placeholder="select" name="type">
 							<option value="" disabled selected="">Select User Type</option>
 						  	<option value="patron">Patron</option>
 						  	<option value="sponsor">Sponsor</option>
@@ -47,7 +47,7 @@
 			<h5>Delete User</h5>
 			<div class="box">
 				<div class="properties">
-					<input required type="number" placeholder="User_ID"></input>
+					<input required type="number" placeholder="User_ID" name="userid"></input>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
@@ -61,9 +61,9 @@
 				<h5>Add Production</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="title"></input>
-						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
-						<input type="number" placeholder="revenue"></input>
+						<input required type="text" placeholder="title" name="title"></input>
+						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -74,8 +74,8 @@
 			<h5>Delete Production</h5>
 			<div class="box">
 				<div class="properties">
-					<input required type="text" placeholder="title"></input>
-					<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
+					<input required type="text" placeholder="title" name="title"></input>
+					<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
@@ -89,10 +89,9 @@
 				<h5>Add Member</h5>
 				<div class="box">
 					<div class="properties">
-						<input required class="textbox" type="text" placeholder="fname"></input>
-						<input required class="textbox" type="text" placeholder="lname"></input>
-						<input class="number" type="text" placeholder="contact"></input>
-						<input class="textbox" type="text" placeholder="address"></input>
+						<input required class="textbox" type="text" placeholder="fname" name="firstname"></input>
+						<input required class="textbox" type="text" placeholder="lname" name="lastname"></input>
+						<input class="number" type="text" placeholder="contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -103,7 +102,7 @@
 			<h5>Delete Member</h5>
 			<div class="box">
 				<div class="properties">
-					<input required class="number" type="text" placeholder="member ID"></input>
+					<input required class="number" type="text" placeholder="member ID" name="memberid"></input>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
@@ -117,11 +116,11 @@
 				<h5>Add Play</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="playwright"></input>
-						<input required type="text" placeholder="title"></input>
-						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')"/>
+						<input required type="text" placeholder="playwright" name="playwright"></input>
+						<input required type="text" placeholder="title" name="title"></input>
+						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input required="" type="text" class="form-control"
-						placeholder="choose poster" onfocus="(this.type='file')"/>
+						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -132,8 +131,8 @@
 			<h5>Delete Play</h5>
 			<div class="box">
 				<div class="properties">
-					<input required type="text" placeholder="play wright"></input>
-					<input required type="text" placeholder="play title"></input>
+					<input required type="text" placeholder="play wright" name="playwright"></input>
+					<input required type="text" placeholder="play title" name=playtitle></input>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
@@ -147,11 +146,11 @@
 				<h5>Add Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="user ID"></input>
-						<input required type="text" placeholder="title"></input>
-						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
-						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')"/>
-						<input type="number" placeholder="amount"></input>
+						<input required type="number" placeholder="user ID" name="userid"></input>
+						<input required type="text" placeholder="title" name="title"></input>
+						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
+						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -162,14 +161,14 @@
 			<h5>Delete Sponsorship</h5>
 			<div class="box">
 				<div class="properties">
-					<input required type="text" placeholder="title"></input>
-					<input required type="text" placeholder="user ID"></input>
-					<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
+					<input required type="text" placeholder="title" name="title"></input>
+					<input required type="text" placeholder="user ID" name="userid"></input>
+					<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
 		</div>
- 
+
 		<!-- /////////////////////////////////// -->
 
 		<footer>

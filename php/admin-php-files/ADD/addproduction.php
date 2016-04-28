@@ -10,7 +10,7 @@ if($con)
     echo 'connected successfully to PlasantVille database';
 
 $title = $_POST['title'];
-$date = $_POST['date'];
+$date = $_POST['proddate'];
 $revenue = $_POST['revenue'];
 
 $sql="INSERT into production(title, date, revenue) values ($title, $date, $revenue)";
@@ -19,7 +19,7 @@ $sql="INSERT into production(title, date, revenue) values ($title, $date, $reven
 $query=mysqli_query($con,$sql);
 
 if($query)
-    echo 'Registration Complete';
+    echo 'Adding to production successfully completed!';
 else
-    echo 'A problem has been encountered. Pls ';
+    echo 'A problem has been encountered. Pls check add production.';
 ?>
