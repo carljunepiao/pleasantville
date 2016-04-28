@@ -1,39 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="css/login-register.css">
-	<link rel="stylesheet" type="text/css" href="css/register.css">
-</head>
-<body>
-	<img class="logo" src="images/logo2.jpg">
+<?php
 
-	<h1>Pleasantville Registration</h1>
+$host= 'localhost';
+$user= 'root';
+$pass='';
+$db= 'PleasantVille';
 
-	<div class="container">
-                //connects to php
-		<form action="connect.php" method="post" />
+$con = mysqli_connect($host,$user,$pass,$db);
 
-			<p class="attribute">First Name</p>
-			<input class="name" type="text" placeholder="fname" name="fname">
+if($con)
+	echo 'connected successfully to PlasantVille database';
 
-			<p class="attribute">Last Name</p>
-			<input class="name" type="text" placeholder="lname" name="lname">
+$Fname = $_POST['fname'];
+$Lname = $_POST['lname'];
+$Contact_No = $_POST['contact'];
 
-			<p class="attribute">Contact Number</p>
-			<input class="number" type="number" placeholder="contact" name="contact">
+$Username = $_POST['username'];
+$Password = $_POST['password'];
 
-			<p class="attribute">Username</p><input class="log" type="text" placeholder="username" name="username">
-			<p class="attribute">Password</p><input class="log" type="password" placeholder="password" name="password">
-			<input class="enter" type="submit" value="Submit">
+$Phash = sha1(sha1($Password."salt")."salt");
 
-		</form>
-                
+//Enter userID dapat Unique, PHASH should be used as password
+$sql="insert into users(UserID,Fname,Lname,Contact_No,Username,Password) values (145,'$Fname', '$Lname', '$Contact_No', '$Username', '$Phash')";
 
-	</div>
+$query=mysqli_query($con,$sql);
 
-	<a href="index.html">Back to Home</a>
-
-</body>
-</html>
+if($query)
+	echo 'data inserted successfully';
+else
+	echo 'nope';
+?>
