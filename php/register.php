@@ -24,9 +24,6 @@
 			<p class="attribute">Contact Number</p>
 			<input class="number" type="number" placeholder="contact" name="contact">
 
-			<p class="attribute">Address</p>
-			<input class="address" type="address" placeholder="address" name="address">
-
 			<p class="attribute">Username</p><input class="log" type="text" placeholder="username" name="username">
 			<p class="attribute">Password</p><input class="log" type="password" placeholder="password" name="password">
 			<input class="enter" type="submit" value="Submit">
