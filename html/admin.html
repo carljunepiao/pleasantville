@@ -57,7 +57,7 @@
 			<div class="box">
 				<div class="properties">
 					<input type="text" placeholder="title"></input>
-					<input type="date" placeholder="date"></input>
+					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
 					<input type="number" placeholder="revenue"></input>
 				</div>
 				<input class="enter" type="submit" value="Submit"></input>
@@ -69,7 +69,7 @@
 			<div class="box">
 				<div class="properties">
 					<input type="text" placeholder="title"></input>
-					<input type="date" placeholder="date"></input>
+					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
@@ -108,8 +108,9 @@
 				<div class="properties">
 					<input type="text" placeholder="playwright"></input>
 					<input type="text" placeholder="title"></input>
-					<input type="time" placeholder="time"></input>
-					<input class="blob" type="file" placeholder="poster"></input>
+					<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')"/>
+					<input required="" type="text" class="form-control"
+					placeholder="choose poster" onfocus="(this.type='file')"/>
 				</div>
 				<input class="enter" type="submit" value="Submit"></input>
 			</div>
@@ -133,8 +134,8 @@
 			<div class="box">
 				<div class="properties">
 					<input type="text" placeholder="title"></input>
-					<input type="date" placeholder="production date"></input>
-					<input type="date" placeholder="donation date"></input>
+					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
+					<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')"/>
 					<input type="number" placeholder="amount"></input>
 				</div>
 				<input class="enter" type="submit" value="Submit"></input>
@@ -147,7 +148,7 @@
 				<div class="properties">
 					<input type="text" placeholder="title"></input>
 					<input type="text" placeholder="user ID"></input>
-					<input type="date" placeholder="production date"></input>
+					<input required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')"/>
 				</div>
 				<input class="enter" type="submit" value="Delete"></input>
 			</div>
