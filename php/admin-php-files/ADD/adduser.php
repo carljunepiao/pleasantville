@@ -1,6 +1,6 @@
 <?php
 //this is for the administrator
-//similar to connect.php but has user type, the admin can add wether a user is a patron or a sponsor
+//similar to register.php but has user type, the admin can add wether a user is a patron or a sponsor
 $host= 'localhost';
 $user= 'root';
 $pass='';
@@ -14,12 +14,14 @@ if($con)
 $fname = $_POST['firstname'];
 $lname = $_POST['lastname'];
 $contact = $_POST['contact'];
-$address = $_POST['address'];
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $type = $_POST['type'];
 
-$sql="INSERT into Registration(fname,lname,contact_no,address,username,password,type) values ($fname', '$lname', '$contact', '$address', '$username', '$password','$type')";
+$Phash = sha1(sha1($password."salt")."salt");
+
+$sql="INSERT into users(UserID,Fname,Lname,Contact_No,Username,Password,Type) values (139,'$Fname', '$Lname', '$Contact_No', '$Username', '$Phash', '$type')";
 
 
 $query=mysqli_query($con,$sql);
