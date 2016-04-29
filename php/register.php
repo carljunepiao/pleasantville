@@ -19,7 +19,7 @@
 
 	$Phash = sha1(sha1($Password."salt")."salt");
 
-	//Enter userID dapat Unique, PHASH should be used as password
+	//Enter userID dapat Unique -piao
 	$sql="insert into users(UserID,Fname,Lname,Contact_No,Username,Password) values (139,'$Fname', '$Lname', '$Contact_No', '$Username', '$Phash')";
 
 	$query=mysqli_query($con,$sql);

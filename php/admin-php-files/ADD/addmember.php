@@ -13,7 +13,8 @@
 	$fname = $_POST['firstname'];
 	$lname = $_POST['lastname'];
 	$contact = $_POST['contact'];
-	//di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
+
+	//naay error ani - piao
 	$sql="insert into member(MemberID,FNname, LName, ContactNo) values (123,'$fname', '$lname', '$contact')";
 
 	echo "<br/>$sql<br/>";

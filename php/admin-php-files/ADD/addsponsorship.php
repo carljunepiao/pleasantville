@@ -16,6 +16,7 @@
 	$donationdate = $_POST['donationdate'];
 	$amount = $_POST['amount'];
 
+	//naay error ani - piao
 	$sql="insert into sponsorship(Title,Date,UserID,Date_of_Donation, Amount_of_Donation) values ('$title','$proddate', '$userID', '$donationdate', '$amount')";
 
 	echo "</br> $sql</br>";

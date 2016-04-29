@@ -2,23 +2,23 @@
    $host = 'localhost';
    $user = 'root';
    $pass = '';
+	$db= 'PleasantVille';
 
-
-   $conn = mysqli_connect($host, $user, $pass);
+   $conn = mysqli_connect($host, $user, $pass, $db);
 
    if(! $conn ) {
       die('Could not connect: ' . mysql_error());
    }
 
    $sql = 'SELECT UserID, Fname, Lname, Contact_No FROM users';
-   mysql_select_db('PleasantVille');
-   $retval = mysql_query( $sql, $conn );
+   mysqli_select_db($conn,$sql);
+   $retval = mysqli_query($conn,$sql);
 
    if(! $retval ) {
       die('Could not get data: ' . mysql_error());
    }
 
-   while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+   while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
       echo "USER ID :{$row['UserID']}  <br> ".
          "FIRST NAME : {$row['Fname']} <br> ".
          "LAST NAME : {$row['Lname']} <br> ".
