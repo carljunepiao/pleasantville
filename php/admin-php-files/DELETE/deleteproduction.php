@@ -13,7 +13,7 @@ if($con)
 $title = $_POST['title'];
 $proddate = $_POST['proddate'];
 
-$sql="DELETE from production where Title = $title and Date = $proddate";
+$sql="DELETE from production where Title = '$title' and Date = '$proddate';";
 
 $query=mysqli_query($con,$sql);
 

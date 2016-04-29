@@ -14,7 +14,7 @@ $title = $_POST['title'];
 $userid = $_POST['userid'];
 $proddate = $_POST['proddate'];
 
-$sql="DELETE from sponsorship where Title = $title and UserID = $userid and Date = $proddate";
+$sql="DELETE from sponsorship where Title = '$title' and UserID = '$userid' and Date = '$proddate';";
 
 $query=mysqli_query($con,$sql);
 

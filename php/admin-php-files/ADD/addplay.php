@@ -14,7 +14,7 @@ $playtitle = $_POST['title'];
 $time = $_POST['playtime'];
 $poster = $_POST['poster'];
 //di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
-$sql="INSERT into play(playwright, title, time, poster) values ($playwright, $playtitle, $time, $poster)";
+$sql="INSERT into play(Playwright, Title, Time, Poster) values ('$playwright', '$playtitle', '$time', '$poster')";
 
 $query=mysqli_query($con,$sql);
 

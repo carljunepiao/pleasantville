@@ -13,7 +13,7 @@ $title = $_POST['title'];
 $date = $_POST['proddate'];
 $revenue = $_POST['revenue'];
 
-$sql="INSERT into production(title, date, revenue) values ($title, $date, $revenue)";
+$sql="INSERT into production(Title, Date, Revenue) values ('$title', '$date', '$revenue')";
 
 
 $query=mysqli_query($con,$sql);

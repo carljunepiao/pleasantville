@@ -13,7 +13,7 @@ if($con)
 $playwright = $_POST['playwright'];
 $playtitle = $_POST['playtitle'];
 
-$sql="DELETE from play where Playwright = $playwright and Title = $playtitle";
+$sql="DELETE from play where Playwright = '$playwright' and Title = '$playtitle';";
 
 $query=mysqli_query($con,$sql);
 
