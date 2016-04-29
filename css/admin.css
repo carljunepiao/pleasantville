@@ -109,15 +109,19 @@ nav {
 	margin: 20px 35%;
 	background-color: rgba(0,0,0,0.3);
 	border: none;
-	color: white;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	color: rgb(150,150,150);
 	border-radius: 10px;
 
-	transition-property: background;
+	transition-property: background, color, border-color;
     transition-duration: 0.5s;
     transition-timing-function: ease;
 }
 	.enter:hover {
 		background: rgba(0,0,0,1);
+		color: white;
+		border-color: white;
 	}
 
 .br1 {
