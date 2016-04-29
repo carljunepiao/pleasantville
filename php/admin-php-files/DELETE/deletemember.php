@@ -12,7 +12,7 @@ if($con)
 
 $memberid = $_POST['memberid'];
 
-$sql="DELETE from member where MemberID = $memberid";
+$sql="DELETE from member where MemberID = '$memberid';";
 
 $query=mysqli_query($con,$sql);
 
