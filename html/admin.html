@@ -14,7 +14,6 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="production.html">Production</a></li>
 				<li><a href="admin-login.html">Administration</a></li>
-				<li><a href="file:///home/japheth/Documents/codes/js/myProjects/stars/index.html">Relax</a></li>
 			</ul>
 		</nav>
 
@@ -24,6 +23,7 @@
 		</header>
 
 		<!-- /////////////////// USER /////////////////////// -->
+
 		<form action="../php/admin-php-files/ADD/adduser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add User</h5>
@@ -47,7 +47,14 @@
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
-						<!---->
+						<input required type="number" placeholder="REQUIRED : UserID"></input>
+						<input type="text" placeholder="fname" name="firstname"></input>
+						<input type="text" placeholder="lname" name="lastname"></input>
+						<input type="number" placeholder="contact" name="contact"></input>
+						<input type="text" placeholder="username" name="username"></input>
+						<input type="password" placeholder="password" name="password"></input>
+						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron"></input>
+						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -56,7 +63,7 @@
 
 		<form action="../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display User</h5>
+				<h5>Display Users</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -81,6 +88,7 @@
 
 
 		<!-- /////////////////// PRODUCTION ////////////////////// -->
+
 		<form action="../php/admin-php-files/ADD/addproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Production</h5>
@@ -100,7 +108,10 @@
 				<h5>Edit Production</h5>
 				<div class="box">
 					<div class="properties">
-						<!---->
+						<input required type="number" placeholder="REQUIRED : ProductionID"></input>
+						<input type="text" placeholder="title" name="title"></input>
+						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -109,7 +120,7 @@
 
 		<form action="../php/admin-php-files/DISPLAY/displayproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Production</h5>
+				<h5>Display Productions</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -135,6 +146,7 @@
 
 
 		<!-- /////////////////// MEMBER /////////////////// -->
+
 		<form action="../php/admin-php-files/ADD/addmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Member</h5>
@@ -154,7 +166,10 @@
 				<h5>Edit Member</h5>
 				<div class="box">
 					<div class="properties">
-						<!---->
+						<input required type="number" placeholder="REQUIRED : MemberID"></input>
+						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
+						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
+						<input class="number" type="text" placeholder="contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -163,7 +178,7 @@
 
 		<form action="../php/admin-php-files/DISPLAY/displaymember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Member</h5>
+				<h5>Display Members</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -188,6 +203,7 @@
 
 
 		<!-- /////////////////// PLAY ///////////////////// -->
+
 		<form action="../php/admin-php-files/ADD/addplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Play</h5>
@@ -209,7 +225,11 @@
 				<h5>Edit Play</h5>
 				<div class="box">
 					<div class="properties">
-						<!---->
+						<input required type="text" placeholder="REQUIRED : playwright" name="playwright"></input>
+						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
+						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
+						<input type="text" class="form-control"
+						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -218,7 +238,7 @@
 
 		<form action="../php/admin-php-files/DISPLAY/displayplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Play</h5>
+				<h5>Display Plays</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -244,6 +264,7 @@
 
 
 		<!-- /////////////////// SPONSORSHIP /////////////////// -->
+
 		<form action="../php/admin-php-files/ADD/addsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Sponsorship</h5>
@@ -265,7 +286,11 @@
 				<h5>Edit Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<!---->
+						<input required type="number" placeholder="REQUIRED : user ID" name="userid"></input>
+						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
+						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
+						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -274,7 +299,7 @@
 
 		<form action="../php/admin-php-files/DISPLAY/displaysponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Sponsorship</h5>
+				<h5>Display Sponsorships</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
