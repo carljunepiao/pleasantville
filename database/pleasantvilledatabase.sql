@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2016 at 03:28 AM
+-- Generation Time: May 03, 2016 at 05:22 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `casts` (
   `MemberID` int(20) UNSIGNED NOT NULL,
+  `ProdNo` int(11) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
   `MemberJob` varchar(20) NOT NULL
@@ -66,6 +67,7 @@ CREATE TABLE `play` (
 --
 
 CREATE TABLE `production` (
+  `ProdNo` int(11) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
   `Revenue` int(10) NOT NULL
@@ -80,6 +82,7 @@ CREATE TABLE `production` (
 CREATE TABLE `seats` (
   `SeatNo` varchar(10) NOT NULL,
   `Location` varchar(30) NOT NULL,
+  `ProdNo` int(11) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
   `Taken` tinyint(1) NOT NULL
@@ -92,9 +95,10 @@ CREATE TABLE `seats` (
 --
 
 CREATE TABLE `sponsorship` (
-  `Title` varchar(51) NOT NULL,
+  `UserID` int(11) NOT NULL,
+  `ProdNo` int(11) NOT NULL,
+  `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
-  `UserID` int(20) NOT NULL,
   `Date_of_Donation` date NOT NULL,
   `Amount_of_Donation` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -107,8 +111,9 @@ CREATE TABLE `sponsorship` (
 
 CREATE TABLE `tickets` (
   `TicketID` int(20) NOT NULL,
-  `UserID` int(20) NOT NULL,
+  `UserID` int(11) NOT NULL,
   `SeatNo` varchar(10) NOT NULL,
+  `ProdNo` int(11) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
   `Cost` int(10) NOT NULL
@@ -121,7 +126,7 @@ CREATE TABLE `tickets` (
 --
 
 CREATE TABLE `users` (
-  `UserID` int(20) NOT NULL,
+  `UserID` int(11) NOT NULL,
   `Type` varchar(10) NOT NULL,
   `Fname` varchar(20) NOT NULL,
   `Lname` varchar(20) NOT NULL,
@@ -147,9 +152,10 @@ DELIMITER ;
 -- Indexes for table `casts`
 --
 ALTER TABLE `casts`
-  ADD PRIMARY KEY (`MemberID`,`Title`,`Date`),
+  ADD PRIMARY KEY (`MemberID`,`ProdNo`),
   ADD UNIQUE KEY `MemberID` (`MemberID`),
-  ADD KEY `MemberID_2` (`MemberID`,`Title`,`Date`),
+  ADD KEY `MemberID_2` (`MemberID`),
+  ADD KEY `ProdNo` (`ProdNo`),
   ADD KEY `Title` (`Title`,`Date`);
 
 --
@@ -172,34 +178,37 @@ ALTER TABLE `play`
 -- Indexes for table `production`
 --
 ALTER TABLE `production`
-  ADD PRIMARY KEY (`Title`,`Date`),
+  ADD PRIMARY KEY (`ProdNo`),
   ADD KEY `Title` (`Title`,`Date`);
 
 --
 -- Indexes for table `seats`
 --
 ALTER TABLE `seats`
-  ADD PRIMARY KEY (`SeatNo`,`Location`,`Title`,`Date`),
-  ADD KEY `SeatNo` (`SeatNo`,`Location`,`Title`,`Date`),
-  ADD KEY `seats_ibfk_1` (`Title`,`Date`);
+  ADD PRIMARY KEY (`SeatNo`,`Location`,`ProdNo`),
+  ADD KEY `SeatNo` (`SeatNo`,`Location`),
+  ADD KEY `ProdNo` (`ProdNo`),
+  ADD KEY `Title` (`Title`,`Date`);
 
 --
 -- Indexes for table `sponsorship`
 --
 ALTER TABLE `sponsorship`
-  ADD PRIMARY KEY (`Title`,`Date`,`UserID`),
-  ADD KEY `Title` (`Title`,`Date`),
-  ADD KEY `UserID` (`UserID`);
+  ADD PRIMARY KEY (`UserID`,`ProdNo`),
+  ADD KEY `UserID` (`UserID`),
+  ADD KEY `ProdNo` (`ProdNo`),
+  ADD KEY `Title` (`Title`,`Date`);
 
 --
 -- Indexes for table `tickets`
 --
 ALTER TABLE `tickets`
-  ADD PRIMARY KEY (`TicketID`,`UserID`,`SeatNo`,`Title`,`Date`),
-  ADD KEY `TicketID` (`TicketID`,`SeatNo`,`Title`,`Date`),
-  ADD KEY `Title` (`Title`,`Date`),
+  ADD PRIMARY KEY (`TicketID`,`UserID`,`SeatNo`,`ProdNo`),
+  ADD KEY `TicketID` (`TicketID`,`SeatNo`),
   ADD KEY `SeatNo` (`SeatNo`),
-  ADD KEY `UserID` (`UserID`);
+  ADD KEY `UserID` (`UserID`),
+  ADD KEY `ProdNo` (`ProdNo`),
+  ADD KEY `Title` (`Title`,`Date`);
 
 --
 -- Indexes for table `users`
@@ -209,6 +218,20 @@ ALTER TABLE `users`
   ADD KEY `UserID` (`UserID`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `production`
+--
+ALTER TABLE `production`
+  MODIFY `ProdNo` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- Constraints for dumped tables
 --
 
@@ -216,8 +239,9 @@ ALTER TABLE `users`
 -- Constraints for table `casts`
 --
 ALTER TABLE `casts`
-  ADD CONSTRAINT `casts_ibfk_2` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `casts_ibfk_3` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `casts_ibfk_3` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `casts_ibfk_4` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `casts_ibfk_5` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `production`
@@ -229,22 +253,25 @@ ALTER TABLE `production`
 -- Constraints for table `seats`
 --
 ALTER TABLE `seats`
-  ADD CONSTRAINT `seats_ibfk_1` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `seats_ibfk_1` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `seats_ibfk_2` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sponsorship`
 --
 ALTER TABLE `sponsorship`
-  ADD CONSTRAINT `sponsorship_ibfk_3` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `sponsorship_ibfk_4` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `sponsorship_ibfk_5` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sponsorship_ibfk_6` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sponsorship_ibfk_7` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tickets`
 --
 ALTER TABLE `tickets`
-  ADD CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`SeatNo`) REFERENCES `seats` (`SeatNo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tickets_ibfk_4` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tickets_ibfk_5` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tickets_ibfk_6` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
