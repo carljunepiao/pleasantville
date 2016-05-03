@@ -1,111 +1,111 @@
 
 body {
-	background: #000;
-	background-image: url("../images/adminbg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding: 0% 25%;
-	font-family: Arial;
+    background: #000;
+    background-image: url("../images/adminbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0% 25%;
+    font-family: Arial;
 }
 
 .logo {
-	margin: 15px auto;
-	width: 150px;
-	border: 1px solid white;
-	border-radius: 50%;
+    margin: 15px auto;
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .container {
-	background: rgba(0,0,0,0.6);
-	border: 1px solid rgba(255,255,255,0.1);
-	border-radius: 10px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
 }
 
 h1 {
-	margin: 0;
-	padding: 0;
-	font-size: 45px;
-	color: white;
-	border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+    color: white;
+    border: none;
 }
 
 .highlight h3 {
-	border-bottom: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 footer {
-	margin-top: 7%;
+    margin-top: 7%;
 }
 
 footer p {
-	color: rgb(255,255,255);
-	font-size: 10px;
-	line-height: 13px;
+    color: rgb(255,255,255);
+    font-size: 10px;
+    line-height: 13px;
 }
 
 input {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
     margin: 3% auto 0px auto;
-	height:25px;
-	background-color: rgba(0,0,0,0.5);
-	color: white;
+    height:25px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
 
-	transition-property: background-color, color, border, border-color;
+    transition-property: background-color, color, border, border-color;
     transition-duration: 1s;
     transition-timing-function: ease;
 }
-	.enter {
-		width: 100px;
-		border-radius: 10px;
-		border: none;
-		background-color: background: rgba(0,0,0,0.5);
-	    border: 1px solid rgba(150,150,150,0.5);
-	    color: rgb(150,150,150);
-		border: none;
-		border-top: 1px solid rgba(255,255,255,0.5);
-		border-bottom: 1px solid rgba(255,255,255,0.5);
-	}
-	.enter:hover {
-		background-color: rgba(0,0,0,1.5);
-	    color: white;
-	    border-color: white;
-	}
-	.textbox {
-	    border: 1px solid rgba(150,150,150,0.5);
-	    -webkit-border-radius: 30px;
-	    -moz-border-radius: 30px;
-	    border-radius: 30px;
-	    outline: 0;
-	    width: 275px;
-	    padding-left:10px;
-	    padding-right:10px;
-	}
+    .enter {
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        background-color: background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(150,150,150,0.5);
+        color: rgb(150,150,150);
+        border: none;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+    .enter:hover {
+        background-color: rgba(0,0,0,1.5);
+        color: white;
+        border-color: white;
+    }
+    .textbox {
+        border: 1px solid rgba(150,150,150,0.5);
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        outline: 0;
+        width: 275px;
+        padding-left:10px;
+        padding-right:10px;
+    }
 
 .test a {
-	color: white;
-	font-size: 14px;
-	background: rgba(0,0,0,0.6);
-	margin: 8% auto 10px;
-	text-align: center;
-	display: block;
-	padding: 15px 0;
-	text-decoration: none;
-	border: 1px solid rgba(255,255,255,0.1);
-	border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    background: rgba(0,0,0,0.6);
+    margin: 8% auto 10px;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
 
-	transition-property: background-color;
+    transition-property: background-color;
     transition-duration: 0.5s;
     transition-timing-function: ease;
 }
-	.test a:hover {
-		background: rgba(0,0,0,1);
-	}
+    .test a:hover {
+        background: rgba(0,0,0,1);
+    }
 
 ::-webkit-input-placeholder {
    text-align: center;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
