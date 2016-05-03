@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2016 at 05:01 AM
+-- Generation Time: Apr 29, 2016 at 03:28 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -220,10 +220,10 @@ ALTER TABLE `casts`
   ADD CONSTRAINT `casts_ibfk_3` FOREIGN KEY (`MemberID`) REFERENCES `member` (`MemberID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `play`
+-- Constraints for table `production`
 --
-ALTER TABLE `play`
-  ADD CONSTRAINT `play_ibfk_1` FOREIGN KEY (`Title`) REFERENCES `production` (`Title`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `production`
+  ADD CONSTRAINT `production_ibfk_1` FOREIGN KEY (`Title`) REFERENCES `play` (`Title`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `seats`
