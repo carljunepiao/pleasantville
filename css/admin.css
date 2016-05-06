@@ -32,7 +32,7 @@ h1 {
 	color: white;
 	border: none;
 	width: 50%;
-	margin: auto 25%; 
+	margin: auto 25%;
 }
 
 footer {
@@ -137,14 +137,14 @@ nav {
 ::-webkit-input-placeholder {
    text-align: center;
 }
-::-webkit-datetime-edit { 
+::-webkit-datetime-edit {
 	text-align: center;
 	color: grey;
 }
 ::-webkit-datetime-edit-text {
 	padding: 0 2px;
 }
-::-webkit-inner-spin-button { 
+::-webkit-inner-spin-button {
 	display: none;
 }
 ::-webkit-calendar-picker-indicator {
