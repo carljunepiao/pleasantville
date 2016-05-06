@@ -5,8 +5,6 @@
 	<title>The Pleasantville Theater</title>
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/admin.css">
-	<script src="../javascripts/vendor-js/jquery.jquery.js"></script>
-	<script src="../javascripts/hover-display.js"></script>
 </head>
 <body>
 
@@ -29,7 +27,7 @@
 		<form action="../php/admin-php-files/ADD/adduser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add User</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="fname" name="firstname"></input>
 						<input required type="text" placeholder="lname" name="lastname"></input>
@@ -47,7 +45,7 @@
 		<form action="../php/admin-php-files/EDIT/edituser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit User</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="REQUIRED : UserID"></input>
 						<input type="text" placeholder="fname" name="firstname"></input>
@@ -66,7 +64,7 @@
 		<form action="../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Users</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<!---->
 					</div>
@@ -78,7 +76,7 @@
 		<form action="../php/admin-php-files/DELETE/deleteuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete User</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="User_ID" name="userid"></input>
 					</div>
@@ -94,7 +92,7 @@
 		<form action="../php/admin-php-files/ADD/addproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Production</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="title" name="title"></input>
 						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -108,7 +106,7 @@
 		<form action="../php/admin-php-files/EDIT/editproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Production</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="REQUIRED : ProductionID"></input>
 						<input type="text" placeholder="title" name="title"></input>
@@ -123,7 +121,7 @@
 		<form action="../php/admin-php-files/DISPLAY/displayproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Productions</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<!---->
 					</div>
@@ -135,7 +133,7 @@
 		<form action="../php/admin-php-files/DELETE/deleteproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Production</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="title" name="title"></input>
 						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -152,7 +150,7 @@
 		<form action="../php/admin-php-files/ADD/addmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Member</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required class="textbox" type="text" placeholder="fname" name="firstname"></input>
 						<input required class="textbox" type="text" placeholder="lname" name="lastname"></input>
@@ -166,7 +164,7 @@
 		<form action="../php/admin-php-files/EDIT/editmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Member</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="REQUIRED : MemberID"></input>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
@@ -181,7 +179,7 @@
 		<form action="../php/admin-php-files/DISPLAY/displaymember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Members</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<!---->
 					</div>
@@ -193,7 +191,7 @@
 		<form action="../php/admin-php-files/DELETE/deletemember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Member</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required class="number" type="text" placeholder="member ID" name="memberid"></input>
 					</div>
@@ -209,7 +207,7 @@
 		<form action="../php/admin-php-files/ADD/addplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Play</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="playwright" name="playwright"></input>
 						<input required type="text" placeholder="title" name="title"></input>
@@ -225,7 +223,7 @@
 		<form action="../php/admin-php-files/EDIT/editplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Play</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="REQUIRED : playwright" name="playwright"></input>
 						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
@@ -241,7 +239,7 @@
 		<form action="../php/admin-php-files/DISPLAY/displayplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Plays</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<!---->
 					</div>
@@ -253,7 +251,7 @@
 		<form action="../php/admin-php-files/DELETE/deleteplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Play</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="play wright" name="playwright"></input>
 						<input required type="text" placeholder="play title" name=playtitle></input>
@@ -270,7 +268,7 @@
 		<form action="../php/admin-php-files/ADD/addsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Sponsorship</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="user ID" name="userid"></input>
 						<input required type="text" placeholder="title" name="title"></input>
@@ -286,7 +284,7 @@
 		<form action="../php/admin-php-files/EDIT/editsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Sponsorship</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="number" placeholder="REQUIRED : user ID" name="userid"></input>
 						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
@@ -302,7 +300,7 @@
 		<form action="../php/admin-php-files/DISPLAY/displaysponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Sponsorships</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<!---->
 					</div>
@@ -314,7 +312,7 @@
 		<form action="../php/admin-php-files/DELETE/deletesponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Sponsorship</h5>
-				<div class="box hidden">
+				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="title" name="title"></input>
 						<input required type="text" placeholder="user ID" name="userid"></input>
