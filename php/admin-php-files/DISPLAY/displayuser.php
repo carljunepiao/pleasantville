@@ -1,32 +1,28 @@
 <?php
-   $host = 'localhost';
-   $user = 'root';
-   $pass = '';
-	$db= 'PleasantVille';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Pleasantville";
 
-   $conn = mysqli_connect($host, $user, $pass, $db);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-   if(! $conn ) {
-      die('Could not connect: ' . mysql_error());
-   }
+$sql = "SELECT Fname, Lname, Contact_No FROM users";
+$result = $conn->query($sql);
 
-   $sql = 'SELECT UserID, Fname, Lname, Contact_No FROM users';
-   mysqli_select_db($conn,$sql);
-   $retval = mysqli_query($conn,$sql);
-
-   if(! $retval ) {
-      die('Could not get data: ' . mysql_error());
-   }
-
-   while($row = mysqli_fetch_array($retval, MYSQL_ASSOC)) {
-      echo "USER ID :{$row['UserID']}  <br> ".
-         "FIRST NAME : {$row['Fname']} <br> ".
-         "LAST NAME : {$row['Lname']} <br> ".
-         "CONTACT NUMBER : {$row['Contact_No']} <br> ".
-         "--------------------------------<br>";
-   }
-
-   echo "Fetched data successfully\n";
-
-   mysql_close($conn);
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>Name</th><th>Contact No.</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["Fname"]."</td><td>".$row["Lname"]." ".$row["Contact_No"]."</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+$conn->close();
 ?>
