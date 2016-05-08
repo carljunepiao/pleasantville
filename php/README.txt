@@ -1,1 +1,0 @@
-Put PHP files in XAMPP -> HTPDOCS -> Turn on Xampp (Apache and MySQL) ->Access in localhost
