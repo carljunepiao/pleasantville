@@ -48,7 +48,7 @@
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="REQUIRED : UserID"></input>
+						<select required name="select-user-id"></select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
@@ -109,7 +109,7 @@
 				<h5>Edit Production</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="REQUIRED : ProductionID"></input>
+						<select required name="select-production-id"></select>
 						<input type="text" placeholder="title" name="title"></input>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
@@ -167,7 +167,7 @@
 				<h5>Edit Member</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="REQUIRED : MemberID"></input>
+						<select required name="select-member-id"></select>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
 						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
 						<input class="number" type="text" placeholder="contact" name="contact"></input>
@@ -226,8 +226,8 @@
 				<h5>Edit Play</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="REQUIRED : playwright" name="playwright"></input>
-						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
+						<select required name="select-playwright-id"></select>
+						<select required name="select-title"></select>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
 						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
@@ -287,8 +287,8 @@
 				<h5>Edit Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="REQUIRED : user ID" name="userid"></input>
-						<input required type="text" placeholder="REQUIRED : title" name="title"></input>
+						<select required name="select-user-id"></select>
+						<select required name="select-title"></select>
 						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
