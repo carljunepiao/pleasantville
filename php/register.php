@@ -26,7 +26,9 @@
 
 	if($query)
 		echo 'data inserted successfully';
-	else
+	else{
+		header("Location: ../html/register.html");
 		echo 'nope';
+	}
 
 ?>
