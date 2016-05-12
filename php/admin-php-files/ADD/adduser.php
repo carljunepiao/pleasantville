@@ -21,7 +21,7 @@
 
 	$phash = sha1(sha1($password."salt")."salt");
 
-	$sql="insert into users(UserID,Fname,Lname,Contact_No,Username,Password,Type) values (119,'$fname', '$lname', '$contact', '$username', '$phash', '$type')";
+	$sql="INSERT INTO users(`Fname`,`Lname`,`Contact_No`,`Username`,`Password`,`Type`) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$type')";
 
 	echo "<br/>$sql<br/>";
 
