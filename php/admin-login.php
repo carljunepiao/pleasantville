@@ -45,7 +45,17 @@
 			setcookie($cookie_name,$cookie_value, time() + (180), "/");
 			header("Location: ../html/admin.html");
 		}else{
-			echo "Username or password is incorrect!";
+			// echo "Username or password is incorrect!";
+			echo '<script type="text/javascript">',
+				'var title = 'ERROR!';
+				var body = 'Username or Password incorrect.';
+				var icon = '../images/error.png';
+				var notification = new Notification(title, {
+					body: body,
+					icon: icon
+				});
+				setTimeout(function() { notification.close() }, 3000);',
+			'</script>';
 		}
 	}
 
