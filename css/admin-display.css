@@ -1,0 +1,54 @@
+
+body {
+	background: #000;
+	background-image: url("../images/adminbg.jpg");
+	background-repeat: no-repeat;
+	font-family: Arial;
+	background-size: cover;
+	padding: 0 6% 6% 6%;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+.container {
+	margin-top: 5%;
+	background: rgba(0,0,0,0.6);
+	padding: 30px 50px;
+	border-radius: 10px;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+	margin: 15px auto;
+	width: 150px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+    color: white;
+    border: none;
+}
+
+.back {
+	text-decoration: none;
+	display: block;
+	width: 30%;
+	height: 20px;
+}
+
+table {
+	background: rgba(0,0,0,0.6);
+	padding: 10px;
+}
+
+tr {
+	color: white;
+}
+
+.header {
+	color: white;
+}

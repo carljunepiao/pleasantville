@@ -1,29 +1,52 @@
-<?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Pleasantville";
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Production Display</title>
+    <link rel="stylesheet" type="text/css" href="../css/admin-display.css">
+</head>
+<body>
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    <div class="container">
 
-    $sql = "SELECT Title, Date, Revenue FROM production";
-    $result = $conn->query($sql);
+        <center><a class="back" href="../html/admin.html">Back</a></center>
 
-    if ($result->num_rows > 0) {
-        echo "<table><tr><th>Title</th><th>Production Date</th><th>Revenue</th></tr>";
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["Title"]."</td><td>".$row["Date"]."</td><td>".$row["Revenue"]."</td></tr>";
-        }
-        echo "</table>";
-    }
-    else {
-        echo "0 results";
-    }
-    $conn->close();
-?>
+        <header>
+            <h1>Productions</h1>
+            <img class="logo" src="../images/adminicon.jpg" alt="PleasantvilleLogo">
+        </header>
+
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "Pleasantville";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT Title, Date, Revenue FROM production";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                echo "<table><tr><th>Title</th><th>Production Date</th><th>Revenue</th></tr>";
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Date"]."</td><td>".$row["Revenue"]."</td></tr>";
+                }
+                echo "</table>";
+            }
+            else {
+                echo "0 results";
+            }
+            $conn->close();
+        ?>
+    
+    </div>
+
+</body>
+</html>
