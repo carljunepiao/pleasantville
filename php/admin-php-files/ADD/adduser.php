@@ -17,18 +17,35 @@
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	$type = $_POST['type'];
+
+	$Patron = $_POST['patron'];
+	$Sponsor = $_POST['sponsor'];
+
+	$pat = 0;
+	$spon = 0;
+
+	if($Patron == 'value1'){
+		$pat = 1;
+	}
+	if($Sponsor == 'value2'){
+		$spon = 1;
+	}
+
+	echo "$Sponsor";
+	echo "$Patron";
 
 	$phash = sha1(sha1($password."salt")."salt");
 
-	$sql="INSERT INTO users(`Fname`,`Lname`,`Contact_No`,`Username`,`Password`,`Type`) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$type')";
+	$sql="INSERT INTO users(Fname,Lname,Contact_No,Username,Password,Patron,Sponsor) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$pat', '$spon')";
 
 	echo "<br/>$sql<br/>";
 
 	$query=mysqli_query($con,$sql);
 
-	if($query)
+	if($query){
+		header("Location: ../../../html/admin.html");
 	    echo 'Successfully added user.';
+	}
 	else
 	    echo 'A problem has been encountered. Pls check add user.';
 ?>

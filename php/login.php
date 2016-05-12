@@ -27,18 +27,6 @@
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 
-	if($result){
-		echo "process cool!";
-	}
-	else{
-		echo "Shit!";
-	}
-		echo "<br/> $user, $pass , $phash";
-		echo "<br/> $sql";
-		echo "<br/> $count";
-		// echo "<br/> $result";
-		echo "<br/>Entering login!<br />";
-
 
 		if($count == 1){
 			$cookie_value = $user;

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 04:39 PM
+-- Generation Time: May 12, 2016 at 09:21 AM
 -- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -147,9 +147,29 @@ CREATE TABLE `users` (
   `Lname` varchar(20) NOT NULL,
   `Contact_No` int(15) NOT NULL,
   `Username` varchar(25) NOT NULL,
-  `Password` varchar(25) NOT NULL,
+  `Password` varchar(50) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `Patron`, `Sponsor`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
+(9, 0, 0, 'carl', 'piao', 2147483647, 'admin', 'b76bec061967675db6dfcb179f76ae9062277621', 0),
+(10, 1, 0, 'carl', 'piao', 2147483647, 'carlp', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(11, 1, 0, 'carlpiao', 'piao', 2147483647, 'carlpiaojune', 'c385e1697b1bde6a3a346602f77faf9953c8f70a', 0),
+(12, 1, 0, 'carlpiao', 'piao', 2147483647, 'carlpiaojune', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(13, 0, 1, 'kkjk', 'sdsds', 978767565, 'carlpiaok', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(14, 0, 1, 'kkjk', 'sdsds', 978767565, 'carlpiaok', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(15, 1, 1, 'kkjk', 'sdsds', 978767565, 'carlpiaok', '97272a2c31cc329966510a38bfbe12c0fdb4eb00', 0),
+(16, 1, 0, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(17, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', 'b328f9eca91b555222f3436c36291b476aa4c155', 0),
+(18, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '9baed3bbf53a81bb7bd26b11f586a11d1e38a8b9', 0),
+(19, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '932507a858bfc14cec93340944eacb45fccdc4a5', 0),
+(20, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '0fd43510a4fa9b8358c2795d76e3803a0700650a', 0),
+(21, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '59f3a0e6a706398e8b18a5f5796db7cc101bf70d', 0),
+(22, 1, 1, 'sndsndk', 'sdsdsd', 2147483647, 'piao', '13f74022a5ab9cdaf48d1974cda9e890b926d176', 0);
 
 --
 -- Indexes for dumped tables
@@ -242,7 +262,7 @@ ALTER TABLE `production`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- Constraints for dumped tables
 --
