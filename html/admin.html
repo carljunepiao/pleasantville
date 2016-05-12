@@ -55,7 +55,9 @@
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user-id"></select>
+						<select required name="select-user-id">
+							<option selected disabled>userID</option>
+						</select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
@@ -86,7 +88,10 @@
 				<h5>Delete User</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="number" placeholder="User_ID" name="userid"></input>
+						<!-- <input required type="number" placeholder="User_ID" name="userid"></input> -->
+						<select required name="select-user-id">
+							<option selected disabled>userID</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
@@ -102,8 +107,14 @@
 				<h5>Add Production</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="title" name="title"></input>
-						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<!-- <input required type="text" placeholder="title" name="title"></input> -->
+						<!-- <input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
+						<select required name="select-date">
+							<option selected disabled>Date</option>
+						</select>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -116,7 +127,9 @@
 				<h5>Edit Production</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-production-id"></select>
+						<select required name="select-production-id">
+							<option selected disabled>productionID</option>
+						</select>
 						<input type="text" placeholder="title" name="title"></input>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
@@ -143,8 +156,9 @@
 				<h5>Delete Production</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="title" name="title"></input>
-						<input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<select required name="select-production-id">
+							<option selected disabled>productionID</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
@@ -174,7 +188,9 @@
 				<h5>Edit Member</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-member-id"></select>
+						<select required name="select-member-id">
+							<option selected disabled>memberID</option>
+						</select>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
 						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
 						<input class="number" type="text" placeholder="contact" name="contact"></input>
@@ -201,7 +217,10 @@
 				<h5>Delete Member</h5>
 				<div class="box">
 					<div class="properties">
-						<input required class="number" type="text" placeholder="member ID" name="memberid"></input>
+						<!-- <input required class="number" type="text" placeholder="member ID" name="memberid"></input> -->
+						<select required name="select-member-id">
+							<option selected disabled>memberID</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
@@ -233,8 +252,12 @@
 				<h5>Edit Play</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-playwright-id"></select>
-						<select required name="select-title"></select>
+						<select required name="select-playwright-id">
+							<option selected disabled>playwrightID</option>
+						</select>
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
 						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
@@ -261,8 +284,14 @@
 				<h5>Delete Play</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="play wright" name="playwright"></input>
-						<input required type="text" placeholder="play title" name=playtitle></input>
+						<!-- <input required type="text" placeholder="play wright" name="playwright"></input> -->
+						<!-- <input required type="text" placeholder="play title" name=playtitle></input> -->
+						<select required name="select-playwright">
+							<option selected disabled>Playwright</option>
+						</select>
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
@@ -278,7 +307,9 @@
 				<h5>Add Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="user-id"></select>
+						<select required name="user-id">
+							<option selected disabled>userID</option>
+						</select>
 						<input required type="text" placeholder="title" name="title"></input>
 						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
@@ -294,8 +325,12 @@
 				<h5>Edit Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user-id"></select>
-						<select required name="select-title"></select>
+						<select required name="select-user-id">
+							<option selected disabled>userID</option>
+						</select>
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
 						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
@@ -322,9 +357,18 @@
 				<h5>Delete Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="title" name="title"></input>
-						<input required type="text" placeholder="user ID" name="userid"></input>
-						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<!-- <input required type="text" placeholder="title" name="title"></input> -->
+						<!-- <input required type="text" placeholder="user ID" name="userid"></input> -->
+						<!-- <input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
+						<select required name="select-user-id">
+							<option selected disabled>user-ID</option>
+						</select>
+						<select required name="select-date">
+							<option selected disabled>Date</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
@@ -339,10 +383,18 @@
 				<h5>Buy Ticket</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user"></select>
-						<select required name="select-title"></select>
-						<select required name="select-date"></select>
-						<select required name="select-seat"></select>
+						<select required name="select-user-id">
+							<option selected disabled>userID</option>
+						</select>
+						<select required name="select-title">
+							<option selected disabled>Title</option>
+						</select>
+						<select required name="select-date">
+							<option selected disabled>Date</option>
+						</select>
+						<select required name="select-seat">
+							<option selected disabled>Seat</option>
+						</select>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
