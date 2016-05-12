@@ -9,18 +9,19 @@ $con = mysqli_connect($host,$user,$pass,$db);
 if($con)
     echo 'connected successfully to PlasantVille database';
 
-$playwright = $_POST['playwright'];
-$playtitle = $_POST['title'];
+$playwright = $_POST['select-playwright-id'];
+$playtitle = $_POST['select-title'];
 $time = $_POST['playtime'];
 $poster = $_POST['poster'];
-//di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
-$sql="INSERT INTO play(`Playwright`, `Title`, `Time`, `Poster`) VALUES ('$playwright', '$playtitle', '$time', '$poster')";
+
+$sql="UPDATE play SET Time = '$time' , Poster = '$poster' WHERE Playwright = '$playwright' AND Title = '$playtitle'";
+
 
 $query=mysqli_query($con,$sql);
 
 if($query){
 	header("Location: ../../../html/admin.php");
-    echo 'Adding play complete!';
+    echo 'Edit play complete!';
 }
 else{
 	header("Location: ../../../html/admin.php");

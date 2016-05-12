@@ -16,8 +16,12 @@ $sql="DELETE from users where UserID = '$userID';";
 
 $query=mysqli_query($con,$sql);
 
-if($query)
+if($query){
+	header("Location: ../../../html/admin.php");
     echo 'Delete completed';
-else
+}
+else{
+	header("Location: ../../../html/admin.php");
     echo 'A problem has been encountered. ';
+}
 ?>

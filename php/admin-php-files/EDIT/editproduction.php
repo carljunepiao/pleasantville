@@ -9,18 +9,19 @@ $con = mysqli_connect($host,$user,$pass,$db);
 if($con)
     echo 'connected successfully to PlasantVille database';
 
-$title = $_POST['title'];
+$prodno = $_POST['select-production-id'];
+$title = $_POST['select-production-title'];
 $date = $_POST['proddate'];
 $revenue = $_POST['revenue'];
 
-$sql="INSERT INTO production(`Title`, `Date`, `Revenue`) VALUES ('$title', '$date', '$revenue')";
+$sql="UPDATE production SET Date = '$date', Revenue = '$revenue' WHERE ProdNo = '$prodno' AND Title = '$title'";
 
-echo "$sql";
+echo "<br>$sql</br>";
 $query=mysqli_query($con,$sql);
 
 if($query){
 	header("Location: ../../../html/admin.php");
-    echo 'Adding to production successfully completed!';
+    echo 'Edit to production successfully completed!';
 }
 else{
 	header("Location: ../../../html/admin.php");

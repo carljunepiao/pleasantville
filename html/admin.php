@@ -54,16 +54,16 @@
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
-                                                <select required name="select-user-id">
-                                                        <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+                        <select required name="select-user-id">
+                                <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
 						<input type="text" placeholder="username" name="username"></input>
 						<input type="password" placeholder="password" name="password"></input>
-						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron"></input>
-						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor"></input>
+						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
+						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -125,7 +125,10 @@
 						<select required name="select-production-id">
 							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="title" name="title"></input>
+						<!-- <input type="text" placeholder="title" name="title"></input> -->
+						<select required name="select-production-title">
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						</select>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
@@ -291,10 +294,13 @@
 				<h5>Add Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="user-id">
-							<option selected disabled>UserID</option>
+						<select required name="select-user-id">
+                            <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
-						<input required type="text" placeholder="title" name="title"></input>
+						<select required name="select-title">
+                            <?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						</select>
+
 						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
@@ -309,10 +315,10 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
-							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+							<?php include '../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../php/admin-php-files/EDIT/dropdownSponsorshipTitle.php'; echo $options;?>
 						</select>
 						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
@@ -391,16 +397,16 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="date">
-							<option selected disabled>Date</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
 						</select>
 						<input required type="text" placeholder="job" name="job"></input>
 					</div>

@@ -13,17 +13,16 @@
 	$fname = $_POST['firstname'];
 	$lname = $_POST['lastname'];
 	$contact = $_POST['contact'];
+	$memberID = $_POST['select-member-id'];
 
-
-	$sql="INSERT INTO member(`FName`, `LName`, `ContactNo`) VALUES ('$fname','$lname','$contact')";
-
+	$sql="UPDATE member SET FName = '$fname', LName = '$lname', ContactNo = '$contact' WHERE MemberID = $memberID";
 
 	echo "<br/>$sql<br/>";
 	$query=mysqli_query($con,$sql);
 
 	if($query){
 		header("Location: ../../../html/admin.php");
-	    echo 'Add member complete!';
+	    echo 'Edit member complete!';
 	}
 	else{
 		header("Location: ../../../html/admin.php");

@@ -9,7 +9,7 @@
 	$con = mysqli_connect($host,$user,$pass,$db);
 
 	if($con)
-	    echo 'connected successfully to PlasantVille database';
+	    echo 'connected successfully to PleasantVille database';
 
 	$fname = $_POST['firstname'];
 	$lname = $_POST['lastname'];
@@ -21,6 +21,8 @@
 	$Patron = $_POST['patron'];
 	$Sponsor = $_POST['sponsor'];
 
+	$UserID = $_POST['select-user-id'];
+
 	$pat = 0;
 	$spon = 0;
 
@@ -31,12 +33,13 @@
 		$spon = 1;
 	}
 
-	echo "$Sponsor";
-	echo "$Patron";
+	echo "<br/>$Sponsor<br/>";
+	echo "<br/>$Patron<br/>";
 
 	$phash = sha1(sha1($password."salt")."salt");
 
-	$sql="INSERT INTO users(Fname,Lname,Contact_No,Username,Password,Patron,Sponsor) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$pat', '$spon')";
+	// $sql="UPDATE users(Fname,Lname,Contact_No,Username,Password,Patron,Sponsor) SET ('$fname', '$lname', '$contact', '$username', '$phash', '$pat', '$spon') WHERE UserID = $UserID";
+	$sql="UPDATE users SET Fname = '$fname', Lname = '$lname', Contact_No = '$contact', Username = '$username', Password = '$phash', Patron = '$pat', Sponsor = '$spon' WHERE UserID = $UserID";
 
 	echo "<br/>$sql<br/>";
 

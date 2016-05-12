@@ -16,18 +16,18 @@
 	$donationdate = $_POST['donationdate'];
 	$amount = $_POST['amount'];
 
-	$sql="INSERT INTO sponsorship(`Title`,`Date`,`UserID`,`Date_of_Donation`,`Amount_of_Donation`) VALUES ('$title','$proddate', '$userID', '$donationdate', '$amount')";
-
+	$sql="UPDATE sponsorship SET Date = '$proddate', Date_of_Donation = '$donationdate', Amount_of_Donation = '$amount' WHERE Title = '$title' AND UserID = '$userID'";
+	
 	echo "</br> $sql</br>";
 
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo 'Successfully added in Sponsorship';
 	}
 	else{
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo ' A problem has been encountered. ';
 	}
 ?>
