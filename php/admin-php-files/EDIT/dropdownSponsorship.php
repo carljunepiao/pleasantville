@@ -12,7 +12,7 @@ $databaseName = "pleasantville";
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
 // mysql select query
-$query = "SELECT UserID FROM `users`";
+$query = "SELECT UserID FROM `production`";
 
 $result = mysqli_query($connect, $query);
 

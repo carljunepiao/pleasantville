@@ -55,8 +55,8 @@
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user-id">
-							<option selected disabled>userID</option>
+                                                <select required name="select-user-id">
+                                                        <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
@@ -90,7 +90,7 @@
 					<div class="properties">
 						<!-- <input required type="number" placeholder="User_ID" name="userid"></input> -->
 						<select required name="select-user-id">
-							<option selected disabled>userID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
@@ -128,7 +128,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<input type="text" placeholder="title" name="title"></input>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -157,7 +157,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
@@ -189,7 +189,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
 						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
@@ -219,7 +219,7 @@
 					<div class="properties">
 						<!-- <input required class="number" type="text" placeholder="member ID" name="memberid"></input> -->
 						<select required name="select-member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
@@ -253,10 +253,10 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright-id">
-							<option selected disabled>playwrightID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
@@ -287,10 +287,10 @@
 						<!-- <input required type="text" placeholder="play wright" name="playwright"></input> -->
 						<!-- <input required type="text" placeholder="play title" name=playtitle></input> -->
 						<select required name="select-playwright">
-							<option selected disabled>Playwright</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
@@ -308,7 +308,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="user-id">
-							<option selected disabled>userID</option>
+							<option selected disabled>UserID</option>
 						</select>
 						<input required type="text" placeholder="title" name="title"></input>
 						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -326,10 +326,10 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
-							<option selected disabled>userID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
@@ -361,13 +361,13 @@
 						<!-- <input required type="text" placeholder="user ID" name="userid"></input> -->
 						<!-- <input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="select-user-id">
-							<option selected disabled>user-ID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<select required name="select-date">
-							<option selected disabled>Date</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
