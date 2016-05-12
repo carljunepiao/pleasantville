@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 $host= 'localhost';
 $user= 'root';
@@ -9,7 +8,7 @@ $db= 'PleasantVille';
 $con = new mysqli($host,$user,$pass,$db);
 
 if($con->connect-error)
-    echo 'connected successfully to PlasantVille database';
+    echo 'connected successfully to PleasantVille database';
 
 $userName = $_POST['select-user'];
 $Title = $_POST['select-title'];
@@ -43,28 +42,5 @@ if($query2)
     echo 'Your seat has been reserved. ';
 else
     echo 'A problem has been encountered. ';
-=======
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Pleasantville";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-//query
-    $sql=mysql_query("SELECT UserID FROM users");
-
-    if(mysql_num_rows($sql)){
-        $select= '<select name="UserID">';
-        while($rs=mysql_fetch_array($sql)){
-            $select.='<option value="'.$rs['UserID'].'">'</option>';
-        }
-    }
-    $select.='</select>';
-    echo $select;
->>>>>>> dfb70c18b009a2c577f780d76a976824b9d041cc
 ?>

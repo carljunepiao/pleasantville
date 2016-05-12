@@ -19,10 +19,8 @@
 		$user = $_POST['username'];
 		$pass = $_POST['password'];
 
-		$phash = sha1(sha1($pass."salt")."salt");
-
 		//phash should be used but errors occur. (modify)
-		$sql = "SELECT * FROM users WHERE Username = '$user' AND Password = '$phash';";
+		$sql = "SELECT * FROM administrator WHERE Username = '$user' AND Password = '$pass';";
 
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);

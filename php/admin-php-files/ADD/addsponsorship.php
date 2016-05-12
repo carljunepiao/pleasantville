@@ -23,8 +23,10 @@
 
 	$query=mysqli_query($con,$sql);
 
-	if($query)
+	if($query){
+		header("Location: ../../../html/admin.html");
 	    echo 'Successfully added in Sponsorship';
+	}
 	else
 	    echo ' A problem has been encountered. ';
 ?>

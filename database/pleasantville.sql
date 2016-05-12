@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 04:39 PM
+-- Generation Time: May 12, 2016 at 09:52 AM
 -- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `pleasantville`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `administrator`
+--
+
+CREATE TABLE `administrator` (
+  `Username` varchar(25) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  `LogIn` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`Username`, `Password`, `LogIn`) VALUES
+('jjapp', 'goastig54321', 1);
 
 -- --------------------------------------------------------
 
@@ -147,13 +166,26 @@ CREATE TABLE `users` (
   `Lname` varchar(20) NOT NULL,
   `Contact_No` int(15) NOT NULL,
   `Username` varchar(25) NOT NULL,
-  `Password` varchar(25) NOT NULL,
+  `Password` varchar(50) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `Patron`, `Sponsor`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
+(7, 1, 1, 'Dooogg', 'Aaaaaaarfff', 1234567, 'Allfff', 'Fiiiee', 1);
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `administrator`
+--
+ALTER TABLE `administrator`
+  ADD PRIMARY KEY (`Username`,`Password`);
 
 --
 -- Indexes for table `casts`
@@ -242,7 +274,7 @@ ALTER TABLE `production`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --
