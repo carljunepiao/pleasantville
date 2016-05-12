@@ -23,19 +23,11 @@
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-<<<<<<< HEAD
 		// header("Location: ../../../html/admin.php");
 	    echo 'Successfully added in Sponsorship';
 	}
 	else{
 		// header("Location: ../../../html/admin.php");
-=======
-		header("Location: ../../../html/admin.php");
 	    echo 'Successfully added in Sponsorship';
-	}
-	else{
-		header("Location: ../../../html/admin.php");
->>>>>>> 2714ba0a5cf178304b299f26b4ce7ea5374ed6c8
-	    echo ' A problem has been encountered. ';
 	}
 ?>
