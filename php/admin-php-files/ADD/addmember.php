@@ -21,8 +21,10 @@
 	echo "<br/>$sql<br/>";
 	$query=mysqli_query($con,$sql);
 
-	if($query)
+	if($query){
+		header("Location: ../../../html/admin.html");
 	    echo 'Add member complete!';
+	}
 	else
 	    echo ' A problem has been encountered. Check add member.';
 ?>
