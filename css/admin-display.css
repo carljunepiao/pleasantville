@@ -40,7 +40,15 @@ h1 {
 	display: block;
 	width: 30%;
 	height: 20px;
+	background-color: rgba(0,0,0,0.4);
+
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
+	.back:hover {
+		border-color: rgba(0,0,0,1);
+	}
 
 table {
 	background: rgba(0,0,0,0.6);

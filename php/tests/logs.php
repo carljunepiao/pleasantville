@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Backup</title>
+    <title>Transaction Logs</title>
     <link rel="stylesheet" type="text/css" href="../../css/admin-display.css">
 </head>
 <body>
