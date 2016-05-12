@@ -99,11 +99,9 @@
 						<!-- <input required type="text" placeholder="title" name="title"></input> -->
 						<!-- <input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-						<select required name="select-date">
-							<option selected disabled>Date</option>
-						</select>
+						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
