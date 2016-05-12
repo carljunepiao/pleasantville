@@ -9,13 +9,6 @@
 </head>
 <body>
 
-	<form action="../php/tests/test1.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Backup" name="backup"></input>
-	</form>
-	<form action="../php/tests/test2.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Restore" name="restore"></input>
-	</form>
-
 	<div class="container">
 		<nav class="main-navigation">
 			<ul>
@@ -459,15 +452,25 @@
 			</div>
 		</form>		
 
-
-		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
+
+		<!-- /////////////////////////////////// -->
+
 	</div>
+
+	<form action="../php/tests/backup.php" method="post" accept-charset="utf-8"/>
+		<input class="button" type="submit" value="Backup" name="backup"></input>
+	</form>
+	<form action="../php/tests/restore.php" method="post" accept-charset="utf-8"/>
+		<input class="button" type="submit" value="Restore" name="restore"></input>
+	</form>
+	<form action="../php/tests/logs.php" method="post" accept-charset="utf-8"/>
+		<input class="button" type="submit" value="Transaction Logs" name="log"></input>
+	</form>
 
 </body>
 
