@@ -43,8 +43,9 @@
 		if($count == 1){
 			$cookie_value = $user;
 			setcookie($cookie_name,$cookie_value, time() + (180), "/");
-			header("Location: ../php/personal.php"); 
+			header("Location: ../php/personal.php");
 		}else{
+			// header("Location: ../html/login.html");
 			echo "Username or password is incorrect!";
 		}
 	}

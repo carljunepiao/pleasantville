@@ -16,17 +16,23 @@
 
 	$Username = $_POST['username'];
 	$Password = $_POST['password'];
+	$Patron = 0;
+	$Sponsor = 0;
 
 	$Phash = sha1(sha1($Password."salt")."salt");
 
 	//Enter userID dapat Unique -piao
-	$sql="insert into users(UserID,Fname,Lname,Contact_No,Username,Password) values (139,'$Fname', '$Lname', '$Contact_No', '$Username', '$Phash')";
+	$sql="insert into users(Patron,Sponsor,Fname,Lname,Contact_No,Username,Password) values ('$Patron','$Sponsor','$Fname', '$Lname', '$Contact_No', '$Username', '$Phash')";
 
 	$query=mysqli_query($con,$sql);
 
-	if($query)
+	if($query){
+		header("Location: ../html");
 		echo 'data inserted successfully';
-	else
+	}
+	else{
+		header("Location: ../html/register.html");
 		echo 'nope';
+	}
 
 ?>
