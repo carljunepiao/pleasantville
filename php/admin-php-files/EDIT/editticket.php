@@ -24,21 +24,21 @@ else
     echo 'A problem has been encountered. ';
 
 $value = mysql_fetch_object($query);
-$userID = $query->userID;
+$userID = $value->userID;
 
-$sql = "UPDATE tickets SET UserID = '$userID' WHERE Title = '$Title' AND Date = '$Date' AND SeatNo = '$Seats' ";
+$sql1 = "UPDATE tickets SET UserID = '$userID' WHERE Title = '$Title' AND Date = '$Date' AND SeatNo = '$Seats' ";
 //UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg' WHERE CustomerName='Alfreds Futterkiste';
-$query = mysqli_query($con,$sql);
+$query1 = mysqli_query($con,$sql1);
 
-if($query)
+if($query1)
     echo 'You have bought the ticket. ';
 else
     echo 'A problem has been encountered. ';
 
-$sql = "UPDATE seats SET Taken = '1' WHERE SeatNo = '$Seats' ";
-$query = mysqli_query($con,$sql);
+$sql2 = "UPDATE seats SET Taken = '1' WHERE SeatNo = '$Seats' ";
+$query2 = mysqli_query($con,2);
 
-if($query)
+if($query2)
     echo 'Your seat has been reserved. ';
 else
     echo 'A problem has been encountered. ';
