@@ -17,7 +17,7 @@
 	$amount = $_POST['amount'];
 
 	//naay error ani - piao
-	$sql="insert into sponsorship(Title,Date,UserID,Date_of_Donation, Amount_of_Donation) values ('$title','$proddate', '$userID', '$donationdate', '$amount')";
+	$sql="INSERT INTO sponsorship(`Title`,`Date`,`UserID`,`Date_of_Donation`,`Amount_of_Donation`) VALUES ('$title','$proddate', '$userID', '$donationdate', '$amount')";
 
 	echo "</br> $sql</br>";
 
@@ -27,6 +27,8 @@
 		header("Location: ../../../html/admin.html");
 	    echo 'Successfully added in Sponsorship';
 	}
-	else
+	else{
+		header("Location: ../../../html/admin.html");
 	    echo ' A problem has been encountered. ';
+	}
 ?>

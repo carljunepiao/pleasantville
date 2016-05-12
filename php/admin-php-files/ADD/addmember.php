@@ -1,5 +1,5 @@
 <?php
-//not yet done
+
 	$host= 'localhost';
 	$user= 'root';
 	$pass='';
@@ -14,7 +14,7 @@
 	$lname = $_POST['lastname'];
 	$contact = $_POST['contact'];
 
-	//naay error ani - piao
+
 	$sql="INSERT INTO member(`FName`, `LName`, `ContactNo`) VALUES ('$fname','$lname','$contact')";
 
 
@@ -25,6 +25,8 @@
 		header("Location: ../../../html/admin.html");
 	    echo 'Add member complete!';
 	}
-	else
+	else{
+		header("Location: ../../../html/admin.html");
 	    echo ' A problem has been encountered. Check add member.';
+	}
 ?>

@@ -46,6 +46,8 @@
 		header("Location: ../../../html/admin.html");
 	    echo 'Successfully added user.';
 	}
-	else
+	else{
+		header("Location: ../../../html/admin.html");
 	    echo 'A problem has been encountered. Pls check add user.';
+	}
 ?>
