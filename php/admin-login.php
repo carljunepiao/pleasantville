@@ -33,29 +33,13 @@
 	else{
 		echo "Shit!";
 	}
-		echo "<br/> $user, $pass , $phash";
-		echo "<br/> $sql";
-		echo "<br/> $count";
-		// echo "<br/> $result";
-		echo "<br/>Entering login!<br />";
-
 
 		if($count == 1){
 			$cookie_value = $user;
 			setcookie($cookie_name,$cookie_value, time() + (180), "/");
 			header("Location: ../html/admin.html");
 		}else{
-			// echo "Username or password is incorrect!";
-			echo '<script type="text/javascript">',
-				'var title = "ERROR!";
-				var body = "Username or Password incorrect.";
-				var icon = "../images/error.png";
-				var notification = new Notification(title, {
-					body: body,
-					icon: icon
-				});
-				setTimeout(function() { notification.close() }, 3000);',
-			'</script>';
+			echo "Username or password is incorrect!";
 		}
 	}
 
