@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 11:10 PM
+-- Generation Time: May 12, 2016 at 04:06 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -17,36 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pleasantville`
+-- Database: `pleasantvilledatabase`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `administrator`
---
-
-CREATE TABLE `administrator` (
-  `Username` varchar(25) NOT NULL,
-  `Password` varchar(50) NOT NULL,
-  `LogIn` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Triggers `administrator`
---
-DELIMITER $$
-CREATE TRIGGER `addonAdministrator` AFTER INSERT ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Administrator", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonAdministrator` AFTER DELETE ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonAdministrator` AFTER UPDATE ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -61,22 +33,6 @@ CREATE TABLE `casts` (
   `Date` date NOT NULL,
   `MemberJob` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Triggers `casts`
---
-DELIMITER $$
-CREATE TRIGGER `addonCasts` AFTER INSERT ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonCasts` AFTER DELETE ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonCasts` AFTER UPDATE ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -96,27 +52,7 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`MemberID`, `FName`, `LName`, `ContactNo`) VALUES
-(12, 'Cat', 'Meow', 33333),
-(13, 'dahunk', 'shofo', 9999),
-(14, 'Gree', 'Eerg', 4321),
-(16, 'vdsc', 'ascd', 87645),
-(17, 'dddddddz', 'zzzzzzzd', 921355);
-
---
--- Triggers `member`
---
-DELIMITER $$
-CREATE TRIGGER `addonMember` AFTER INSERT ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Insert on Member", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonMember` AFTER DELETE ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Member", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonMember` AFTER UPDATE ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Users", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
+(3, 'Free', 'Dom', 12345678);
 
 -- --------------------------------------------------------
 
@@ -131,29 +67,6 @@ CREATE TABLE `play` (
   `Poster` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `play`
---
-
-INSERT INTO `play` (`Playwright`, `Title`, `Time`, `Poster`) VALUES
-('Papa', 'Pii', '12:02:00.000000', 0x313931313237375f31303230333531343439393238373534365f323935363832353737363639323334363936315f6f2e6a7067);
-
---
--- Triggers `play`
---
-DELIMITER $$
-CREATE TRIGGER `addonPlay` AFTER INSERT ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Insert on Play", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonPlay` AFTER DELETE ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Play", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonPlay` AFTER UPDATE ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Play", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
@@ -166,22 +79,6 @@ CREATE TABLE `production` (
   `Date` date NOT NULL,
   `Revenue` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Triggers `production`
---
-DELIMITER $$
-CREATE TRIGGER `addonProduction` AFTER INSERT ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Production", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonProduction` AFTER DELETE ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Production", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonProduction` AFTER UPDATE ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Production", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -198,22 +95,6 @@ CREATE TABLE `seats` (
   `Taken` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Triggers `seats`
---
-DELIMITER $$
-CREATE TRIGGER `addonSeats` AFTER INSERT ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Seats", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonSeats` AFTER DELETE ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonSeats` AFTER UPDATE ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Seats", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
@@ -228,22 +109,6 @@ CREATE TABLE `sponsorship` (
   `Date_of_Donation` date NOT NULL,
   `Amount_of_Donation` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Triggers `sponsorship`
---
-DELIMITER $$
-CREATE TRIGGER `addonSponsorship` AFTER INSERT ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Sponsorship", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonSponsorship` AFTER DELETE ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Sponsorship", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonSponsorship` AFTER UPDATE ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Sponsorship", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -261,33 +126,6 @@ CREATE TABLE `tickets` (
   `Cost` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Triggers `tickets`
---
-DELIMITER $$
-CREATE TRIGGER `addonTickets` AFTER INSERT ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Tickets", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonTickets` AFTER DELETE ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonTickets` AFTER UPDATE ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Tickets", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `translogs`
---
-
-CREATE TABLE `translogs` (
-  `Info` varchar(100) NOT NULL,
-  `Time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 -- --------------------------------------------------------
 
 --
@@ -296,13 +134,12 @@ CREATE TABLE `translogs` (
 
 CREATE TABLE `users` (
   `UserID` int(11) NOT NULL,
-  `Patron` tinyint(1) NOT NULL,
-  `Sponsor` tinyint(1) NOT NULL,
+  `Type` varchar(10) NOT NULL,
   `Fname` varchar(20) NOT NULL,
   `Lname` varchar(20) NOT NULL,
   `Contact_No` int(15) NOT NULL,
   `Username` varchar(25) NOT NULL,
-  `Password` varchar(50) NOT NULL,
+  `Password` varchar(25) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -310,34 +147,17 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserID`, `Patron`, `Sponsor`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
-(7, 1, 1, 'Dooogg', 'Aaaaaaarfff', 1234567, 'Allfff', 'Fiiiee', 1);
-
---
--- Triggers `users`
---
-DELIMITER $$
-CREATE TRIGGER `addonUsers` AFTER INSERT ON `users` FOR EACH ROW INSERT INTO translogs (Info,Time) VALUES ("Insert on Users", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `deleteonUsers` AFTER DELETE ON `users` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Users", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `updateonUsers` AFTER UPDATE ON `users` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Users", CURRENT_TIMESTAMP)
-$$
-DELIMITER ;
+INSERT INTO `users` (`UserID`, `Type`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
+(1, 'User', 'Dahunk', 'Majait', 123321, 'free', 'dom', 0),
+(2, 'User', 'Dahunkzzz', 'Majaitzzz', 12332112, 'freezz', 'domzz', 0),
+(3, 'Users', 'Hard', 'NotOver', 12345, 'Noises', 'AWake', 0),
+(4, '', '', '', 0, '', 'dbb86863682eb7ebd9bbb1788', 0),
+(5, '', 'Wee', 'Eww', 12345, '', 'dbb86863682eb7ebd9bbb1788', 0),
+(6, '', 'Paul', 'SaraÃ±a', 69696969, 'Oten', 'd2b57d69c311b98bf83c5ac11', 0);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `administrator`
---
-ALTER TABLE `administrator`
-  ADD PRIMARY KEY (`Username`,`Password`);
 
 --
 -- Indexes for table `casts`
@@ -402,12 +222,6 @@ ALTER TABLE `tickets`
   ADD KEY `Title` (`Title`,`Date`);
 
 --
--- Indexes for table `translogs`
---
-ALTER TABLE `translogs`
-  ADD PRIMARY KEY (`Time`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -422,7 +236,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `production`
 --
@@ -432,7 +246,7 @@ ALTER TABLE `production`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --

@@ -9,7 +9,7 @@
 
     <div class="container">
 
-        <center><a class="back" href="../../../html/admin.html">Back</a></center>
+        <center><a class="back" href="../../../html/admin.php">Back</a></center>
 
         <header>
             <h1>Members</h1>
