@@ -11,7 +11,7 @@
         <center><a class="back" href="../../html/admin.php">Back</a></center>
 
         <header>
-            <h1>Backup</h1>
+            <h1>Transaction Logs</h1>
             <center><img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
 
