@@ -18,8 +18,12 @@ $sql="INSERT INTO play(`Playwright`, `Title`, `Time`, `Poster`) VALUES ('$playwr
 
 $query=mysqli_query($con,$sql);
 
-if($query)
+if($query){
+	header("Location: ../../../html/admin.html");
     echo 'Adding play complete!';
-else
+}
+else{
+	header("Location: ../../../html/admin.html");
     echo 'A problem has been encountered. Pls check addplay.';
+}
 ?>

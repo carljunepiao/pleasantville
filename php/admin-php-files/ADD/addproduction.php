@@ -13,13 +13,17 @@ $title = $_POST['title'];
 $date = $_POST['proddate'];
 $revenue = $_POST['revenue'];
 
-$sql="INSERT into production(Title, Date, Revenue) values ('$title', '$date', '$revenue')";
+$sql="INSERT INTO production(`Title`, `Date`, `Revenue`) VALUES ('$title', '$date', '$revenue')";
 
-
+echo "$sql";
 $query=mysqli_query($con,$sql);
 
-if($query)
+if($query){
+	header("Location: ../../../html/admin.html");
     echo 'Adding to production successfully completed!';
-else
+}
+else{
+	header("Location: ../../../html/admin.html");
     echo 'A problem has been encountered. Pls check add production.';
+}
 ?>
