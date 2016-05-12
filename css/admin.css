@@ -194,3 +194,13 @@ select {
 	height: 30px;
 	border-radius: 10px;
 }
+
+.button {
+    display: block;
+    width: 20%;
+    height: 30px;
+    margin: 1% 40%;
+    border-radius: 10px;
+    color: white;
+    background: #000;
+}
