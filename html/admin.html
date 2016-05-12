@@ -49,7 +49,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/EDIT/edituser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit User</h5>
@@ -70,7 +69,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Users</h5>
@@ -82,7 +80,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DELETE/deleteuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete User</h5>
@@ -97,7 +94,6 @@
 				</div>
 			</div>
 		</form>
-
 
 
 		<!-- /////////////////// PRODUCTION ////////////////////// -->
@@ -121,7 +117,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/EDIT/editproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Production</h5>
@@ -138,7 +133,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DISPLAY/displayproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Productions</h5>
@@ -150,7 +144,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DELETE/deleteproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Production</h5>
@@ -164,7 +157,6 @@
 				</div>
 			</div>
 		</form>
-
 
 
 		<!-- /////////////////// MEMBER /////////////////// -->
@@ -182,7 +174,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/EDIT/editmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Member</h5>
@@ -199,7 +190,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DISPLAY/displaymember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Members</h5>
@@ -211,7 +201,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DELETE/deletemember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Member</h5>
@@ -226,7 +215,6 @@
 				</div>
 			</div>
 		</form>
-
 
 
 		<!-- /////////////////// PLAY ///////////////////// -->
@@ -246,7 +234,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/EDIT/editplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Play</h5>
@@ -266,7 +253,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DISPLAY/displayplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Plays</h5>
@@ -278,7 +264,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DELETE/deleteplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Play</h5>
@@ -297,7 +282,6 @@
 				</div>
 			</div>
 		</form>
-
 
 
 		<!-- /////////////////// SPONSORSHIP /////////////////// -->
@@ -319,7 +303,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/EDIT/editsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Sponsorship</h5>
@@ -339,7 +322,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DISPLAY/displaysponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Sponsorships</h5>
@@ -351,7 +333,6 @@
 				</div>
 			</div>
 		</form>
-
 		<form action="../php/admin-php-files/DELETE/deletesponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Sponsorship</h5>
@@ -401,6 +382,83 @@
 			</div>
 		</form>
 		
+
+		<!-- ///////////////// CASTS ////////////////// -->
+
+		<form action="../php/admin-php-files/ADD/addcast.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br1">
+				<h5>Add Cast</h5>
+				<div class="box">
+					<div class="properties">
+						<select required name="member-id">
+							<option selected disabled>memberID</option>
+						</select>
+						<select required name="production-id">
+							<option selected disabled>productionID</option>
+						</select>
+						<select required name="title">
+							<option selected disabled>Title</option>
+						</select>
+						<select required name="date">
+							<option selected disabled>Date</option>
+						</select>
+						<input required type="text" placeholder="job" name="job"></input>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
+				</div>
+			</div>
+		</form>
+		<form action="../php/admin-php-files/EDIT/editcast.php" method="post" accept-charset="utf-8"/>
+			<div class="admin">
+				<h5>Edit Cast</h5>
+				<div class="box">
+					<div class="properties">
+						<select required name="member-id">
+							<option selected disabled>memberID</option>
+						</select>
+						<select required name="production-id">
+							<option selected disabled>productionID</option>
+						</select>
+						<select required name="title">
+							<option selected disabled>Title</option>
+						</select>
+						<select required name="date">
+							<option selected disabled>Date</option>
+						</select>
+						<input required type="text" placeholder="job" name="job"></input>
+					</div>
+					<input class="enter" type="submit" value="Edit"></input>
+				</div>
+			</div>
+		</form>
+		<form action="../php/admin-php-files/DISPLAY/displaycast.php" method="post" accept-charset="utf-8"/>
+			<div class="admin">
+				<h5>Display Casts</h5>
+				<div class="box">
+					<div class="properties">
+						<!---->
+					</div>
+					<input class="enter" type="submit" value="Display"></input>
+				</div>
+			</div>
+		</form>
+		<form action="../php/admin-php-files/DELETE/deletecast.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br2">
+				<h5>Delete Cast</h5>
+				<div class="box">
+					<div class="properties">
+						<select required name="member-id">
+							<option selected disabled>memberID</option>
+						</select>
+						<select required name="production-id">
+							<option selected disabled>productionID</option>
+						</select>
+					</div>
+					<input class="enter" type="submit" value="Delete"></input>
+				</div>
+			</div>
+		</form>		
+
 
 		<!-- /////////////////////////////////// -->
 
