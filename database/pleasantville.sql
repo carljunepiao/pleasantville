@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 06:31 PM
+-- Generation Time: May 12, 2016 at 09:52 AM
 -- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,6 +31,13 @@ CREATE TABLE `administrator` (
   `Password` varchar(50) NOT NULL,
   `LogIn` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`Username`, `Password`, `LogIn`) VALUES
+('jjapp', 'goastig54321', 1);
 
 -- --------------------------------------------------------
 
