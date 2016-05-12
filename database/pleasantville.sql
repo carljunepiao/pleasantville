@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 04:06 PM
+-- Generation Time: May 12, 2016 at 04:39 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pleasantvilledatabase`
+-- Database: `pleasantville`
 --
 
 -- --------------------------------------------------------
@@ -52,7 +52,7 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`MemberID`, `FName`, `LName`, `ContactNo`) VALUES
-(3, 'Free', 'Dom', 12345678);
+(12, 'Cat', 'Meow', 33333);
 
 -- --------------------------------------------------------
 
@@ -66,6 +66,13 @@ CREATE TABLE `play` (
   `Time` time(6) NOT NULL,
   `Poster` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `play`
+--
+
+INSERT INTO `play` (`Playwright`, `Title`, `Time`, `Poster`) VALUES
+('Papa', 'Pii', '12:02:00.000000', 0x313931313237375f31303230333531343439393238373534365f323935363832353737363639323334363936315f6f2e6a7067);
 
 -- --------------------------------------------------------
 
@@ -134,7 +141,8 @@ CREATE TABLE `tickets` (
 
 CREATE TABLE `users` (
   `UserID` int(11) NOT NULL,
-  `Type` varchar(10) NOT NULL,
+  `Patron` tinyint(1) NOT NULL,
+  `Sponsor` tinyint(1) NOT NULL,
   `Fname` varchar(20) NOT NULL,
   `Lname` varchar(20) NOT NULL,
   `Contact_No` int(15) NOT NULL,
@@ -142,18 +150,6 @@ CREATE TABLE `users` (
   `Password` varchar(25) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`UserID`, `Type`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
-(1, 'User', 'Dahunk', 'Majait', 123321, 'free', 'dom', 0),
-(2, 'User', 'Dahunkzzz', 'Majaitzzz', 12332112, 'freezz', 'domzz', 0),
-(3, 'Users', 'Hard', 'NotOver', 12345, 'Noises', 'AWake', 0),
-(4, '', '', '', 0, '', 'dbb86863682eb7ebd9bbb1788', 0),
-(5, '', 'Wee', 'Eww', 12345, '', 'dbb86863682eb7ebd9bbb1788', 0),
-(6, '', 'Paul', 'SaraÃ±a', 69696969, 'Oten', 'd2b57d69c311b98bf83c5ac11', 0);
 
 --
 -- Indexes for dumped tables
@@ -236,7 +232,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `production`
 --
