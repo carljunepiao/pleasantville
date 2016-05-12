@@ -19,11 +19,11 @@ echo "$sql";
 $query=mysqli_query($con,$sql);
 
 if($query){
-	header("Location: ../../../html/admin.html");
+	header("Location: ../../../html/admin.php");
     echo 'Adding to production successfully completed!';
 }
 else{
-	header("Location: ../../../html/admin.html");
+	header("Location: ../../../html/admin.php");
     echo 'A problem has been encountered. Pls check add production.';
 }
 ?>
