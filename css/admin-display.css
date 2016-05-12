@@ -11,11 +11,12 @@ body {
 }
 
 .container {
-	margin-top: 5%;
+	margin: 5% 20%;
+	padding: 40px 100px;
 	background: rgba(0,0,0,0.6);
-	padding: 30px 50px;
 	border-radius: 10px;
 	border: 1px solid rgba(255,255,255,0.1);
+	text-align: center;
 }
 
 .logo {
@@ -31,6 +32,7 @@ h1 {
     font-size: 45px;
     color: white;
     border: none;
+    text-align: center;
 }
 
 .back {

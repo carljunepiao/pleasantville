@@ -13,7 +13,7 @@
 
         <header>
             <h1>Users</h1>
-            <img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo">
+            <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
 
         <?php
