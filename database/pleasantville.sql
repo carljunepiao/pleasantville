@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2016 at 11:10 PM
+-- Generation Time: May 13, 2016 at 01:02 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -31,6 +31,13 @@ CREATE TABLE `administrator` (
   `Password` varchar(50) NOT NULL,
   `LogIn` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`Username`, `Password`, `LogIn`) VALUES
+('jjapp', 'astig54321', 1);
 
 --
 -- Triggers `administrator`
@@ -61,6 +68,13 @@ CREATE TABLE `casts` (
   `Date` date NOT NULL,
   `MemberJob` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `casts`
+--
+
+INSERT INTO `casts` (`MemberID`, `ProdNo`, `Title`, `Date`, `MemberJob`) VALUES
+(19, 1, 'Pii', '2016-04-13', 'freee');
 
 --
 -- Triggers `casts`
@@ -100,7 +114,10 @@ INSERT INTO `member` (`MemberID`, `FName`, `LName`, `ContactNo`) VALUES
 (13, 'dahunk', 'shofo', 9999),
 (14, 'Gree', 'Eerg', 4321),
 (16, 'vdsc', 'ascd', 87645),
-(17, 'dddddddz', 'zzzzzzzd', 921355);
+(17, 'dddddddz', 'zzzzzzzd', 921355),
+(19, 'hhahaha', 'asdada', 7543),
+(20, 'zxc', 'cxzv', 6543),
+(21, 'qwaerty', 'hgfd', 9876543);
 
 --
 -- Triggers `member`
@@ -168,6 +185,13 @@ CREATE TABLE `production` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `production`
+--
+
+INSERT INTO `production` (`ProdNo`, `Title`, `Date`, `Revenue`) VALUES
+(1, 'Pii', '2016-04-13', 555);
+
+--
 -- Triggers `production`
 --
 DELIMITER $$
@@ -191,12 +215,19 @@ DELIMITER ;
 
 CREATE TABLE `seats` (
   `SeatNo` varchar(10) NOT NULL,
-  `Location` varchar(30) NOT NULL,
   `ProdNo` int(11) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Date` date NOT NULL,
   `Taken` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `seats`
+--
+
+INSERT INTO `seats` (`SeatNo`, `ProdNo`, `Title`, `Date`, `Taken`) VALUES
+('', 1, 'Pii', '2016-04-13', 1),
+('A1', 1, 'Pii', '2016-04-13', 1);
 
 --
 -- Triggers `seats`
@@ -288,6 +319,26 @@ CREATE TABLE `translogs` (
   `Time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `translogs`
+--
+
+INSERT INTO `translogs` (`Info`, `Time`) VALUES
+('Add on Administrator', '2016-05-13 05:18:46'),
+('Insert on Member', '2016-05-13 05:19:19'),
+('Insert on Member', '2016-05-13 05:33:11'),
+('Insert on Member', '2016-05-13 05:35:05'),
+('Add on Production', '2016-05-13 05:51:36'),
+('Add on Seats', '2016-05-13 05:52:14'),
+('Add on Seats', '2016-05-13 05:52:42'),
+('Add on Casts', '2016-05-13 06:25:42'),
+('Delete on Users', '2016-05-13 06:28:59'),
+('Insert on Users', '2016-05-13 06:30:09'),
+('Insert on Users', '2016-05-13 06:30:33'),
+('Delete on Users', '2016-05-13 06:39:14'),
+('Insert on Users', '2016-05-13 06:39:39'),
+('Delete on Users', '2016-05-13 06:43:19');
+
 -- --------------------------------------------------------
 
 --
@@ -311,7 +362,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`UserID`, `Patron`, `Sponsor`, `Fname`, `Lname`, `Contact_No`, `Username`, `Password`, `Log_In`) VALUES
-(7, 1, 1, 'Dooogg', 'Aaaaaaarfff', 1234567, 'Allfff', 'Fiiiee', 1);
+(8, 1, 1, 'greed', 'reegd', 87654, 'gay', 'a90a6a6814eaeafaba30193897e68bbcb8a9589e', 0);
 
 --
 -- Triggers `users`
@@ -376,8 +427,8 @@ ALTER TABLE `production`
 -- Indexes for table `seats`
 --
 ALTER TABLE `seats`
-  ADD PRIMARY KEY (`SeatNo`,`Location`,`ProdNo`),
-  ADD KEY `SeatNo` (`SeatNo`,`Location`),
+  ADD PRIMARY KEY (`SeatNo`,`ProdNo`),
+  ADD KEY `SeatNo` (`SeatNo`),
   ADD KEY `ProdNo` (`ProdNo`),
   ADD KEY `Title` (`Title`,`Date`);
 
@@ -422,17 +473,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `production`
 --
 ALTER TABLE `production`
-  MODIFY `ProdNo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ProdNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
@@ -471,9 +522,9 @@ ALTER TABLE `sponsorship`
 --
 ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`SeatNo`) REFERENCES `seats` (`SeatNo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tickets_ibfk_4` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tickets_ibfk_6` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tickets_ibfk_7` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tickets_ibfk_7` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tickets_ibfk_8` FOREIGN KEY (`ProdNo`) REFERENCES `seats` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
