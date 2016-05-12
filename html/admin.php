@@ -413,16 +413,16 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 						<select required name="title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastTitle.php'; echo $options;?>
 						</select>
 						<select required name="date">
-							<option selected disabled>Date</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastProductionDate.php'; echo $options;?>
 						</select>
 						<input required type="text" placeholder="job" name="job"></input>
 					</div>
