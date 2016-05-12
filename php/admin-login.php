@@ -47,9 +47,9 @@
 		}else{
 			// echo "Username or password is incorrect!";
 			echo '<script type="text/javascript">',
-				'var title = 'ERROR!';
-				var body = 'Username or Password incorrect.';
-				var icon = '../images/error.png';
+				'var title = "ERROR!";
+				var body = "Username or Password incorrect.";
+				var icon = "../images/error.png";
 				var notification = new Notification(title, {
 					body: body,
 					icon: icon

@@ -1,7 +1,7 @@
 function notify() {
 	var title = 'Please log in to verify existence!';
 	var body = 'Robots are prohibited.';
-	var icon = '../images/adminicon.jpg';
+	var icon = "../images/adminicon.jpg";
 	var notification = new Notification(title, {
 		body: body,
 		icon: icon
