@@ -467,10 +467,10 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
