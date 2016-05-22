@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-	margin-top: 5%;
 	background: rgba(0,0,0,0.6);
 	padding: 30px 50px;
 	border-radius: 10px;
@@ -17,13 +16,13 @@ body {
 
 .logo {
 	margin: 15px auto;
-	margin-bottom: 50px;
 	width: 150px;
 	border: 1px solid white;
 	border-radius: 50%;
 }
 
 h1 {
+	font-family: 'Tangerine', Arial, serif;
 	margin: 0;
 	padding: 0;
 	font-size: 45px;

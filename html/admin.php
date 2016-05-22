@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../images/adminicon.jpg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/admin.css">
 </head>
@@ -46,17 +47,7 @@
 		</footer>
 
 	</div>
-
-	<form action="../php/tests/backup.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Backup" name="backup"></input>
-	</form>
-	<form action="../php/tests/restore.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Restore" name="restore"></input>
-	</form>
-	<form action="../php/tests/logs.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Transaction Logs" name="log"></input>
-	</form>
-
+	
 </body>
 
 </html>

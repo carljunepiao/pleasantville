@@ -147,7 +147,8 @@ footer {
 /*/////////////////////////////////////////////////////////////////////////*/
 
 .highlight {
-	margin: 70px 0;
+	margin: 30px 0;
+	border-top: 1px solid gold;
 }
 .highlight h3{
 	margin: auto;
@@ -160,10 +161,17 @@ footer {
 }
 .poster {
 	width: 200px;
-	height: 270px;
+	height: 260px;
 	margin: 15px 20px 15px 50px;
 	float: left;
 }
 .description p {
 	padding-bottom: 20px;
+	font-family: Arial;
+}
+
+.desc {
+	font-size: 10px;
+	color: white;
+	line-height: 15px;
 }

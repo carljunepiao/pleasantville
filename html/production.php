@@ -31,6 +31,10 @@
 			</nav>
 		</header>
 
+		<div>
+			<h1>The Pleasantville Theater</h1>
+		</div>
+
 		<?php
             $servername = "localhost";
             $username = "root";
@@ -48,12 +52,19 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table><tr><th>Title</th><th>Playwright</th><th>Time</th><th>Poster</th></tr>";
-                // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Playwright"]."</td><td>".$row["Time"]."</td><td>".$row["Poster"]."</td></tr>";
+                	echo "<div class=\"highlight\">
+ 	               			<h3>
+ 	               			<div class=\"description\">
+ 	               				<img class=\"poster\" src=\"../images/poster1.jpg\">
+ 	               				<p>"
+ 	               					.$row["Title"]."</br>"
+ 	               					.$row["Playwright"]."</br>"
+ 	               					.$row["Time"].
+ 	               				"</p>
+ 	               			</div>
+ 	               		  </div>";
                 }
-                echo "</table>";
             }
             else {
                 echo "0 results";
