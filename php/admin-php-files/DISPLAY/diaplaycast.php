@@ -16,6 +16,12 @@
             <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
 
+        <form action="../php/admin-php-files/DISPLAY/SEARCH/searchcast.php" method="post" accept-charset="utf-8"/>
+            <h5>Search Casts</h5>
+            <input type="text" placeholder="title" name="title"></input>
+            <input class="enter" type="submit" value="Search"></input>
+        </form>
+
         <?php
             $servername = "localhost";
             $username = "root";
