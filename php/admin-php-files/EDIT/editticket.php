@@ -27,7 +27,6 @@ $row = $query->fetch_assoc();
 $userID = $row["userID"];
 
 $sql1 = "UPDATE tickets SET UserID = '$userID' WHERE Title = '$Title' AND Date = '$Date' AND SeatNo = '$Seats' ";
-//UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg' WHERE CustomerName='Alfreds Futterkiste';
 $query1 = mysqli_query($con,$sql1);
 
 if($query1)

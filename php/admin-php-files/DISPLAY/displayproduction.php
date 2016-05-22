@@ -17,7 +17,7 @@
         </header>
 
         <form action="SEARCH/searchproduction.php" method="post" accept-charset="utf-8"/>
-            <h5>Search Casts</h5>
+            <h5>Search Production</h5>
             <input type="text" placeholder="Title" name="title"></input>
             <input class="enter" type="submit" value="Search"></input>
         </form>
