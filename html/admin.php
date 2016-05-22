@@ -24,14 +24,14 @@
 
 		<nav class="secondary-navigation">
 			<ul>
-				<li><a href="admin/user.html">User</a></li>
-				<li><a href="admin/production.html">Production</a></li>
-				<li><a href="admin/casts.html">Casts</a></li>
-				<li><a href="admin/member.html">Member</a></li>
-				<li><a href="admin/play.html">Play</a></li>
-				<li><a href="admin/seats.html">Seats</a></li>
-				<li><a href="admin/sponsorship.html">Sponsorship</a></li>
-				<li><a href="admin/tickets.html">Tickets</a></li>
+				<li><a href="admin/user.php">User</a></li>
+				<li><a href="admin/production.php">Production</a></li>
+				<li><a href="admin/casts.php">Casts</a></li>
+				<li><a href="admin/member.php">Member</a></li>
+				<li><a href="admin/play.php">Play</a></li>
+				<li><a href="admin/seats.php">Seats</a></li>
+				<li><a href="admin/sponsorship.php">Sponsorship</a></li>
+				<li><a href="admin/tickets.php">Tickets</a></li>
 			</ul>
 		</nav>
 

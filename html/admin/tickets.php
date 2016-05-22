@@ -12,7 +12,7 @@
 		<ul>
 			<li><a href="../index.html">Home</a></li>
 			<li><a href="../production.html">Production</a></li>
-			<li><a href="../admin.html">Admin</a></li>
+			<li><a href="../admin.php">Admin</a></li>
 		</ul>
 	</nav>
 	<header>
@@ -23,14 +23,14 @@
 	<div class="container">
 		<nav class="secondary-navigation">
 			<ul>
-				<li><a href="user.html">User</a></li>
-				<li><a href="production.html">Production</a></li>
-				<li><a href="casts.html">Casts</a></li>
-				<li><a href="member.html">Member</a></li>
-				<li><a href="play.html">Play</a></li>
-				<li><a href="seats.html">Seats</a></li>
-				<li><a href="sponsorship.html">Sponsorship</a></li>
-				<li><a href="tickets.html">Tickets</a></li>
+				<li><a href="user.php">User</a></li>
+				<li><a href="production.php">Production</a></li>
+				<li><a href="casts.php">Casts</a></li>
+				<li><a href="member.php">Member</a></li>
+				<li><a href="play.php">Play</a></li>
+				<li><a href="seats.php">Seats</a></li>
+				<li><a href="sponsorship.php">Sponsorship</a></li>
+				<li><a href="tickets.php">Tickets</a></li>
 			</ul>
 		</nav>
 
