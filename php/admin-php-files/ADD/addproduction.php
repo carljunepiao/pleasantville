@@ -9,7 +9,7 @@ $con = mysqli_connect($host,$user,$pass,$db);
 if($con)
     echo 'connected successfully to PlasantVille database';
 
-$title = $_POST['title'];
+$title = $_POST['select-title'];
 $date = $_POST['proddate'];
 $revenue = $_POST['revenue'];
 

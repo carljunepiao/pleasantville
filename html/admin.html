@@ -99,11 +99,9 @@
 						<!-- <input required type="text" placeholder="title" name="title"></input> -->
 						<!-- <input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-						<select required name="select-date">
-							<option selected disabled>Date</option>
-						</select>
+						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -364,16 +362,38 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
-							<option selected disabled>userID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+						</select>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						</select>
 						</select>
 						<select required name="select-date">
-							<option selected disabled>Date</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
+						</select>
 						</select>
 						<select required name="select-seat">
-							<option selected disabled>Seat</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
+						</select>
+						</select>
+					</div>
+					<input class="enter" type="submit" value="Submit"></input>
+				</div>
+			</div>
+		</form>
+                
+                <form action="../php/admin-php-files/ADD/addseat.php" method="post" accept-charset="utf-8"/>
+			<div class="admin br1 br2">
+				<h5>Add Seat</h5>
+				<div class="box">
+					<div class="properties">
+                                            <input type="text" placeholder="Seat No" name="seat-no"></input>
+						<select required name="select-production-no">
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
+						</select>
+						<select required name="select-title">
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -413,16 +433,16 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 						<select required name="title">
-							<option selected disabled>Title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastTitle.php'; echo $options;?>
 						</select>
 						<select required name="date">
-							<option selected disabled>Date</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastProductionDate.php'; echo $options;?>
 						</select>
 						<input required type="text" placeholder="job" name="job"></input>
 					</div>
@@ -447,10 +467,10 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>memberID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>productionID</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
