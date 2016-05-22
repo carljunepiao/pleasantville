@@ -16,7 +16,7 @@
 		</ul>
 	</nav>
 	<header>
-		<h1>User</h1>
+		<h1>Member</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
 
@@ -34,48 +34,40 @@
 			</ul>
 		</nav>
 
-		<!-- /////////////////// USER /////////////////////// -->
-		<form action="../../php/admin-php-files/ADD/adduser.php" method="post" accept-charset="utf-8"/>
+		<!-- /////////////////// MEMBER /////////////////////// -->
+		<form action="../../php/admin-php-files/ADD/addmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
-				<h5>Add User</h5>
+				<h5>Add Member</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="fname" name="firstname"></input>
-						<input required type="text" placeholder="lname" name="lastname"></input>
-						<input type="number" placeholder="contact" name="contact"></input>
-						<input required type="text" placeholder="username" name="username"></input>
-						<input required type="password" placeholder="password" name="password"></input>
-						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
-						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
+						<input required class="textbox" type="text" placeholder="fname" name="firstname"></input>
+						<input required class="textbox" type="text" placeholder="lname" name="lastname"></input>
+						<input class="number" type="text" placeholder="contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/EDIT/edituser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/EDIT/editmember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Edit User</h5>
+				<h5>Edit Member</h5>
 				<div class="box">
 					<div class="properties">
-                        <select required name="select-user-id">
-                        	<option selected disabled>select-user-id</option>
-                            <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+						<select required name="select-member-id">
+							<option selected disabled>select-member-id</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="fname" name="firstname"></input>
-						<input type="text" placeholder="lname" name="lastname"></input>
-						<input type="number" placeholder="contact" name="contact"></input>
-						<input type="text" placeholder="username" name="username"></input>
-						<input type="password" placeholder="password" name="password"></input>
-						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
-						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
+						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
+						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
+						<input class="number" type="text" placeholder="contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DISPLAY/displaymember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Users</h5>
+				<h5>Display Members</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -84,14 +76,14 @@
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DELETE/deleteuser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DELETE/deletemember.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
-				<h5>Delete User</h5>
+				<h5>Delete Member</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user-id">
-							<option selected disabled>select-user-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+						<select required name="select-member-id">
+							<option selected disabled>select-member-id</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
