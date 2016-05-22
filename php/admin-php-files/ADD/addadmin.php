@@ -17,9 +17,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$phash = sha1(sha1($password."salt")."salt");
-
-	$sql="INSERT INTO administrator(Fname,Lname,Username,Password) VALUES ('$fname', '$lname','$username','$phash')";
+	$sql="INSERT INTO administrator(Fname,Lname,Username,Password) VALUES ('$fname', '$lname','$username','$password')";
 
 	echo "<br/>$sql<br/>";
 
