@@ -178,12 +178,14 @@ nav {
 }
 
 .box {
-	display: none;
-}
-
-.admin:hover .box {
 	display: block;
 }
+/*.box {
+	display: none;
+}*/
+/*.admin:hover .box {*/
+	/*display: block;*/
+/*}*/
 
 select {
 	display: block;
@@ -203,4 +205,8 @@ select {
     border-radius: 10px;
     color: white;
     background: #000;
+}
+
+.hidden {
+	display: none;
 }

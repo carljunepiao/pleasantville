@@ -48,7 +48,8 @@
 				<div class="box">
 					<div class="properties">
                         <select required name="select-user-id">
-                                <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+                        	<option selected disabled>select-user-id</option>
+                            <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
@@ -78,8 +79,8 @@
 				<h5>Delete User</h5>
 				<div class="box">
 					<div class="properties">
-						<!-- <input required type="number" placeholder="User_ID" name="userid"></input> -->
 						<select required name="select-user-id">
+							<option selected disabled>select-user-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 					</div>
@@ -96,9 +97,8 @@
 				<h5>Add Production</h5>
 				<div class="box">
 					<div class="properties">
-						<!-- <input required type="text" placeholder="title" name="title"></input> -->
-						<!-- <input required type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -114,10 +114,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-production-id">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
-						<!-- <input type="text" placeholder="title" name="title"></input> -->
 						<select required name="select-production-title">
+							<option selected disabled>select-playwright-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
@@ -144,6 +145,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-production-id">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
@@ -174,6 +176,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-member-id">
+							<option selected disabled>select-member-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
@@ -200,8 +203,8 @@
 				<h5>Delete Member</h5>
 				<div class="box">
 					<div class="properties">
-						<!-- <input required class="number" type="text" placeholder="member ID" name="memberid"></input> -->
 						<select required name="select-member-id">
+							<option selected disabled>select-member-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 					</div>
@@ -234,9 +237,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright-id">
+							<option selected disabled>select-playwright-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
@@ -263,12 +268,12 @@
 				<h5>Delete Play</h5>
 				<div class="box">
 					<div class="properties">
-						<!-- <input required type="text" placeholder="play wright" name="playwright"></input> -->
-						<!-- <input required type="text" placeholder="play title" name=playtitle></input> -->
 						<select required name="select-playwright">
+							<option selected disabled>select-playwright</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
@@ -286,12 +291,13 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
+							<option selected disabled>select-user-id</option>
                             <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
                             <?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-
 						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
@@ -306,9 +312,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
+							<option selected disabled>select-user-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownSponsorshipTitle.php'; echo $options;?>
 						</select>
 						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
@@ -335,16 +343,16 @@
 				<h5>Delete Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<!-- <input required type="text" placeholder="title" name="title"></input> -->
-						<!-- <input required type="text" placeholder="user ID" name="userid"></input> -->
-						<!-- <input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/> -->
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="select-user-id">
+							<option selected disabled>select-user-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<select required name="select-date">
+							<option selected disabled>select-date</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
 					</div>
@@ -362,18 +370,22 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
+							<option selected disabled>select-user-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-date">
+							<option selected disabled>select-date</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-seat">
+							<option selected disabled>select-seat</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
 						</select>
 						</select>
@@ -382,18 +394,19 @@
 				</div>
 			</div>
 		</form>
+
+
+		<!-- ///////////////// SEATS ////////////////// -->
                 
-                <form action="../php/admin-php-files/ADD/addseat.php" method="post" accept-charset="utf-8"/>
+        <form action="../php/admin-php-files/ADD/addseat.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1 br2">
 				<h5>Add Seat</h5>
 				<div class="box">
 					<div class="properties">
-                                            <input type="text" placeholder="Seat No" name="seat-no"></input>
+                        <input type="text" placeholder="Seat No" name="seat-no"></input>
 						<select required name="select-production-no">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
-						</select>
-						<select required name="select-title">
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -410,15 +423,19 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
+							<option selected disabled>select-member-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="date">
+							<option selected disabled>select-date</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
 						</select>
 						<input required type="text" placeholder="job" name="job"></input>
@@ -433,15 +450,19 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
+							<option selected disabled>select-member-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 						<select required name="title">
+							<option selected disabled>select-title</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastTitle.php'; echo $options;?>
 						</select>
 						<select required name="date">
+							<option selected disabled>select-date</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastProductionDate.php'; echo $options;?>
 						</select>
 						<input required type="text" placeholder="job" name="job"></input>
@@ -467,9 +488,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
+							<option selected disabled>select-member-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
+							<option selected disabled>select-production-id</option>
 							<?php include '../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
 						</select>
 					</div>
