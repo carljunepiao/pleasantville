@@ -32,6 +32,7 @@
 				<li><a href="admin/seats.php">Seats</a></li>
 				<li><a href="admin/sponsorship.php">Sponsorship</a></li>
 				<li><a href="admin/tickets.php">Tickets</a></li>
+				<li><a href="admin/admin.php">Admin</a></li>
 			</ul>
 		</nav>
 
