@@ -177,15 +177,15 @@ nav {
 	height: 20px;
 }
 
-.box {
+/*.box {
 	display: block;
-}
+}*/
 /*.box {
 	display: none;
+}
+.admin:hover .box {
+	display: block;
 }*/
-/*.admin:hover .box {*/
-	/*display: block;*/
-/*}*/
 
 select {
 	display: block;
