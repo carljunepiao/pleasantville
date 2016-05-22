@@ -1,4 +1,4 @@
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +29,10 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT `UserID`, `Fname`, `Lname`, `Contact_No`, `Username`, `Patron`, `Sponsor` FROM `users` WHERE 1";
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+
+            $sql = "SELECT `UserID`, `Fname`, `Lname`, `Contact_No`, `Username`, `Patron`, `Sponsor` FROM `users` WHERE Fname LIKE '%$fname%' or Lname LIKE '%$lname%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

@@ -1,4 +1,4 @@
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +29,9 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT UserID, ProdNo, Title, Date, Date_of_Donation, Amount_of_Donation FROM sponsorship";
+            $title = $_POST['title'];
+
+            $sql = "SELECT UserID, ProdNo, Title, Date, Date_of_Donation, Amount_of_Donation FROM sponsorship WHERE Title LIKE '%$title%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

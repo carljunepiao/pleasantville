@@ -1,4 +1,4 @@
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +21,6 @@
             $username = "root";
             $password = "";
             $dbname = "Pleasantville";
-
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
@@ -29,7 +28,9 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT Title, Date, Revenue FROM production";
+            $title = $_POST['title'];
+
+            $sql = "SELECT Title, Date, Revenue FROM production WHERE Title LIKE '%$title%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -45,7 +46,7 @@
             }
             $conn->close();
         ?>
-    
+
     </div>
 
 </body>

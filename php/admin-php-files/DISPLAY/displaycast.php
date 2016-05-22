@@ -18,7 +18,8 @@
 
         <form action="SEARCH/searchcast.php" method="post" accept-charset="utf-8"/>
             <h5>Search Casts</h5>
-            <input type="text" placeholder="title" name="title"></input>
+            <input type="text" placeholder="Title" name="title"></input>
+            <input type="text" placeholder="Member Job" name="memberjob"></input>
             <input class="enter" type="submit" value="Search"></input>
         </form>
 
