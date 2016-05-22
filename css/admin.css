@@ -178,12 +178,14 @@ nav {
 }
 
 .box {
-	display: none;
-}
-
-.admin:hover .box {
 	display: block;
 }
+/*.box {
+	display: none;
+}*/
+/*.admin:hover .box {*/
+	/*display: block;*/
+/*}*/
 
 select {
 	display: block;
