@@ -227,3 +227,9 @@ select {
 .hidden {
 	display: none;
 }
+
+.seats {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
