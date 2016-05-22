@@ -16,7 +16,7 @@
 		</ul>
 	</nav>
 	<header>
-		<h1>Play</h1>
+		<h1>Admin</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
 
@@ -35,66 +35,53 @@
 			</ul>
 		</nav>
 
-		<!-- /////////////////// PLAY /////////////////////// -->
-		<form action="../../php/admin-php-files/ADD/addplay.php" method="post" accept-charset="utf-8"/>
-			<div class="admin br1">
-				<h5>Add Play</h5>
-				<div class="box">
-					<div class="properties">
-						<input required type="text" placeholder="playwright" name="playwright"></input>
-						<input required type="text" placeholder="title" name="title"></input>
-						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
-						<input required="" type="text" class="form-control"
-						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
+		<!-- /////////////////// ADMIN /////////////////////// -->
+		<form action="../../php/admin-php-files/ADD/addadmin.php" method="post" accept-charset="utf-8"/>
+				<div class="admin br1">
+					<h5>Add Admin</h5>
+					<div class="box">
+						<div class="properties">
+							<input required type="text" placeholder="fname" name="firstname"></input>
+							<input required type="text" placeholder="lname" name="lastname"></input>
+							<input required type="text" placeholder="username" name="username"></input>
+							<input required type="password" placeholder="password" name="password"></input>
+						</div>
+						<input class="enter" type="submit" value="Submit"></input>
 					</div>
-					<input class="enter" type="submit" value="Submit"></input>
 				</div>
-			</div>
 		</form>
-		<form action="../../php/admin-php-files/EDIT/editplay.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/EDIT/editadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Edit Play</h5>
+				<h5>Edit Admin</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-playwright-id">
-							<option selected disabled>select-playwright-id</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
+                        <select required name="select-admin-username">
+                        	<option selected disabled>select-admin-username</option>
+                            <?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
-						<select required name="select-title">
-							<option selected disabled>select-title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
-						</select>
-						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
-						<input type="text" class="form-control"
-						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
+						<input type="text" placeholder="fname" name="firstname"></input>
+						<input type="text" placeholder="lname" name="lastname"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DISPLAY/displayplay.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DISPLAY/displayadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Plays</h5>
+				<h5>Display Admin</h5>
 				<div class="box">
-					<div class="properties">
-						<!---->
-					</div>
 					<input class="enter" type="submit" value="Display"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DELETE/deleteplay.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DELETE/deleteadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
-				<h5>Delete Play</h5>
+				<h5>Delete Admin</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-playwright">
-							<option selected disabled>select-playwright</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
-						</select>
-						<select required name="select-title">
-							<option selected disabled>select-title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						<select required name="select-admin-username">
+							<option selected disabled>select-admin-username</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
