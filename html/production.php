@@ -6,8 +6,8 @@
 	<title>Productions</title>
 	<link rel="icon" href="../images/logo.jpg">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/index.css">
 
 	<script src="../javascripts/production-notif.js"></script>
 </head>
@@ -56,7 +56,6 @@
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
- 	               				<img class=\"poster\" src=\"../images/poster1.jpg\">
  	               				<p>"
  	               					.$row["Title"]."</br>"
  	               					.$row["Playwright"]."</br>"

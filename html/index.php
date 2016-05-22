@@ -6,7 +6,6 @@
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../images/logo.jpg">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/main.css">
 
 	<script src="../javascripts/main-notif.js"></script>
@@ -56,12 +55,13 @@
             $sql = "SELECT Playwright, Title, Time, Poster FROM play";
             $result = $conn->query($sql);
 
+
             if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
+                while($row = $result->fetch_array()) { 	
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
- 	               				<img class=\"poster\" src=\"../images/poster1.jpg\">
+ 	               				<img class=\"poster\" src='data:poster/jpeg;base64,". base64_encode( $row['Poster'] )."'/>
  	               				<p>"
  	               					.$row["Title"]."</br>"
  	               					.$row["Playwright"]."</br>"
