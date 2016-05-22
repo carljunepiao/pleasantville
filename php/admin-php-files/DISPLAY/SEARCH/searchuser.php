@@ -3,17 +3,17 @@
 <html>
 <head>
     <title>User Display</title>
-    <link rel="stylesheet" type="text/css" href="../../../css/admin-display.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/admin-display.css">
 </head>
 <body>
 
     <div class="container">
 
-        <center><a class="back" href="../../../html/admin.php">Back</a></center>
+        <center><a class="back" href="../displayuser.php">Back</a></center>
 
         <header>
             <h1>Users</h1>
-            <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
+            <center><img class="logo" src="../../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
 
         <?php

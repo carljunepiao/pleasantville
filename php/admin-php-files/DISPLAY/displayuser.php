@@ -16,8 +16,8 @@
             <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
 
-        <form action="SEARCH/searchsponsorship.php" method="post" accept-charset="utf-8"/>
-            <h5>Search Casts</h5>
+        <form action="SEARCH/searchuser.php" method="post" accept-charset="utf-8"/>
+            <h5>Search User</h5>
             <input type="text" placeholder="First Name" name="fname"></input>
             <input type="text" placeholder="Last Name" name="lname"></input>
             <input class="enter" type="submit" value="Search"></input>
