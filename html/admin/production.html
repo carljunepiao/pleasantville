@@ -16,7 +16,7 @@
 		</ul>
 	</nav>
 	<header>
-		<h1>User</h1>
+		<h1>Production</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
 
@@ -34,48 +34,46 @@
 			</ul>
 		</nav>
 
-		<!-- /////////////////// USER /////////////////////// -->
-		<form action="../../php/admin-php-files/ADD/adduser.php" method="post" accept-charset="utf-8"/>
+		<!-- /////////////////// PRODUCTIONS /////////////////////// -->
+		<form action="../../php/admin-php-files/ADD/addproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
-				<h5>Add User</h5>
+				<h5>Add Production</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="fname" name="firstname"></input>
-						<input required type="text" placeholder="lname" name="lastname"></input>
-						<input type="number" placeholder="contact" name="contact"></input>
-						<input required type="text" placeholder="username" name="username"></input>
-						<input required type="password" placeholder="password" name="password"></input>
-						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
-						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
+						<select required name="select-title">
+							<option selected disabled>select-title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						</select>
+						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/EDIT/edituser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/EDIT/editproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Edit User</h5>
+				<h5>Edit Production</h5>
 				<div class="box">
 					<div class="properties">
-                        <select required name="select-user-id">
-                        	<option selected disabled>select-user-id</option>
-                            <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+						<select required name="select-production-id">
+							<option selected disabled>select-production-id</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="fname" name="firstname"></input>
-						<input type="text" placeholder="lname" name="lastname"></input>
-						<input type="number" placeholder="contact" name="contact"></input>
-						<input type="text" placeholder="username" name="username"></input>
-						<input type="password" placeholder="password" name="password"></input>
-						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
-						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
+						<select required name="select-production-title">
+							<option selected disabled>select-playwright-title</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						</select>
+						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DISPLAY/displayproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
-				<h5>Display Users</h5>
+				<h5>Display Productions</h5>
 				<div class="box">
 					<div class="properties">
 						<!---->
@@ -84,14 +82,14 @@
 				</div>
 			</div>
 		</form>
-		<form action="../../php/admin-php-files/DELETE/deleteuser.php" method="post" accept-charset="utf-8"/>
+		<form action="../../php/admin-php-files/DELETE/deleteproduction.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
-				<h5>Delete User</h5>
+				<h5>Delete Production</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-user-id">
-							<option selected disabled>select-user-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+						<select required name="select-production-id">
+							<option selected disabled>select-production-id</option>
+							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
@@ -105,7 +103,7 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
+
 	</div>
 
 	<form action="../../php/tests/backup.php" method="post" accept-charset="utf-8"/>
