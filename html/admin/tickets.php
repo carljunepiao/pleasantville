@@ -42,22 +42,22 @@
 					<div class="properties">
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-title">
 							<option selected disabled>select-title</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-date">
 							<option selected disabled>select-date</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-seat">
 							<option selected disabled>select-seat</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
 						</select>
 						</select>
 					</div>

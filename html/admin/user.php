@@ -59,7 +59,7 @@
 					<div class="properties">
                         <select required name="select-user-id">
                         	<option selected disabled>select-user-id</option>
-                            <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+                            <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<input type="text" placeholder="fname" name="firstname"></input>
 						<input type="text" placeholder="lname" name="lastname"></input>
@@ -91,7 +91,7 @@
 					<div class="properties">
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>

@@ -42,7 +42,7 @@
 					<div class="properties">
 						<select required name="select-title">
 							<option selected disabled>select-title</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
@@ -58,11 +58,11 @@
 					<div class="properties">
 						<select required name="select-production-id">
 							<option selected disabled>select-production-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="select-production-title">
 							<option selected disabled>select-playwright-title</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
@@ -89,7 +89,7 @@
 					<div class="properties">
 						<select required name="select-production-id">
 							<option selected disabled>select-production-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
