@@ -57,11 +57,11 @@
 					<div class="properties">
 						<select required name="select-playwright-id">
 							<option selected disabled>select-playwright-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
 							<option selected disabled>select-title</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
@@ -89,11 +89,11 @@
 					<div class="properties">
 						<select required name="select-playwright">
 							<option selected disabled>select-playwright</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
 							<option selected disabled>select-title</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>

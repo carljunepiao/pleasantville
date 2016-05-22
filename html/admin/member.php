@@ -55,7 +55,7 @@
 					<div class="properties">
 						<select required name="select-member-id">
 							<option selected disabled>select-member-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
 						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
@@ -83,7 +83,7 @@
 					<div class="properties">
 						<select required name="select-member-id">
 							<option selected disabled>select-member-id</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
