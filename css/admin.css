@@ -80,8 +80,8 @@ footer p {
 	margin: 0;
 }
 	.secondary-navigation li {
-		margin-right: 1.5%;
-		width: 11%;
+		margin: 10px 1.5% auto auto;
+		width: 15%;
 	}
 	.secondary-navigation a {
 		text-transform: uppercase;

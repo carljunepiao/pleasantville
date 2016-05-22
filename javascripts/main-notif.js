@@ -7,6 +7,6 @@ function notify() {
 		icon: icon
 	});
 
-	setTimeout(function() { notification.close() }, 3000);
+	setTimeout(function() { notification.close() }, 5000);
 }
 notify();

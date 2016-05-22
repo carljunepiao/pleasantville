@@ -37,7 +37,7 @@
 			setcookie($cookie_name,$cookie_value, time() + (180), "/");
 			header("Location: ../html/admin.php");
 		}else{
-			echo "Username or password is incorrect!";
+			header("Location: ../html/admin-login.php");
 		}
 	}
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+../<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -32,6 +32,9 @@
 				<li><a href="sponsorship.php">Sponsorship</a></li>
 				<li><a href="tickets.php">Tickets</a></li>
 				<li><a href="admin.php">Admin</a></li>
+				<li><a href="../../php/tests/backup.php">Backup</a></li>
+				<li><a href="../../php/tests/restore.php">Restore</a></li>
+				<li><a href="../../php/tests/logs.php">Transactions</a></li><!DOCTYPE html>
 			</ul>
 		</nav>
 

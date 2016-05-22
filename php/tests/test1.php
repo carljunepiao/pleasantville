@@ -17,7 +17,7 @@
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-		header("Location: ../../../html/admin.html");
+		header("Location: ../../../html/admin.php");
 	    echo 'BackUp complete!';
 	}
 	else

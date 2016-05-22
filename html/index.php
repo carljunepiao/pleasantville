@@ -17,16 +17,16 @@
 		<header>
 			<nav class="secondary-navigation">
 				<ul>
-					<li><a href="../html/register.html">Register</a></li>
-					<li><a href="../html/login.html">Login</a></li>
+					<li><a href="../html/register.php">Register</a></li>
+					<li><a href="../html/login.php">Login</a></li>
 				</ul>
 			</nav>
 			<img class="logo" src="../images/logo.jpg" alt="PleasantvilleLogo">
 			<nav class="main-navigation">
 				<ul>
-					<li><a href="../html/index.html">Home</a></li>
-					<li><a href="../html/production.html">Production</a></li>
-					<li><a href="../html/admin-login.html">Administration</a></li>
+					<li><a href="../html/index.php">Home</a></li>
+					<li><a href="../html/production.php">Production</a></li>
+					<li><a href="../html/admin-login.php">Administration</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -40,7 +40,36 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<div class="highlight">
+		<?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "Pleasantville";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT Playwright, Title, Time, Poster FROM play";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                echo "<table><tr><th>Title</th><th>Playwright</th><th>Time</th><th>Poster</th></tr>";
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Playwright"]."</td><td>".$row["Time"]."</td><td>".$row["Poster"]."</td></tr>";
+                }
+                echo "</table>";
+            }
+            else {
+                echo "0 results";
+            }
+            $conn->close();
+        ?>
+		<!-- <div class="highlight">
 			<h3>Les Mesirables</h3>
 			<div class="description">
 				<img class="poster" src="../images/poster1.jpg">
@@ -48,25 +77,7 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-		</div>
-		<div class="highlight">
-			<h3>Beuty and the Beast</h3>
-			<div class="description">
-				<img class="poster" src="../images/poster2.jpg">
-				<p>play description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
-			</div>
-		</div>
-		<div class="highlight">
-			<h3>Romeo and Juliet</h3>
-			<div class="description">
-				<img class="poster" src="../images/poster3.jpg">
-				<p>play description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lbore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
-			</div>
-		</div>
+		</div> -->
 		<footer>
 			<h4>Contact us</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>

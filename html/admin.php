@@ -10,9 +10,9 @@
 <body>
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="production.html">Production</a></li>
-			<li><a href="admin-login.html">Log-out</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="production.php">Production</a></li>
+			<li><a href="admin-login.php">Log-out</a></li>
 		</ul>
 	</nav>
 	<header>
@@ -33,6 +33,9 @@
 				<li><a href="admin/sponsorship.php">Sponsorship</a></li>
 				<li><a href="admin/tickets.php">Tickets</a></li>
 				<li><a href="admin/admin.php">Admin</a></li>
+				<li><a href="../php/tests/backup.php">Backup</a></li>
+				<li><a href="../php/tests/restore.php">Restore</a></li>
+				<li><a href="../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
 
