@@ -11,17 +11,45 @@
 
         $seat = $_POST['seat-no'];
 	$prod = $_POST['select-production-no'];
-	$title = $_POST['select-title'];
 
-	$sql="INSERT INTO seats(SeatNo, ProdNo, Title) VALUES ('$seat', '$prod', '$title')";
+        echo $seat;
+        echo $prod;
+        $sql = "SELECT Title from production WHERE ProdNo = '$prod'";
+        
+        $query = $con->query($sql);
+        
+        if($query)
+            echo 'The title has been taken. ';
+        else
+            echo 'A problem has been encountered on Title. ';
+        
+        $row = $query->fetch_assoc();
+        
+        $Title = $row["Title"];
+        
+        $sql2 = "SELECT Date from production WHERE ProdNo = '$prod'";
+        
+        $query2 = $con->query($sql2);
 
+        if($query2)
+            echo 'The date has been taken. ';
+        else
+            echo 'A problem has been encountered on Date. ';
+        
+        $row2 = $query2->fetch_assoc();
+        
+        $Date = $row2["Date"];
+        
+        echo $Date;
 
-	$query=mysqli_query($con,$sql);
-
+        $sql="INSERT INTO seats(SeatNo, ProdNo, Title, Date, Taken) VALUES ('$seat', '$prod', '$Title', '$Date', 0)";
+        
+        $query=mysqli_query($con,$sql);
+        
 	if($query){
-	    echo 'Successfully added user.';
+	    echo 'Successfully added seat.';
 	}
 	else{
-	    echo 'A problem has been encountered. Pls check add user.';
+	    echo 'A problem has been encountered. Pls check add seat.';
 	}
 ?>

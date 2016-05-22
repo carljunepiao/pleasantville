@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Member Display</title>
+    <title>Cast Display</title>
     <link rel="stylesheet" type="text/css" href="../../../css/admin-display.css">
 </head>
 <body>
@@ -12,9 +12,16 @@
         <center><a class="back" href="../../../html/admin.php">Back</a></center>
 
         <header>
-            <h1>Members</h1>
+            <h1>Casts</h1>
             <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
+
+        <form action="SEARCH/searchcast.php" method="post" accept-charset="utf-8"/>
+            <h5>Search Casts</h5>
+            <input type="text" placeholder="Title" name="title"></input>
+            <input type="text" placeholder="Member Job" name="memberjob"></input>
+            <input class="enter" type="submit" value="Search"></input>
+        </form>
 
         <?php
             $servername = "localhost";
@@ -29,14 +36,14 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT MemberID, FName, LName, ContactNo FROM member";
+            $sql = "SELECT MemberID, ProdNo, Title, Date, MemberJob FROM casts";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table><tr class='header'><th>MemberID</th><th>First Name</th><th>Last Name</th><th>Contact No.</th></tr>";
+                echo "<table><tr><th>MemberID</th><th>Production Number</th><th>Title</th><th>Date</th><th>Job</th></tr>";
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["MemberID"]."</td><td>".$row["FName"]."</td><td>".$row["LName"]."</td><td>".$row["ContactNo"]."</td></tr>";
+                    echo "<tr><td>".$row["MemberID"]."</td><td>".$row["ProdNo"]."</td><td>".$row["Title"]."</td><td>".$row["Date"]."</td><td>".$row["MemberJob"]."</td></tr>";
                 }
                 echo "</table>";
             }

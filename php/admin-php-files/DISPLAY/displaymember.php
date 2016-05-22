@@ -1,8 +1,8 @@
-    
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Play Display</title>
+    <title>Member Display</title>
     <link rel="stylesheet" type="text/css" href="../../../css/admin-display.css">
 </head>
 <body>
@@ -12,9 +12,16 @@
         <center><a class="back" href="../../../html/admin.php">Back</a></center>
 
         <header>
-            <h1>Plays</h1>
+            <h1>Members</h1>
             <center><img class="logo" src="../../../images/adminicon.jpg" alt="PleasantvilleLogo"></center>
         </header>
+
+        <form action="SEARCH/searchmember.php" method="post" accept-charset="utf-8"/>
+            <h5>Search Members</h5>
+            <input type="text" placeholder="First Name" name="fname"></input>
+            <input type="text" placeholder="Last Name" name="lname"></input>
+            <input class="enter" type="submit" value="Search"></input>
+        </form>
 
         <?php
             $servername = "localhost";
@@ -29,14 +36,14 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT Playwright, Title, Time, Poster FROM play";
+            $sql = "SELECT MemberID, FName, LName, ContactNo FROM member";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table><tr><th>Title</th><th>Playwright</th><th>Time</th><th>Poster</th></tr>";
+                echo "<table><tr class='header'><th>MemberID</th><th>First Name</th><th>Last Name</th><th>Contact No.</th></tr>";
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Playwright"]."</td><td>".$row["Time"]."</td><td>".$row["Poster"]."</td></tr>";
+                    echo "<tr><td>".$row["MemberID"]."</td><td>".$row["FName"]."</td><td>".$row["LName"]."</td><td>".$row["ContactNo"]."</td></tr>";
                 }
                 echo "</table>";
             }
