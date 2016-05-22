@@ -35,21 +35,25 @@ h1 {
     text-align: center;
 }
 
-.back {
-	text-decoration: none;
-	display: block;
-	width: 30%;
-	height: 20px;
-	background-color: rgba(0,0,0,0.4);
-	border: 1px solid white;
-
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: ease;
+h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: white;
+    border: none;
+    text-align: center;
+    margin: 10px auto;
 }
-	.back:hover {
-		border-color: rgba(0,0,0,1);
-	}
+
+.back {
+    text-decoration: none;
+    display: block;
+    width: 30%;
+    height: 20px;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid white;
+    color: white;
+}
 
 table {
 	background: rgba(0,0,0,0.6);
