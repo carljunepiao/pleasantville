@@ -29,7 +29,10 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT MemberID, FName, LName, ContactNo FROM member";
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+
+            $sql = "SELECT MemberID, FName, LName, ContactNo FROM member WHERE FName LIKE '%$fname%' or LName LIKE '%$lname'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

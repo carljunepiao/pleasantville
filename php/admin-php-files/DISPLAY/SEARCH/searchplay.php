@@ -1,4 +1,4 @@
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +22,8 @@
             $password = "";
             $dbname = "Pleasantville";
 
+            $title = $_POST['title'];
+            $playwright = $_POST['playwright'];
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
@@ -29,7 +31,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT Playwright, Title, Time, Poster FROM play";
+            $sql = "SELECT Playwright, Title, Time, Poster FROM play WHERE Title LIKE '%$title' or Playwright LIKE '%$playwright%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
