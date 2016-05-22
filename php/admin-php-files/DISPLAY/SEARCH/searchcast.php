@@ -32,7 +32,7 @@
             $title = $_POST['title'];
             $memberjob = $_POST['memberjob'];
 
-            $sql = "SELECT MemberID, ProdNo, Title, Date, MemberJob FROM casts WHERE Title LIKE '%title%' or MemberJob LIKE '%memberjob%'";
+            $sql = "SELECT MemberID, ProdNo, Title, Date, MemberJob FROM casts WHERE Title LIKE '%$title%' and MemberJob LIKE '%$memberjob%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
