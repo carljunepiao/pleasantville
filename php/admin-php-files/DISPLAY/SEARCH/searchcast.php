@@ -31,15 +31,19 @@
 
             $title = $_POST['title'];
             $memberjob = $_POST['memberjob'];
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
 
-            $sql = "SELECT MemberID, ProdNo, Title, Date, MemberJob FROM casts WHERE Title LIKE '%$title%' or MemberJob LIKE '%$memberjob%'";
+            $sql = "SELECT MemberID, Fname, Lname, ProdNo, Title, Date, MemberJob FROM casts NATURAL JOIN member WHERE Title LIKE '%$title%' and MemberJob LIKE '%$memberjob%' and Fname LIKE '%$fname%' and Lname LIKE '%$lname%'";
+
+            // $sql = "SELECT MemberID, Fname, Lname, ProdNo, Title, Date, MemberJob FROM casts NATURAL JOIN member";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table><tr><th>MemberID</th><th>Production Number</th><th>Title</th><th>Date</th><th>Job</th></tr>";
+                echo "<table><tr><th>MemberID</th><th>First Name</th><th>Last Name</th><th>Production Number</th><th>Title</th><th>Date</th><th>Job</th></tr>";
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["MemberID"]."</td><td>".$row["ProdNo"]."</td><td>".$row["Title"]."</td><td>".$row["Date"]."</td><td>".$row["MemberJob"]."</td></tr>";
+                    echo "<tr><td>".$row["MemberID"]."</td><td>".$row["Fname"]."</td><td>".$row["Lname"]."</td><td>".$row["ProdNo"]."</td><td>".$row["Title"]."</td><td>".$row["Date"]."</td><td>".$row["MemberJob"]."</td></tr>";
                 }
                 echo "</table>";
             }
