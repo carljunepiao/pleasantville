@@ -116,7 +116,7 @@
 						</select>
 						<select required name="production-id">
 							<option selected disabled>Select Production ID</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
