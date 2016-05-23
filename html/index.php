@@ -52,12 +52,14 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
+
+
             $sql = "SELECT Playwright, Title, Time, Poster FROM play";
             $result = $conn->query($sql);
 
 
             if ($result->num_rows > 0) {
-                while($row = $result->fetch_array()) { 	
+                while($row = $result->fetch_array()) {
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
