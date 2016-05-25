@@ -26,11 +26,11 @@
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo 'Successfully added user.';
 	}
 	else{
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo 'A problem has been encountered. Pls check add user.';
 	}
 ?>
