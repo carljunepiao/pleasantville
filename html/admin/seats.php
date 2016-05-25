@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
+
+	<div class="container">
 	<nav class="main-navigation">
 		<ul>
 			<li><a href="../admin-login.php">Log out</a></li>
@@ -17,8 +19,6 @@
 		<h1>Seats</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
-
-	<div class="container">
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
