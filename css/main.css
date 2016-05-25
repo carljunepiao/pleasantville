@@ -185,3 +185,26 @@ footer {
 .logout {
 	display: block;
 }
+
+button {
+	width: 150px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid gold;
+	border: 3px solid gold;
+    
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    opacity: 1;
+    background-color: rgba(250,250,0,0.2);
+}
+
+button a {
+	text-decoration: none;
+	color: gold;
+	display: block;
+}
