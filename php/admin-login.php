@@ -22,12 +22,11 @@
 		//phash should be used but errors occur. (modify)
 		$sql = "SELECT * FROM administrator WHERE Username = '$user' AND Password = '$pass'";
 		$sql1 = "UPDATE administrator SET LogIn = 1 WHERE Username = '$user' AND Password = '$pass'";
-		$sql2 = "UPDATE administrator SET Fname = 'haha' WHERE LogIn = 1";
 
 		// $result0 = mysql_query($conn, $sql0);
 		$result = mysqli_query($conn, $sql);
 		$result1 = mysqli_query($conn, $sql1);
-		$result2 = mysqli_num_rows($conn, $sql2);
+		// $result2 = mysqli_num_rows($conn, $sql2);
 		$count = mysqli_num_rows($result);
 
 	if($result) {

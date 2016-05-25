@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/admin.css">
-	
+
 	<script type="text/javascript">
         window.history.forward();
         function noBack()
@@ -21,7 +21,7 @@
 	<div class="container">
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="admin-login.php">Log out</a></li>
+			<li><a href="../php/admin-logout.php">Log out</a></li>
 		</ul>
 	</nav>
 	<header>

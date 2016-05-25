@@ -13,7 +13,7 @@
         echo "Connected to databasse successfully!";
     }
         //phash should be used but errors occur. (modify)
-    $sql1 = "UPDATE users SET Log_In = 0 WHERE Log_In = 1";
+    $sql1 = "UPDATE administrator SET LogIn = 0 WHERE LogIn = 1";
 
     $result1 = mysqli_query($conn, $sql1);
     $count = mysqli_num_rows($result1);
@@ -26,6 +26,6 @@
     }
 
     setcookie("loggedin", "val", time() - (120), "/");
-    header("Location: ../html/login.php");
+    header("Location: ../html/admin-login.php");
 
 ?>
