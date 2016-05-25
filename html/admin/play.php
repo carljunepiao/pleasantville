@@ -51,15 +51,12 @@
 				<div class="box">
 					<div class="properties">
 						<input required type="text" placeholder="Playwright" name="playwright"></input>
-						<input required type="text" placeholder="Title" name="title"></input>
-						<input required type="text" name="date"  min='2016-05-26'
-						placeholder="Play Date"
-						onfocus="this.type='date';this.focus();"
-						<input required type="text" name="date"
-						placeholder="Play Date"
-						onfocus="this.type='date';this.focus();"
-						onblur="if(this.value == '') this.type='text';"/>
-						<input required="" type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						<input required type="text" placeholder="Title" name="title"></input>				
+						<input required type="text" name="date" min='2016-05-26' placeholder="Play Start Date"
+						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<input required type="text" name="date" min='2016-05-26' placeholder="Play End Date"
+						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<input required="" name="playtime" type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="this.type='time';this.focus();" onblur="if(this.value == '') this.type='text';"/>
 						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
@@ -81,9 +78,12 @@
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input required type="text" name="date" min='2016-05-26'
-						placeholder="Play Date"
-						onfocus="this.type='date';this.focus();"/>
-						<input type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						placeholder="Play Start Date"
+						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<input required type="text" name="date" min='2016-05-26'
+						placeholder="Play End Date"
+						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<input type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime" onblur="if(this.value == '') this.type='text';"/>
 						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>

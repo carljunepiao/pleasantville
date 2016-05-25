@@ -13,7 +13,7 @@
 
 <body>
 
-<!-- <audio src="../../canon.mp3" loop autoplay controls></audio> -->
+<audio src="../canon.mp3" loop autoplay controls></audio>
 
 <!-- <script type="text/javascript">
 	function setCookie(c_name,value,exdays)
