@@ -61,6 +61,7 @@
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
+ 	               				<img class=\"poster\">
  	               				<p>"
  	               					.$row["Title"]."</br>"
  	               					.$row["Playwright"]."</br>"
