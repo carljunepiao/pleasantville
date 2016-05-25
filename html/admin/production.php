@@ -47,7 +47,7 @@
 							<option selected disabled>select-title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="text"  min='2016-05-26' class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -67,7 +67,7 @@
 							<option selected disabled>select-playwright-title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-						<input type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="text"  min='2016-05-26' class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="number" placeholder="revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
