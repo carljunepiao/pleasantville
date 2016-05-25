@@ -50,19 +50,11 @@
 				<h5>Add User</h5>
 				<div class="box">
 					<div class="properties">
-<<<<<<< HEAD
 						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="fname" name="firstname"></input>
 						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
 						<input required type="text" placeholder="username" name="username"></input>
 						<input required type="password" placeholder="password" name="password"></input>
-=======
-						<input required type="text" placeholder="First Name" name="firstname"></input>
-						<input required type="text" placeholder="Last Name" name="lastname"></input>
-						<input type="number" placeholder="Contact" name="contact"></input>
-						<input required type="text" placeholder="Username" name="username"></input>
-						<input required type="password" placeholder="Password" name="password"></input>
->>>>>>> 9956feadac6bd7f8d6de6212ddf7f45deee7b033
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
 					</div>
@@ -79,19 +71,11 @@
                         	<option selected disabled>Select User ID</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
-<<<<<<< HEAD
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="fname" name="firstname"></input>
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
 						<input type="text" placeholder="username" name="username"></input>
 						<input type="password" placeholder="password" name="password"></input>
-=======
-						<input type="text" placeholder="First Name" name="firstname"></input>
-						<input type="text" placeholder="Last Name" name="lastname"></input>
-						<input type="number" placeholder="Contact" name="contact"></input>
-						<input type="text" placeholder="Username" name="username"></input>
-						<input type="password" placeholder="Password" name="password"></input>
->>>>>>> 9956feadac6bd7f8d6de6212ddf7f45deee7b033
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
 					</div>
