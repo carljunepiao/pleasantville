@@ -45,22 +45,22 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-user-id">
-							<option selected disabled>select-user-id</option>
+							<option selected disabled>Select User ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-date">
-							<option selected disabled>select-date</option>
+							<option selected disabled>Select Date</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
 						</select>
 						<select required name="select-seat">
-							<option selected disabled>select-seat</option>
+							<option selected disabled>Select Seat</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
 						</select>
 						</select>
@@ -76,7 +76,7 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
+
 	</div>
 
 </body>
