@@ -31,7 +31,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT Playwright, Title, Time, Poster FROM play WHERE Title LIKE '%$title' or Playwright LIKE '%$playwright%'";
+            $sql = "SELECT Playwright, Title, Time, Poster FROM play WHERE Title LIKE '%$title' and Playwright LIKE '%$playwright%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
