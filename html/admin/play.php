@@ -47,7 +47,7 @@
 					<div class="properties">
 						<input required type="text" placeholder="playwright" name="playwright"></input>
 						<input required type="text" placeholder="title" name="title"></input>
-						<input required type="text" name="date"	 
+						<input required type="text" name="date"  min='2016-05-26'
 						placeholder="play date"  
 						onfocus="this.type='date';this.focus();" 
 						onblur="if(this.value == '') this.type='text';"/>
@@ -72,7 +72,7 @@
 							<option selected disabled>select-title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
-						<input required type="text" name="date"	 
+						<input required type="text" name="date" min='2016-05-26'
 						placeholder="play date"  
 						onfocus="this.type='date';this.focus();" 
 						onblur="if(this.value == '') this.type='text';"/>
