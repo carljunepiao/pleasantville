@@ -46,22 +46,22 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>select-member-id</option>
+							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>select-production-id</option>
+							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="date">
-							<option selected disabled>select-date</option>
+							<option selected disabled>Select Date</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
 						</select>
-						<input required type="text" placeholder="job" name="job"></input>
+						<input required type="text" placeholder="Job" name="job"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -73,22 +73,22 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>select-member-id</option>
+							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>select-production-id</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
+							<option selected disabled>Select Production ID</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="title">
-							<option selected disabled>select-title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownCastTitle.php'; echo $options;?>
+							<option selected disabled>Select Title</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<select required name="date">
-							<option selected disabled>select-date</option>
-							<?php include '../php/admin-php-files/EDIT/dropdownCastProductionDate.php'; echo $options;?>
+							<option selected disabled>Select Date</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
 						</select>
-						<input required type="text" placeholder="job" name="job"></input>
+						<input required type="text" placeholder="Job" name="job"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -111,18 +111,18 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="member-id">
-							<option selected disabled>select-member-id</option>
+							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
 						<select required name="production-id">
-							<option selected disabled>select-production-id</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownCastPID.php'; echo $options;?>
+							<option selected disabled>Select Production ID</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
 				</div>
 			</div>
-		</form>	
+		</form>
 		<!-- /////////////////////////////////// -->
 
 		<footer>
@@ -130,9 +130,9 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
+
 	</div>
-	
+
 </body>
 
 </html>

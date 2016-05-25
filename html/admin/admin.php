@@ -45,10 +45,10 @@
 					<h5>Add Admin</h5>
 					<div class="box">
 						<div class="properties">
-							<input required type="text" placeholder="fname" name="firstname"></input>
-							<input required type="text" placeholder="lname" name="lastname"></input>
-							<input required type="text" placeholder="username" name="username"></input>
-							<input required type="password" placeholder="password" name="password"></input>
+							<input required type="text" placeholder="First Name" name="firstname"></input>
+							<input required type="text" placeholder="Last Name" name="lastname"></input>
+							<input required type="text" placeholder="Username" name="username"></input>
+							<input required type="password" placeholder="Password" name="password"></input>
 						</div>
 						<input class="enter" type="submit" value="Submit"></input>
 					</div>
@@ -60,11 +60,11 @@
 				<div class="box">
 					<div class="properties">
                         <select required name="select-admin-username">
-                        	<option selected disabled>select-admin-username</option>
+                        	<option selected disabled>Select Admin Username</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="fname" name="firstname"></input>
-						<input type="text" placeholder="lname" name="lastname"></input>
+						<input type="text" placeholder="First Name" name="firstname"></input>
+						<input type="text" placeholder="Last Name" name="lastname"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -84,7 +84,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-admin-username">
-							<option selected disabled>select-admin-username</option>
+							<option selected disabled>Select Admin Username</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
 					</div>
@@ -99,7 +99,7 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
+
 	</div>
 
 </body>

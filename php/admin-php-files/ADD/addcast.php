@@ -14,7 +14,6 @@
 	$memberID = $_POST['member-id'];
 	$prodID = $_POST['production-id'];
 	$title = $_POST['title'];
-
 	$date = $_POST['date'];
 	$job = $_POST['job'];
 
@@ -26,11 +25,11 @@
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo 'Successfully added user.';
 	}
 	else{
-		// header("Location: ../../../html/admin.php");
+		header("Location: ../../../html/admin.php");
 	    echo 'A problem has been encountered. Pls check add user.';
 	}
 ?>
