@@ -60,6 +60,9 @@
 							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+							<form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/>
+								<input class="enter" type="submit" value="okay" style="width:50px;"></input>
+							</form>
 						</select>
 						<select required name="select-date">
 							<option selected disabled>Select Date</option>
