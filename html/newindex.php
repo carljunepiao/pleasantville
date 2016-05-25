@@ -16,6 +16,7 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+	<audio src="../audio/canon.mp3" autoplay loop controls></audio>
 	<div class="container">
 		<header>
 			<button><a href="login.php">LOG OUT</a></button>
@@ -61,7 +62,7 @@
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
- 	               				<img class=\"poster\">
+ 	               				<img class=\"poster\" src=\"../images/poster1.jpg\">
  	               				<p>"
  	               					.$row["Title"]."</br>"
  	               					.$row["Playwright"]."</br>"

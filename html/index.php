@@ -9,6 +9,7 @@
 	<script src="../javascripts/main-notif.js"></script>
 </head>
 <body>
+	<audio src="../audio/canon.mp3" autoplay loop controls></audio>
 	<div class="container">
 		<header>
 			<nav class="secondary-navigation">
