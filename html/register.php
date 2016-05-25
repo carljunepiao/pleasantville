@@ -15,10 +15,10 @@
 
 <body>
 
-	<img class="logo" src="../images/logo.jpg">
-	<h1>Pleasantville Registration</h1>
 
 	<div class="container">
+	<img class="logo" src="../images/logo.jpg">
+	<h1>Pleasantville Registration</h1>
 
 		<form action="../php/register.php" method="post" accept-charset="utf-8"/>
 			<p class="attribute">First Name</p>
@@ -32,9 +32,9 @@
 			<input class="enter" type="submit" value="Submit">
 		</form>
 
+	<center><a href="../html/index.php">Back to Home</a></center>
 	</div>
 
-	<center><a href="../html/index.php">Back to Home</a></center>
 
 </body>
 
