@@ -7,8 +7,15 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../../css/main.css">
 	<link rel="stylesheet" href="../../css/admin.css">
-</head>
-<body>
+	<script type="text/javascript">
+	        window.history.forward();
+	        function noBack()
+	        {
+	            window.history.forward();
+	        }
+		</script>
+	</head>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
 	<div class="container">
 	<nav class="main-navigation">

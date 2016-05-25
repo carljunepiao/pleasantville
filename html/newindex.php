@@ -22,7 +22,7 @@
 	<div class="container">
 		<header>
 			<!-- <input class="logout" type="submit" value="Log Out" name="logout"> -->
-			<button><a href="login.php">BACK</a></button>
+			<button><a href="login.php">LOG OUT</a></button>
 			<nav class="secondary-navigation">
 				<ul>
 					<!-- <li><a href="../html/register.php">Register</a></li> -->
