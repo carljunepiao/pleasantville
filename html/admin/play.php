@@ -48,6 +48,13 @@
 						<input required type="text" placeholder="Playwright" name="playwright"></input>
 						<input required type="text" placeholder="Title" name="title"></input>
 						<input required="" type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						<input required type="text" placeholder="playwright" name="playwright"></input>
+						<input required type="text" placeholder="title" name="title"></input>
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+						onblur="if(this.value == '') this.type='text';"/>
+						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input required="" type="text" class="form-control"
 						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
@@ -69,6 +76,11 @@
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<input type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+						onblur="if(this.value == '') this.type='text';"/>
+						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
