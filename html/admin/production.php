@@ -51,13 +51,13 @@
 					<div class="properties">
 						<!-- TITLE -->
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<!-- PRODUCTION DATE -->
-						<input type="text"  min='2016-05-26' class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="text"  min='2016-05-26' class="form-control" placeholder="Production Date" onfocus="(this.type='date')" name="proddate"/>
 						<!-- REVENUE -->
-						<input type="number" placeholder="revenue" name="revenue"></input>
+						<input type="number" placeholder="Revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -71,18 +71,18 @@
 					<div class="properties">
 						<!-- PRODUCTION ID -->
 						<select required name="select-production-id">
-							<option selected disabled>select-production-id</option>
+							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<!-- PLAY TITLE -->
 						<select required name="select-production-title">
-							<option selected disabled>select-playwright-title</option>
+							<option selected disabled>Select Playwright Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 						<!-- PRODUCTION DATE -->
-						<input type="text"  min='2016-05-26' class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
+						<input type="text"  min='2016-05-26' class="form-control" placeholder="Production Date" onfocus="(this.type='date')" name="proddate"/>
 						<!-- REVENUE -->
-						<input type="number" placeholder="revenue" name="revenue"></input>
+						<input type="number" placeholder="Revenue" name="revenue"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -108,7 +108,7 @@
 					<div class="properties">
 						<!-- PRODUCTION ID -->
 						<select required name="select-production-id">
-							<option selected disabled>select-production-id</option>
+							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 					</div>
