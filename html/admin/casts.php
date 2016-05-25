@@ -16,17 +16,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Casts</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Casts</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,25 +42,29 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// CASTS /////////////////////// -->
+		<!-- ADD -->
 		<form action="../../php/admin-php-files/ADD/addcast.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Cast</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- MEMBER ID -->
 						<select required name="member-id">
 							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
+						<!-- PRODUCTION ID -->
 						<select required name="production-id">
 							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
+						<!-- TITLE -->
 						<select required name="title">
 							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+						<!-- DATE -->
 						<select required name="date">
 							<option selected disabled>Select Date</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
@@ -72,23 +75,28 @@
 				</div>
 			</div>
 		</form>
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/editcast.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Cast</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- MEMBER ID -->
 						<select required name="member-id">
 							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
+						<!-- PRODUCTION ID -->
 						<select required name="production-id">
 							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
+						<!-- TITLE -->
 						<select required name="title">
 							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+						<!-- DATE -->
 						<select required name="date">
 							<option selected disabled>Select Date</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProductionDate.php'; echo $options;?>
@@ -99,6 +107,7 @@
 				</div>
 			</div>
 		</form>
+		<!-- DISPLAY -->
 		<form action="../../php/admin-php-files/DISPLAY/displaycast.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Casts</h5>
@@ -110,15 +119,18 @@
 				</div>
 			</div>
 		</form>
+		<!-- DELETE -->
 		<form action="../../php/admin-php-files/DELETE/deletecast.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Cast</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- MEMBER ID -->
 						<select required name="member-id">
 							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownCastMID.php'; echo $options;?>
 						</select>
+						<!-- PRODUCTION ID -->
 						<select required name="production-id">
 							<option selected disabled>Select Production ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
@@ -129,15 +141,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

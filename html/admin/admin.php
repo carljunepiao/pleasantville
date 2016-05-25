@@ -16,17 +16,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Admin</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Admin</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,51 +42,63 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// ADMIN /////////////////////// -->
+		<!-- ADD -->
 		<form action="../../php/admin-php-files/ADD/addadmin.php" method="post" accept-charset="utf-8"/>
 				<div class="admin br1">
 					<h5>Add Admin</h5>
 					<div class="box">
 						<div class="properties">
-							<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="First Name" name="firstname"></input>
+							<!-- FNAME -->
+							<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="First Name" name="firstname"></input> 
+							<!-- LNAME -->
 							<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="Last Name" name="lastname"></input>
+							<!-- USERNAME -->
 							<input pattern=".{0}|.{5,}" maxlength="15" required type="text" placeholder="Username" name="username"></input>
+							<!-- PASSWORD -->
 							<input pattern=".{0}|.{5,}" maxlength="15" required type="password" placeholder="Password" name="password"></input>
 						</div>
 						<input class="enter" type="submit" value="Submit"></input>
 					</div>
 				</div>
 		</form>
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/editadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Admin</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USERNAME -->
                         <select required name="select-admin-username">
                         	<option selected disabled>Select Admin Username</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
+						<!-- FNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="First Name" name="firstname"></input>
+						<!-- LNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="Last Name" name="lastname"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
 			</div>
 		</form>
+		<!-- DISPLAY -->
 		<form action="../../php/admin-php-files/DISPLAY/displayadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Admin</h5>
 				<div class="box">
+					<!-- SUBMIT -->
 					<input class="enter" type="submit" value="Display"></input>
 				</div>
 			</div>
 		</form>
+		<!-- DELETE -->
 		<form action="../../php/admin-php-files/DELETE/deleteadmin.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Admin</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USERNAME -->
 						<select required name="select-admin-username">
 							<option selected disabled>Select Admin Username</option>
 							<?php include '../../php/admin-php-files/EDIT/editadmindropdownUsername.php'; echo $options;?>
@@ -98,15 +109,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

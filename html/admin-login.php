@@ -6,15 +6,12 @@
 	<link rel="icon" href="../images/adminicon.jpg">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/admin-login.css">
-
 	<script src="../javascripts/admin-login-notif.js"></script>
 </head>
 <body>
-
 	<div class="test">
 		<a href="../html/index.php">Home</a>
 	</div>
-	
 	<form form action="../php/admin-login.php" method="post" accept-charset="utf-8">
 		<div class="container">
 			<header>
@@ -33,7 +30,5 @@
 			</footer>
 		</div>
 	</form>
-		
-
 </body>
 </html>

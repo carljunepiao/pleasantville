@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Productions</title>
@@ -8,7 +7,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/index.css">
-
 	<script src="../javascripts/production-notif.js"></script>
 	<script type="text/javascript">
         window.history.forward();
@@ -18,7 +16,6 @@
         }
 	</script>
 </head>
-
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 	<div class="container">
 		<header>
@@ -42,7 +39,6 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-
 		<?php
             $servername = "localhost";
             $username = "root";
@@ -78,7 +74,6 @@
             }
             $conn->close();
         ?>
-		
 		<footer>
 			<h4>Contact us</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
@@ -87,7 +82,5 @@
 			<p>Itanimulli</p>
 		</footer>
 	</div>
-
 </body>
-
 </html>

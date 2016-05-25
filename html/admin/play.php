@@ -16,17 +16,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Play</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Play</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,20 +42,26 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// PLAY /////////////////////// -->
+		<!-- ADD -->
 		<form action="../../php/admin-php-files/ADD/addplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Play</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- PLAYWRIGHT -->
 						<input required type="text" placeholder="Playwright" name="playwright"></input>
+						<!-- TITLE -->
 						<input required type="text" placeholder="Title" name="title"></input>				
+						<!-- START DATE -->
 						<input required type="text" name="start-date" min='2016-05-26' placeholder="Play Start Date"
 						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<!-- END DATE -->
 						<input required type="text" name="end-date" min='2016-05-26' placeholder="Play End Date"
 						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<!-- TIME -->
 						<input required="" name="playtime" type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="this.type='time';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<!-- POSTER -->
 						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
@@ -64,26 +69,33 @@
 				</div>
 			</div>
 		</form>
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/editplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Play</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- PLAYWRIGHT -->
 						<select required name="select-playwright-id">
 							<option selected disabled>Select Playwright ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
+						<!-- TITLE -->
 						<select required name="select-title">
 							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+						<!-- START DATE -->
 						<input required type="text" name="start-date" min='2016-05-26'
 						placeholder="Play Start Date"
 						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<!-- END DATE -->
 						<input required type="text" name="end-date" min='2016-05-26'
 						placeholder="Play End Date"
 						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
+						<!-- TIME -->
 						<input type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime" onblur="if(this.value == '') this.type='text';"/>
+						<!-- POSTER -->
 						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
@@ -91,6 +103,7 @@
 				</div>
 			</div>
 		</form>
+		<!-- DISPLAY -->
 		<form action="../../php/admin-php-files/DISPLAY/displayplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Plays</h5>
@@ -102,15 +115,18 @@
 				</div>
 			</div>
 		</form>
+		<!-- DELETE -->
 		<form action="../../php/admin-php-files/DELETE/deleteplay.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Play</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- PLAYWRIGHT -->
 						<select required name="select-playwright">
 							<option selected disabled>Select Playwright</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
+						<!-- TITLE -->
 						<select required name="select-title">
 							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
@@ -121,15 +137,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

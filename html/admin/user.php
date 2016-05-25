@@ -16,17 +16,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>User</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>User</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,18 +42,24 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li><!DOCTYPE html>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// USER /////////////////////// -->
+		<!-- ADD -->
 		<form action="../../php/admin-php-files/ADD/adduser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add User</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- FNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="fname" name="firstname"></input>
+						<!-- LNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="lname" name="lastname"></input>
+						<!-- CONTACT -->
 						<input type="number" placeholder="contact" name="contact"></input>
+						<!-- USERNAME -->
 						<input required type="text" placeholder="username" name="username"></input>
+						<!-- PASSWORD -->
 						<input required type="password" placeholder="password" name="password"></input>
+						<!-- USER TYPE -->
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
 					</div>
@@ -62,20 +67,28 @@
 				</div>
 			</div>
 		</form>
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/edituser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit User</h5>
 				<div class="box">
 					<div class="properties">
+                        <!-- USER ID -->
                         <select required name="select-user-id">
                         	<option selected disabled>Select User ID</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
+						<!-- FNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="fname" name="firstname"></input>
+						<!-- LNAME -->
 						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="lname" name="lastname"></input>
+						<!-- CONTACT -->
 						<input type="number" placeholder="contact" name="contact"></input>
+						<!-- USERNAME -->
 						<input type="text" placeholder="username" name="username"></input>
+						<!-- PASSWORD -->
 						<input type="password" placeholder="password" name="password"></input>
+						<!-- USER TYPE -->
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
 					</div>
@@ -83,6 +96,7 @@
 				</div>
 			</div>
 		</form>
+		<!-- DISPLAY -->
 		<form action="../../php/admin-php-files/DISPLAY/displayuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Users</h5>
@@ -94,11 +108,13 @@
 				</div>
 			</div>
 		</form>
+		<!-- DELETE -->
 		<form action="../../php/admin-php-files/DELETE/deleteuser.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete User</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USER ID -->
 						<select required name="select-user-id">
 							<option selected disabled>Select User ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
@@ -109,15 +125,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

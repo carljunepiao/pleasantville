@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../images/logo.jpg">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
-
 	<script src="../javascripts/main-notif.js"></script>
 </head>
-
 <body>
-
 	<div class="container">
 		<header>
 			<nav class="secondary-navigation">
@@ -83,7 +79,5 @@
 			<p>Itanimulli</p>
 		</footer>
 	</div>
-
 </body>
-
 </html>

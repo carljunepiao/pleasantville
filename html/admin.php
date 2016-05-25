@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/admin.css">
-
 	<script type="text/javascript">
         function noBack()
         {
@@ -16,18 +15,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../php/admin-logout.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Admin</h1>
-		<img class="logo" src="../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
-
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../php/admin-logout.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Admin</h1>
+			<img class="logo" src="../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="admin/user.php">User</a></li>
@@ -44,16 +41,11 @@
 				<li><a href="../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
-
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

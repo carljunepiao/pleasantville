@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../images/logo.jpg">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
-
 	<script src="../javascripts/main-notif.js"></script>
 	<script type="text/javascript">
         window.history.forward();
@@ -17,24 +15,15 @@
         }
 	</script>
 </head>
-
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 	<div class="container">
 		<header>
-			<!-- <input class="logout" type="submit" value="Log Out" name="logout"> -->
 			<button><a href="login.php">LOG OUT</a></button>
-			<nav class="secondary-navigation">
-				<ul>
-					<!-- <li><a href="../html/register.php">Register</a></li> -->
-					<!-- <li><a href="../html/login.php">Login</a></li> -->
-				</ul>
-			</nav>
 			<img class="logo" src="../images/logo.jpg" alt="PleasantvilleLogo">
 			<nav class="main-navigation">
 				<ul>
 					<li><a href="../html/newindex.php">Home</a></li>
 					<li><a href="../html/production.php">Production</a></li>
-					<!-- <li><a href="../html/admin-login.php">Administration</a></li> -->
 				</ul>
 			</nav>
 		</header>
@@ -97,7 +86,5 @@
 			<p>Itanimulli</p>
 		</footer>
 	</div>
-
 </body>
-
 </html>

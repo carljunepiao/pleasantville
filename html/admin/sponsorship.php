@@ -16,17 +16,16 @@
 		</script>
 	</head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Sponsorship</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Sponsorship</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,48 +42,58 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li><!DOCTYPE html>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// SPONSORSHIP /////////////////////// -->
+		<!-- ADD -->
 		<form action="../../php/admin-php-files/ADD/addsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1">
 				<h5>Add Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USER ID -->
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
-                                                        <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+                            <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
+						<!-- PRODUCTION -->
 						<select required name="select-production">
 							<option selected disabled>select-production</option>
-                                                        <?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
+                            <?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
+						<!-- DONATION DATE -->
 						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
+						<!-- AMOUNT -->
 						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
 			</div>
 		</form>
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/editsponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Edit Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USER ID -->
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
 						</select>
+						<!-- PRODUCTION -->
 						<select required name="select-production">
 							<option selected disabled>select-production</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
+						<!-- DONATION DATE -->
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
+						<!-- AMOUNT -->
 						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
 			</div>
 		</form>
+		<!-- DISPLAY -->
 		<form action="../../php/admin-php-files/DISPLAY/displaysponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin">
 				<h5>Display Sponsorships</h5>
@@ -96,15 +105,18 @@
 				</div>
 			</div>
 		</form>
+		<!-- DELETE -->
 		<form action="../../php/admin-php-files/DELETE/deletesponsorship.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br2">
 				<h5>Delete Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- PRODUCTION -->
 						<select required name="select-production">
 							<option selected disabled>select-production</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
+						<!-- USER ID -->
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
@@ -115,15 +127,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
 	</div>
-
 </body>
-
 </html>

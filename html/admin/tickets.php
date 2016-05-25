@@ -16,17 +16,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Tickets</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Tickets</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,35 +42,37 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li><!DOCTYPE html>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// TICKETS /////////////////////// -->
+		<!-- SEATS IMAGE -->
         <img class="seats" src="../../images/seats.jpg">
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/EDIT/editticket.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1 br2">
 				<h5>Buy Ticket</h5>
 				<div class="box">
 					<div class="properties">
+						<!-- USER ID -->
 						<select required name="select-user-id">
 							<option selected disabled>Select User ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
+						<!-- FROM FOR TITLE SELECTION -->
 						<form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/>
 							<select required name="select-title">
 								<option selected disabled>Select Title</option>
 								<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 							</select>
 							<input class="enter" type="submit" value="lock-title" style="width:70px;"></input>
-						</form>
-						</select>
+						</form>	
+						<!-- DATE -->
 						<select required name="select-date">
 							<option selected disabled>Select Date</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
 						</select>
-						</select>
+						<!-- SEAT -->
 						<select required name="select-seat">
 							<option selected disabled>Select Seat</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
-						</select>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
@@ -79,15 +80,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-
 	</div>
-
 </body>
-
 </html>

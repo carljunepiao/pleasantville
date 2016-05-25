@@ -15,17 +15,16 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
 	<div class="container">
-	<nav class="main-navigation">
-		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
-		</ul>
-	</nav>
-	<header>
-		<h1>Seats</h1>
-		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
-	</header>
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="../admin-login.php">Log out</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Seats</h1>
+			<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
+		</header>
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -42,15 +41,18 @@
 				<li><a href="../../php/tests/logs.php">Transactions</a></li><!DOCTYPE html>
 			</ul>
 		</nav>
-
 		<!-- /////////////////// SEATS /////////////////////// -->
+		<!-- SEAT IMAGE -->
 		<img class="seats" src="../../images/seats.jpg">
+		<!-- EDIT -->
 		<form action="../../php/admin-php-files/ADD/addseat.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1 br2">
 				<h5>Add Seat</h5>
 				<div class="box">
 					<div class="properties">
+                        <!-- SEAT NUMBER -->
                         <input type="text" placeholder="Seat No" name="seat-no"></input>
+						<!-- PRODUCTION ID -->
 						<select required name="select-production-no">
 							<option selected disabled>select-production-id</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
@@ -61,15 +63,11 @@
 			</div>
 		</form>
 		<!-- /////////////////////////////////// -->
-
 		<footer>
 			<p>`Maestro Productions</p>
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
 	</div>
-
 </body>
-
 </html>
