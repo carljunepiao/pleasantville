@@ -28,8 +28,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = shell_exec("del wee.txt");
-            echo "$sql";
+            shell_exec("mysqldump -u root pleasantville > backupss.sql 2>&1");
             $conn->close();
         ?>
 
