@@ -63,7 +63,6 @@
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
- 	      	<img class=\"poster\" src='data:poster/jpeg;base64,". base64_encode($row['Poster'] )."'/>
  	               				<p>"
  	               					.$row["Title"]."</br>"
  	               					.$row["Playwright"]."</br>"
