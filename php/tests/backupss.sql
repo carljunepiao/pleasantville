@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-'mysqldump' is not recognized as an internal or external command,
-operable program or batch file.
-=======
 -- MySQL dump 10.16  Distrib 10.1.10-MariaDB, for Win32 (AMD64)
 --
 -- Host: localhost    Database: pleasantville
@@ -729,5 +725,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-26  5:16:00
->>>>>>> 1b19d4e1cccba31be1f81536e6629cb286344016
+-- Dump completed on 2016-05-26  5:21:56

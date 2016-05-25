@@ -20,7 +20,6 @@
 			$user= 'root';
 			$pass='';
 			$db= 'PleasantVille';
-
 			$conn = mysqli_connect($host,$user,$pass,$db);
             // Check connection
             if ($conn->connect_error) {
