@@ -9,12 +9,20 @@
 	<link rel="stylesheet" href="../css/main.css">
 
 	<script src="../javascripts/main-notif.js"></script>
+	<script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+	</script>
 </head>
 
-<body>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 	<div class="container">
 		<header>
-			<input class="logout" type="submit" value="Log Out" name="logout">
+			<!-- <input class="logout" type="submit" value="Log Out" name="logout"> -->
+			<button><a href="login.php">BACK</a></button>
 			<nav class="secondary-navigation">
 				<ul>
 					<!-- <li><a href="../html/register.php">Register</a></li> -->
