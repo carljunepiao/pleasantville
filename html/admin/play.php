@@ -45,11 +45,20 @@
 				<h5>Add Play</h5>
 				<div class="box">
 					<div class="properties">
+						<input required type="text" placeholder="Playwright" name="playwright"></input>
+						<input required type="text" placeholder="Title" name="title"></input>
+						<input required="" type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
 						<input required type="text" placeholder="playwright" name="playwright"></input>
 						<input required type="text" placeholder="title" name="title"></input>
+<<<<<<< HEAD
 						<input required type="text" name="date"  min='2016-05-26'
 						placeholder="play date"  
 						onfocus="this.type='date';this.focus();" 
+=======
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+>>>>>>> c3f294f7612a9ad4ce1843664310cd6d4baa5e94
 						onblur="if(this.value == '') this.type='text';"/>
 						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input required="" type="text" class="form-control"
@@ -65,20 +74,27 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright-id">
-							<option selected disabled>select-playwright-id</option>
+							<option selected disabled>Select Playwright ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+<<<<<<< HEAD
 						<input required type="text" name="date" min='2016-05-26'
 						placeholder="play date"  
 						onfocus="this.type='date';this.focus();" 
+=======
+						<input type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+>>>>>>> c3f294f7612a9ad4ce1843664310cd6d4baa5e94
 						onblur="if(this.value == '') this.type='text';"/>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
-						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
+						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -101,11 +117,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright">
-							<option selected disabled>select-playwright</option>
+							<option selected disabled>Select Playwright</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
@@ -120,7 +136,7 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
+
 	</div>
 
 </body>
