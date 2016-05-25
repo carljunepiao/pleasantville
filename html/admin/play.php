@@ -4,14 +4,15 @@
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../../images/adminicon.jpg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../../css/main.css">
 	<link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="../production.html">Production</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="../production.php">Production</a></li>
 			<li><a href="../admin.php">Admin</a></li>
 		</ul>
 	</nav>
@@ -32,6 +33,9 @@
 				<li><a href="sponsorship.php">Sponsorship</a></li>
 				<li><a href="tickets.php">Tickets</a></li>
 				<li><a href="admin.php">Admin</a></li>
+				<li><a href="../../php/tests/backup.php">Backup</a></li>
+				<li><a href="../../php/tests/restore.php">Restore</a></li>
+				<li><a href="../../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
 
@@ -41,8 +45,15 @@
 				<h5>Add Play</h5>
 				<div class="box">
 					<div class="properties">
+						<input required type="text" placeholder="Playwright" name="playwright"></input>
+						<input required type="text" placeholder="Title" name="title"></input>
+						<input required="" type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
 						<input required type="text" placeholder="playwright" name="playwright"></input>
 						<input required type="text" placeholder="title" name="title"></input>
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+						onblur="if(this.value == '') this.type='text';"/>
 						<input required="" type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input required="" type="text" class="form-control"
 						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
@@ -57,16 +68,21 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright-id">
-							<option selected disabled>select-playwright-id</option>
+							<option selected disabled>Select Playwright ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
+						<input type="text" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
+						<input required type="text" name="date"
+						placeholder="play date"
+						onfocus="this.type='date';this.focus();"
+						onblur="if(this.value == '') this.type='text';"/>
 						<input type="text" class="form-control" placeholder="play time" onfocus="(this.type='time')" name="playtime"/>
 						<input type="text" class="form-control"
-						placeholder="choose poster" onfocus="(this.type='file')" name="poster"/>
+						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -89,11 +105,11 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-playwright">
-							<option selected disabled>select-playwright</option>
+							<option selected disabled>Select Playwright</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlaywright.php'; echo $options;?>
 						</select>
 						<select required name="select-title">
-							<option selected disabled>select-title</option>
+							<option selected disabled>Select Title</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 						</select>
 					</div>
@@ -108,18 +124,8 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
-	</div>
 
-	<form action="../../php/tests/backup.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Backup" name="backup"></input>
-	</form>
-	<form action="../../php/tests/restore.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Restore" name="restore"></input>
-	</form>
-	<form action="../../php/tests/logs.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Transaction Logs" name="log"></input>
-	</form>
+	</div>
 
 </body>
 

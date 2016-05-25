@@ -28,6 +28,6 @@
 	}
 	else{
 		// header("Location: ../../../html/admin.php");
-	    echo 'A problem has been encountered. Pls check add user.';
+	    echo 'A problem has been encountered. Pls check edit admin.';
 	}
 ?>

@@ -14,7 +14,7 @@
 
 <body>
 
-	<center><a href="../html/register.html" style="margin-top: 17%;">Sign up</a></center>
+	<center><a href="../html/register.php" style="margin-top: 17%;">Sign up</a></center>
 
 	<div class="container">
 		<p>Log In</p>
@@ -31,7 +31,7 @@
 
 	</div>
 
-	<center><a href="../html/index.html">Back to Home</a></center>
+	<center><a href="../html/index.php">Back to Home</a></center>
 
 </body>
 

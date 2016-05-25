@@ -7,9 +7,6 @@
 
 	$con = mysqli_connect($host,$user,$pass,$db);
 
-	if($con)
-		echo 'connected successfully to PlasantVille database';
-
 	$Fname = $_POST['fname'];
 	$Lname = $_POST['lname'];
 	$Contact_No = $_POST['contact'];
@@ -27,11 +24,11 @@
 	$query=mysqli_query($con,$sql);
 
 	if($query){
-		header("Location: ../html");
+		header("Location: ../html/index.php");
 		echo 'data inserted successfully';
 	}
 	else{
-		header("Location: ../html/register.html");
+		header("Location: ../html/register.php");
 		echo 'nope';
 	}
 

@@ -4,14 +4,15 @@
 	<meta charset="utf-8">
 	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../../images/adminicon.jpg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../../css/main.css">
 	<link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="../production.html">Production</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="../production.php">Production</a></li>
 			<li><a href="../admin.php">Admin</a></li>
 		</ul>
 	</nav>
@@ -32,6 +33,9 @@
 				<li><a href="sponsorship.php">Sponsorship</a></li>
 				<li><a href="tickets.php">Tickets</a></li>
 				<li><a href="admin.php">Admin</a></li>
+				<li><a href="../../php/tests/backup.php">Backup</a></li>
+				<li><a href="../../php/tests/restore.php">Restore</a></li>
+				<li><a href="../../php/tests/logs.php">Transactions</a></li>
 			</ul>
 		</nav>
 
@@ -41,9 +45,9 @@
 				<h5>Add Member</h5>
 				<div class="box">
 					<div class="properties">
-						<input required class="textbox" type="text" placeholder="fname" name="firstname"></input>
-						<input required class="textbox" type="text" placeholder="lname" name="lastname"></input>
-						<input class="number" type="text" placeholder="contact" name="contact"></input>
+						<input required class="textbox" type="text" placeholder="First Name" name="firstname"></input>
+						<input required class="textbox" type="text" placeholder="Last Name" name="lastname"></input>
+						<input class="number" type="text" placeholder="Contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
 				</div>
@@ -55,12 +59,12 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-member-id">
-							<option selected disabled>select-member-id</option>
+							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
-						<input class="textbox" type="text" placeholder="fname" name="firstname"></input>
-						<input class="textbox" type="text" placeholder="lname" name="lastname"></input>
-						<input class="number" type="text" placeholder="contact" name="contact"></input>
+						<input class="textbox" type="text" placeholder="First Name" name="firstname"></input>
+						<input class="textbox" type="text" placeholder="Last Name" name="lastname"></input>
+						<input class="number" type="text" placeholder="Contact" name="contact"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
@@ -83,7 +87,7 @@
 				<div class="box">
 					<div class="properties">
 						<select required name="select-member-id">
-							<option selected disabled>select-member-id</option>
+							<option selected disabled>Select Member ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownMember.php'; echo $options;?>
 						</select>
 					</div>
@@ -98,18 +102,8 @@
 			<p>japheth162@gmail.com : 09123456789</p>
 			<p>Itanimulli</p>
 		</footer>
-		
-	</div>
 
-	<form action="../../php/tests/backup.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Backup" name="backup"></input>
-	</form>
-	<form action="../../php/tests/restore.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Restore" name="restore"></input>
-	</form>
-	<form action="../../php/tests/logs.php" method="post" accept-charset="utf-8"/>
-		<input class="button" type="submit" value="Transaction Logs" name="log"></input>
-	</form>
+	</div>
 
 </body>
 

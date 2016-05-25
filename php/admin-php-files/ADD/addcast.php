@@ -14,7 +14,6 @@
 	$memberID = $_POST['member-id'];
 	$prodID = $_POST['production-id'];
 	$title = $_POST['title'];
-
 	$date = $_POST['date'];
 	$job = $_POST['job'];
 

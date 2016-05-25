@@ -12,7 +12,7 @@
 <body>
 
 	<div class="test">
-		<a href="../html/index.html">Home</a>
+		<a href="../html/index.php">Home</a>
 	</div>
 	
 	<form form action="../php/admin-login.php" method="post" accept-charset="utf-8">
@@ -24,9 +24,7 @@
 			<div class="login">
 				<input required class="textbox" type="text" placeholder="User" name="username"></input>
 				<input required class="textbox" type="password" placeholder="Password" name="password"></input>
-<!-- 				<a href="../html/admin.html"> -->
-					<input class="enter" type="submit" value="Login" name="login"></input>
-				<!-- </a> -->
+				<input class="enter" type="submit" value="Login" name="login"></input>
 			</div>
 			<footer>
 				<p>`Maestro Productions</p>
