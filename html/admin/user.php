@@ -50,15 +50,15 @@
 				<div class="box">
 					<div class="properties">
 						<!-- FNAME -->
-						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="fname" name="firstname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="First Name" name="firstname"></input>
 						<!-- LNAME -->
-						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="lname" name="lastname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="Last Name" name="lastname"></input>
 						<!-- CONTACT -->
-						<input type="number" placeholder="contact" name="contact"></input>
+						<input type="number" placeholder="Contact" name="contact"></input>
 						<!-- USERNAME -->
-						<input required type="text" placeholder="username" name="username"></input>
+						<input required type="text" placeholder="Username" name="username"></input>
 						<!-- PASSWORD -->
-						<input required type="password" placeholder="password" name="password"></input>
+						<input required type="password" placeholder="Password" name="password"></input>
 						<!-- USER TYPE -->
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>
@@ -79,15 +79,15 @@
                             <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<!-- FNAME -->
-						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="fname" name="firstname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="First Name" name="firstname"></input>
 						<!-- LNAME -->
-						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="lname" name="lastname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="Last Name" name="lastname"></input>
 						<!-- CONTACT -->
-						<input type="number" placeholder="contact" name="contact"></input>
+						<input type="number" placeholder="Contact" name="contact"></input>
 						<!-- USERNAME -->
-						<input type="text" placeholder="username" name="username"></input>
+						<input type="text" placeholder="Username" name="username"></input>
 						<!-- PASSWORD -->
-						<input type="password" placeholder="password" name="password"></input>
+						<input type="password" placeholder="Password" name="password"></input>
 						<!-- USER TYPE -->
 						<p class="label">Patron</p><input class="checkbox" type="checkbox" name="patron" value="value1"></input>
 						<p class="label">Sponsor</p><input class="checkbox" type="checkbox" name="sponsor" value="value2"></input>

@@ -23,11 +23,11 @@
 
 		//phash should be used but errors occur. (modify)
 		$sql = "SELECT * FROM users WHERE Username = '$user' AND Password = '$phash'";
-		$sql1 = "UPDATE users SET Log_In = 1 WHERE Username = 'hahaha'";
+		$sql1 = "UPDATE users SET Log_In = 1 WHERE Username = '$user' AND Password = '$phash'";
 
 		$result = mysqli_query($conn, $sql);
+		$result1 = mysqli_query($conn, $sql1);
 		$count = mysqli_num_rows($result);
-
 
 		if($count == 1){
 			$cookie_value = $user;
