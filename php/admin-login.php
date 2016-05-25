@@ -20,9 +20,11 @@
 		$pass = $_POST['password'];
 
 		//phash should be used but errors occur. (modify)
-		$sql = "SELECT * FROM administrator WHERE Username = '$user' AND Password = '$pass';";
+		$sql = "SELECT * FROM administrator WHERE Username = '$user' AND Password = '$pass'";
+		$sql1 = "UPDATE administrator SET LogIn = 1 WHERE Username = '$user' AND Password = '$pass'";
 
 		$result = mysqli_query($conn, $sql);
+		$result1 = mysqli_query($conn, $sql1);
 		$count = mysqli_num_rows($result);
 
 	if($result){

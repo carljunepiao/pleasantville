@@ -32,7 +32,7 @@
             $fname = $_POST['fname'];
             $lname = $_POST['lname'];
 
-            $sql = "SELECT `UserID`, `Fname`, `Lname`, `Contact_No`, `Username`, `Patron`, `Sponsor` FROM `users` WHERE Fname LIKE '%$fname%' or Lname LIKE '%$lname%'";
+            $sql = "SELECT `UserID`, `Fname`, `Lname`, `Contact_No`, `Username`, `Patron`, `Sponsor` FROM `users` WHERE Fname LIKE '%$fname%' and Lname LIKE '%$lname%'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
