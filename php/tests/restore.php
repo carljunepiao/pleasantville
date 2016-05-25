@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/admin-display.css">
 </head>
 <body>
-	
+
 	<div class="container">
 
         <center><a class="back" href="../../html/admin.php">Back</a></center>
@@ -16,13 +16,12 @@
         </header>
 
         <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "Pleasantville";
+          	$host= 'localhost';
+			$user= 'root';
+			$pass='';
+			$db= 'PleasantVille';
 
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
+			$conn = mysqli_connect($host,$user,$pass,$db);
             // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
@@ -33,6 +32,6 @@
         ?>
 
     </div>
-	
+
 </body>
 </html>
