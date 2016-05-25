@@ -14,9 +14,9 @@
 
 <body>
 
-	<center><a href="../html/register.php" style="margin-top: 17%;">Sign up</a></center>
 
 	<div class="container">
+	<center><a href="../html/register.php";">Sign up</a></center>
 		<p>Log In</p>
 	
 		<form action="../php/login.php" method="post" accept-charset="utf-8">
@@ -29,9 +29,9 @@
 			</div>
 		</form>
 
+	<center><a href="../html/index.php">Back to Home</a></center>
 	</div>
 
-	<center><a href="../html/index.php">Back to Home</a></center>
 
 </body>
 
