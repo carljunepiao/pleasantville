@@ -16,18 +16,12 @@
 		<header>
 			<nav class="secondary-navigation">
 				<ul>
+					<li><a href="../html/admin-login.php">Administration</a></li>
 					<li><a href="../html/register.php">Register</a></li>
 					<li><a href="../html/login.php">Login</a></li>
 				</ul>
 			</nav>
 			<img class="logo" src="../images/logo.jpg" alt="PleasantvilleLogo">
-			<nav class="main-navigation">
-				<ul>
-					<li><a href="../html/index.php">Home</a></li>
-					<li><a href="../html/production.php">Production</a></li>
-					<li><a href="../html/admin-login.php">Administration</a></li>
-				</ul>
-			</nav>
 		</header>
 		<div>
 			<h1>The Pleasantville Theater</h1>

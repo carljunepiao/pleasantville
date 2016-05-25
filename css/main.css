@@ -28,8 +28,8 @@ body {
 	list-style: none;
 	text-align: center;
 	float: right;
-	margin: 0 1% 0 0;
-	width: 15.5%;
+	margin: 2% 1%;
+	width: 20%;
 }
 .secondary-navigation a {
 	display: block;
@@ -55,7 +55,7 @@ body {
 .logo {
 	display: block;
 	margin: 0 auto;
-	width: 150px;
+	width: 200px;
 	border: 2px solid gold;
 	border-radius: 50%;
 }
@@ -70,8 +70,10 @@ body {
 	list-style: none;
 	text-align: center;
 	float: left;
-	width: 30%;
+	width: 48%;
 	margin: 1.6%;
+	margin: 2% 1%;
+	padding: 0;
 }
 .main-navigation a {
 	display: block;
@@ -174,4 +176,11 @@ footer {
 	font-size: 10px;
 	color: white;
 	line-height: 15px;
+}
+.hidden {
+	display: none;
+}
+
+.logout {
+	display: block;
 }

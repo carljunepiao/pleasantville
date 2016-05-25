@@ -3,13 +3,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Productions</title>
+	<title>The Pleasantville Theater</title>
 	<link rel="icon" href="../images/logo.jpg">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="../css/index.css">
 
-	<script src="../javascripts/production-notif.js"></script>
+	<script src="../javascripts/main-notif.js"></script>
 </head>
 
 <body>
@@ -32,7 +31,7 @@
 			</nav>
 		</header>
 		<div>
-			<h1>Theater Productions</h1>
+			<h1>The Pleasantville Theater</h1>
 			<h2>Pleasantville Community Theater Group</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -41,7 +40,6 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-
 		<?php
             $servername = "localhost";
             $username = "root";
@@ -55,11 +53,14 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
+
+
             $sql = "SELECT Playwright, Title, Time, Poster FROM play";
             $result = $conn->query($sql);
 
+
             if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
+                while($row = $result->fetch_array()) {
                 	echo "<div class=\"highlight\">
  	               			<h3>
  	               			<div class=\"description\">
@@ -68,6 +69,9 @@
  	               					.$row["Playwright"]."</br>"
  	               					.$row["Time"].
  	               				"</p>
+ 	               				<p class=\"desc\">
+ 	               					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 	               				</p>
  	               			</div>
  	               		  </div>";
                 }
@@ -77,7 +81,6 @@
             }
             $conn->close();
         ?>
-		
 		<footer>
 			<h4>Contact us</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>

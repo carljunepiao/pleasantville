@@ -11,9 +11,7 @@
 <body>
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="production.php">Production</a></li>
-			<li><a href="admin-login.php">Log-out</a></li>
+			<li><a href="admin-login.php">Log out</a></li>
 		</ul>
 	</nav>
 	<header>

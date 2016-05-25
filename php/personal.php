@@ -10,4 +10,6 @@
 		echo "You are not logged in!";
 	}
 
+	header("Location: ../html/newindex.php");
+
 ?>
