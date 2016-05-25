@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2016 at 02:19 PM
+-- Generation Time: May 25, 2016 at 04:10 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -33,6 +33,13 @@ CREATE TABLE `administrator` (
   `Password` varchar(50) NOT NULL,
   `LogIn` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`Fname`, `Lname`, `Username`, `Password`, `LogIn`) VALUES
+('Japheth', 'Balane', 'jjapp', 'astig54321', 1);
 
 --
 -- Triggers `administrator`
@@ -90,7 +97,7 @@ CREATE TABLE `member` (
   `MemberID` int(20) UNSIGNED NOT NULL,
   `FName` varchar(40) NOT NULL,
   `LName` varchar(40) NOT NULL,
-  `ContactNo` int(15) NOT NULL
+  `ContactNo` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -119,7 +126,8 @@ CREATE TABLE `play` (
   `Playwright` varchar(50) NOT NULL,
   `Title` varchar(50) NOT NULL,
   `Time` time(6) NOT NULL,
-  `Poster` blob NOT NULL
+  `Poster` blob NOT NULL,
+  `Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -206,8 +214,6 @@ DELIMITER ;
 CREATE TABLE `sponsorship` (
   `UserID` int(11) NOT NULL,
   `ProdNo` int(11) NOT NULL,
-  `Title` varchar(50) NOT NULL,
-  `Date` date NOT NULL,
   `Date_of_Donation` date NOT NULL,
   `Amount_of_Donation` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -271,6 +277,16 @@ CREATE TABLE `translogs` (
   `Time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `translogs`
+--
+
+INSERT INTO `translogs` (`Info`, `Time`) VALUES
+('Insert on Users', '2016-05-25 20:35:22'),
+('Add on Administrator', '2016-05-25 20:50:17'),
+('Delete on Users', '2016-05-25 21:14:14'),
+('Insert on Users', '2016-05-25 21:17:16');
+
 -- --------------------------------------------------------
 
 --
@@ -283,11 +299,18 @@ CREATE TABLE `users` (
   `Sponsor` tinyint(1) NOT NULL,
   `Fname` varchar(20) NOT NULL,
   `Lname` varchar(20) NOT NULL,
-  `Contact_No` int(15) NOT NULL,
+  `ContactNo` varchar(15) NOT NULL,
   `Username` varchar(25) NOT NULL,
   `Password` varchar(50) NOT NULL,
   `Log_In` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `Patron`, `Sponsor`, `Fname`, `Lname`, `ContactNo`, `Username`, `Password`, `Log_In`) VALUES
+(101, 1, 0, 'Fe', 'Ang', '09322960375', 'Fe', 'Ang', 1);
 
 --
 -- Triggers `users`
@@ -361,7 +384,6 @@ ALTER TABLE `seats`
 -- Indexes for table `sponsorship`
 --
 ALTER TABLE `sponsorship`
-  ADD KEY `Title` (`Title`,`Date`),
   ADD KEY `UserID` (`UserID`),
   ADD KEY `ProdNo` (`ProdNo`);
 
@@ -397,17 +419,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `MemberID` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `production`
 --
 ALTER TABLE `production`
-  MODIFY `ProdNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1000;
+  MODIFY `ProdNo` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 --
 -- Constraints for dumped tables
 --
@@ -437,7 +459,6 @@ ALTER TABLE `seats`
 -- Constraints for table `sponsorship`
 --
 ALTER TABLE `sponsorship`
-  ADD CONSTRAINT `sponsorship_ibfk_7` FOREIGN KEY (`Title`,`Date`) REFERENCES `production` (`Title`, `Date`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sponsorship_ibfk_8` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sponsorship_ibfk_9` FOREIGN KEY (`ProdNo`) REFERENCES `production` (`ProdNo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
