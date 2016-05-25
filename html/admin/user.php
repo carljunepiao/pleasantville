@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
+
+	<div class="container">
 	<nav class="main-navigation">
 		<ul>
 			<li><a href="../admin-login.php">Log out</a></li>
@@ -18,8 +20,6 @@
 		<h1>User</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
-
-	<div class="container">
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,8 +43,8 @@
 				<h5>Add User</h5>
 				<div class="box">
 					<div class="properties">
-						<input required type="text" placeholder="fname" name="firstname"></input>
-						<input required type="text" placeholder="lname" name="lastname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="fname" name="firstname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
 						<input required type="text" placeholder="username" name="username"></input>
 						<input required type="password" placeholder="password" name="password"></input>
@@ -64,8 +64,8 @@
                         	<option selected disabled>select-user-id</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="fname" name="firstname"></input>
-						<input type="text" placeholder="lname" name="lastname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="fname" name="firstname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="lname" name="lastname"></input>
 						<input type="number" placeholder="contact" name="contact"></input>
 						<input type="text" placeholder="username" name="username"></input>
 						<input type="password" placeholder="password" name="password"></input>

@@ -22,13 +22,13 @@
 
 		<form action="../php/register.php" method="post" accept-charset="utf-8"/>
 			<p class="attribute">First Name</p>
-			<input required class="name" type="text" name="fname">
+			<input pattern=".{0}|.{2,}" maxlength="15" required class="name" type="text" name="fname">
 			<p class="attribute">Last Name</p>
-			<input required class="name" type="text" name="lname">
+			<input pattern=".{0}|.{2,}" maxlength="15" required class="name" type="text" name="lname">
 			<p class="attribute">Contact Number</p>
 			<input class="number" type="number" name="contact">
-			<p class="attribute">Username</p><input required class="log" type="text" name="username">
-			<p class="attribute">Password</p><input required class="log" type="password" name="password">
+			<p class="attribute">Username</p><input pattern=".{0}|.{5,}" maxlength="15" required class="log" type="text" name="username">
+			<p class="attribute">Password</p><input pattern=".{0}|.{5,}" maxlength="15" required class="log" type="password" name="password">
 			<input class="enter" type="submit" value="Submit">
 		</form>
 

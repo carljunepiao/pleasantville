@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
+
+	<div class="container">
 	<nav class="main-navigation">
 		<ul>
 			<li><a href="../admin-login.php">Log out</a></li>
@@ -18,8 +20,6 @@
 		<h1>Admin</h1>
 		<img class="logo" src="../../images/adminicon.jpg" alt="PleasantvilleLogo">
 	</header>
-
-	<div class="container">
 		<nav class="secondary-navigation">
 			<ul>
 				<li><a href="user.php">User</a></li>
@@ -43,10 +43,10 @@
 					<h5>Add Admin</h5>
 					<div class="box">
 						<div class="properties">
-							<input required type="text" placeholder="First Name" name="firstname"></input>
-							<input required type="text" placeholder="Last Name" name="lastname"></input>
-							<input required type="text" placeholder="Username" name="username"></input>
-							<input required type="password" placeholder="Password" name="password"></input>
+							<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="First Name" name="firstname"></input>
+							<input pattern=".{0}|.{2,}" maxlength="15" required type="text" placeholder="Last Name" name="lastname"></input>
+							<input pattern=".{0}|.{5,}" maxlength="15" required type="text" placeholder="Username" name="username"></input>
+							<input pattern=".{0}|.{5,}" maxlength="15" required type="password" placeholder="Password" name="password"></input>
 						</div>
 						<input class="enter" type="submit" value="Submit"></input>
 					</div>
@@ -61,8 +61,8 @@
                         	<option selected disabled>Select Admin Username</option>
                             <?php include '../../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
 						</select>
-						<input type="text" placeholder="First Name" name="firstname"></input>
-						<input type="text" placeholder="Last Name" name="lastname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="First Name" name="firstname"></input>
+						<input pattern=".{0}|.{2,}" maxlength="15" type="text" placeholder="Last Name" name="lastname"></input>
 					</div>
 					<input class="enter" type="submit" value="Edit"></input>
 				</div>
