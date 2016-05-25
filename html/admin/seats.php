@@ -44,6 +44,7 @@
 		</nav>
 
 		<!-- /////////////////// SEATS /////////////////////// -->
+		<img class="seats" src="../../images/seats.jpg">
 		<form action="../../php/admin-php-files/ADD/addseat.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1 br2">
 				<h5>Add Seat</h5>

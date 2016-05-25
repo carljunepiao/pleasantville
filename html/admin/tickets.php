@@ -45,7 +45,7 @@
 		</nav>
 
 		<!-- /////////////////// TICKETS /////////////////////// -->
-                <img class="seats" src="../../images/seats.jpg">
+        <img class="seats" src="../../images/seats.jpg">
 		<form action="../../php/admin-php-files/EDIT/editticket.php" method="post" accept-charset="utf-8"/>
 			<div class="admin br1 br2">
 				<h5>Buy Ticket</h5>
@@ -55,14 +55,13 @@
 							<option selected disabled>Select User ID</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
-						</select>
-						<select required name="select-title">
-							<option selected disabled>Select Title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
-						</select>
-							<form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/>
-								<input class="enter" type="submit" value="okay" style="width:50px;"></input>
-							</form>
+						<form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/>
+							<select required name="select-title">
+								<option selected disabled>Select Title</option>
+								<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+							</select>
+							<input class="enter" type="submit" value="lock-title" style="width:70px;"></input>
+						</form>
 						</select>
 						<select required name="select-date">
 							<option selected disabled>Select Date</option>
