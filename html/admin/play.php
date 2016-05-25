@@ -60,7 +60,7 @@
 						onfocus="this.type='date';this.focus();"
 						onblur="if(this.value == '') this.type='text';"/>
 						<input required="" type="text" min="08:00:00" max="18:00:00" class="form-control" placeholder="Play Time" onfocus="(this.type='time')" name="playtime"/>
-						<input required="" type="text" class="form-control"
+						<input type="text" class="form-control"
 						placeholder="Choose Poster" onfocus="(this.type='file')" name="poster"/>
 					</div>
 					<input class="enter" type="submit" value="Submit"></input>
