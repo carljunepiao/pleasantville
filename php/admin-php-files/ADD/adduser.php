@@ -1,15 +1,15 @@
 <?php
 	//this is for the administrator
 	//similar to register.php but has user type, the admin can add wether a user is a patron or a sponsor
-	$host= 'localhost';
-	$user= 'root';
-	$pass='';
-	$db= 'PleasantVille';
+$host= 'localhost';
+$user= 'root';
+$pass='';
+$db= 'PleasantVille';
 
-	$con = mysqli_connect($host,$user,$pass,$db);
+$con = mysqli_connect($host,$user,$pass,$db);
 
-	if($con)
-	    echo 'connected successfully to PlasantVille database';
+if($con)
+    echo 'connected successfully to PlasantVille database';
 
 	$fname = $_POST['firstname'];
 	$lname = $_POST['lastname'];
@@ -36,7 +36,7 @@
 
 	$phash = sha1(sha1($password."salt")."salt");
 
-	$sql="INSERT INTO users(Fname,Lname,Contact_No,Username,Password,Patron,Sponsor) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$pat', '$spon')";
+	$sql="INSERT INTO users(Fname,Lname,ContactNo,Username,Password,Patron,Sponsor) VALUES ('$fname', '$lname', '$contact', '$username', '$phash', '$pat', '$spon')";
 
 	echo "<br/>$sql<br/>";
 
