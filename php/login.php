@@ -22,7 +22,8 @@
 		$phash = sha1(sha1($pass."salt")."salt");
 
 		//phash should be used but errors occur. (modify)
-		$sql = "SELECT * FROM users WHERE Username = '$user' AND Password = '$phash';";
+		$sql = "SELECT * FROM users WHERE Username = '$user' AND Password = '$phash'";
+		$sql1 = "UPDATE users SET Log_In = 1 WHERE Username = 'hahaha'";
 
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
