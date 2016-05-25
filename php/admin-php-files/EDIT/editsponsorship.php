@@ -11,15 +11,11 @@
 	    echo 'connected successfully to PlasantVille database';
 
 	$userID = $_POST['select-user-id'];
-	$title = $_POST['select-title'];
-	$proddate = $_POST['proddate'];
+	$Prod = $_POST['select-production'];
 	$donationdate = $_POST['donationdate'];
 	$amount = $_POST['amount'];
 
-	$sql="UPDATE sponsorship SET Date = '$proddate', Date_of_Donation = '$donationdate', Amount_of_Donation = '$amount' WHERE Title = '$title' AND UserID = '$userID'";
-	
-	echo "</br> $sql</br>";
-
+	$sql = "UPDATE sponsorship SET Date_of_Donation = '$donationdate', Amount_of_Donation = '$amount' WHERE ProdNo = '$Prod' AND UserID = '$userID'";
 	$query=mysqli_query($con,$sql);
 
 	if($query){

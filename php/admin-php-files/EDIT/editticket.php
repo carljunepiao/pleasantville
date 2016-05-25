@@ -11,6 +11,7 @@ if($con)
     echo 'connected successfully to PleasantVille database';
 
 $userID = $_POST['select-user-id'];
+$Prod = $_POST['select-production']
 $Title = $_POST['select-title'];
 $Date = $_POST['select-date'];
 $Seats = $_POST['select-seat'];
@@ -42,11 +43,15 @@ else
 $row = $query->fetch_assoc();
 $Prod= $row["ProdNo"];
 
-$final="INSERT INTO tickets(TicketID, UserID, SeatNo, ProdNo, Title, Date, Cost) VALUES('$Seats', '$userID', '$Seats', '$Prod', '$Title', '$Date', 100)";
+$final="INSERT INTO tickets(TicketID, UserID, SeatNo, ProdNo, Cost) VALUES('$Seats', '$userID', '$Seats', '$Prod', 100)";
 $finalq = mysqli_query($con,$final );
         
 if($finalq)
+    header("Location: ../../../html/admin.php");
     echo 'The ticket has been bought. ';
-else
+}
+else{
+    header("Location: ../../../html/admin.php");
     echo 'A problem has been encountered. ';
+}
 ?>

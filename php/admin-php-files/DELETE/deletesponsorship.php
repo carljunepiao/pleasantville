@@ -10,16 +10,19 @@ $con = mysqli_connect($host,$user,$pass,$db);
 if($con)
     echo 'connected successfully to PlasantVille database';
 
-$title = $_POST['title'];
-$userid = $_POST['userid'];
-$proddate = $_POST['proddate'];
+$Prod = $_POST['select-production'];
+$userID = $_POST['select-user-id'];
 
-$sql="DELETE from sponsorship where Title = '$title' and UserID = '$userid' and Date = '$proddate';";
+$sql = "DELETE from sponsorship WHERE ProdNo = '$Prod' and UserID = '$userID' ";
 
 $query=mysqli_query($con,$sql);
 
-if($query)
+if($query){
+    //header("Location: ../../../html/admin.php");
     echo 'Delete sponsorship completed';
-else
+}
+else{
+    //header("Location: ../../../html/admin.php");
     echo 'A problem has been encountered. ';
+}
 ?>

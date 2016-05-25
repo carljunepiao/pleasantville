@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+../<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -11,7 +11,9 @@
 <body>
 	<nav class="main-navigation">
 		<ul>
-			<li><a href="../admin-login.php">Log out</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="../production.php">Production</a></li>
+			<li><a href="../admin.php">Admin</a></li>
 		</ul>
 	</nav>
 	<header>
@@ -45,13 +47,12 @@
 					<div class="properties">
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
-                            <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+                                                        <?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
-						<select required name="select-title">
-							<option selected disabled>select-title</option>
-                            <?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						<select required name="select-production">
+							<option selected disabled>select-production</option>
+                                                        <?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
-						<input required required="" type="text" class="form-control" placeholder="production date" onfocus="(this.type='date')" name="proddate"/>
 						<input required="" type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
@@ -68,11 +69,10 @@
 							<option selected disabled>select-user-id</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
 						</select>
-						<select required name="select-title">
-							<option selected disabled>select-title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownSponsorshipTitle.php'; echo $options;?>
+						<select required name="select-production">
+							<option selected disabled>select-production</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
-						<input required type="text" class="form-control" placeholder="REQUIRED : production date" onfocus="(this.type='date')" name="proddate"/>
 						<input type="text" class="form-control" placeholder="donation date" onfocus="(this.type='date')" name="donationdate"/>
 						<input type="number" placeholder="amount" name="amount"></input>
 					</div>
@@ -96,17 +96,13 @@
 				<h5>Delete Sponsorship</h5>
 				<div class="box">
 					<div class="properties">
-						<select required name="select-title">
-							<option selected disabled>select-title</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+						<select required name="select-production">
+							<option selected disabled>select-production</option>
+							<?php include '../../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
 						</select>
 						<select required name="select-user-id">
 							<option selected disabled>select-user-id</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
-						</select>
-						<select required name="select-date">
-							<option selected disabled>select-date</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
+							<?php include '../../php/admin-php-files/EDIT/dropdownSponsorship.php'; echo $options;?>
 						</select>
 					</div>
 					<input class="enter" type="submit" value="Delete"></input>
