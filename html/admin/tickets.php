@@ -57,19 +57,20 @@
 							<?php include '../../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
 						</select>
 						<!-- FROM FOR TITLE SELECTION -->
-						<form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/>
+						<!-- <form action="../../php/admin-php-files/EDIT/editticketdate.php" method="post" accept-charset="utf-8"/> -->
 							<select required name="select-title">
 								<option selected disabled>Select Title</option>
 								<?php include '../../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 							</select>
-							<input class="enter" type="submit" value="lock-title" style="width:70px;"></input>
-						</form>	
+<!-- 							<input class="enter" type="submit" value="lock-title" style="width:70px;"></input>
+						</form> -->	
 						<!-- DATE -->
-						<select required name="select-date">
-							<option selected disabled>Select Date</option>
-							<?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?>
-						</select>
+						<!-- <select required name="select-date"> -->
+							<!-- <option selected disabled>Select Date</option> -->
+							<!-- <?php include '../../php/admin-php-files/EDIT/dropdownDate.php'; echo $options;?> -->
+						<!-- </select> -->
 						<!-- SEAT -->
+						<input type="date" name="select-date" min="2016-05-26" max="2016-06-05">
 						<select required name="select-seat">
 							<option selected disabled>Select Seat</option>
 							<?php include '../../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>

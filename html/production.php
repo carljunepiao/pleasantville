@@ -81,6 +81,23 @@
 			<center><input class="user-option" type="submit" value="Buy Ticket"></input></center>
 		</form>
 
+		<form action="../php/admin-php-files/EDIT/editticketHOME.php" method="post" accept-charset="utf-8"/>
+			<select required name="select-user-id">
+				<option selected disabled>Select User ID</option>
+				<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
+			</select>
+			<select required name="select-title">
+				<option selected disabled>Select Title</option>
+				<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
+			</select>
+			<input type="date" name="select-date" min="2016-05-26" max="2016-06-05">
+			<select required name="select-seat">
+				<option selected disabled>Select Seat</option>
+				<?php include '../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
+			</select>
+				<center><input class="user-option" type="submit" value="Buy Ticket"></input></center>
+		</form>
+
 		<form class="cont" action="../php/admin-php-files/ADD/addsponsorshipHOME.php" method="post" accept-charset="utf-8"/>
 			<select class="uo" required name="select-user-id">
 				<option selected disabled>select-user-id</option>
