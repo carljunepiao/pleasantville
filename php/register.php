@@ -19,7 +19,7 @@
 	$Phash = sha1(sha1($Password."salt")."salt");
 
 	//Enter userID dapat Unique -piao
-	$sql="INSERT INTO users(Patron,Sponsor,Fname,Lname,Contact_No,Username,Password) VALUES ('$Patron','$Sponsor','$Fname', '$Lname', '$Contact_No', '$Username', '$Phash')";
+	$sql="INSERT INTO users(Patron,Sponsor,Fname,Lname,ContactNo,Username,Password) VALUES ('$Patron','$Sponsor','$Fname', '$Lname', '$ContactNo', '$Username', '$Phash')";
 
 	$query=mysqli_query($con,$sql);
 
