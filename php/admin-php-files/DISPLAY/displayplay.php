@@ -40,10 +40,10 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table><tr><th>Title</th><th>Playwright</th><th>Time</th><th>Poster</th></tr>";
+                echo "<table><tr><th>Title</th><th>Playwright</th><th>Time</th></tr>";
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Playwright"]."</td><td>".$row["Time"]."</td><td>".$row["Poster"]."</td></tr>";
+                    echo "<tr><td>".$row["Title"]."</td><td>".$row["Playwright"]."</td><td>".$row["Time"]."</td></tr>";
                 }
                 echo "</table>";
             }
