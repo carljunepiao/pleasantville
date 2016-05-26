@@ -57,11 +57,11 @@ echo $final;
 $finalq = mysqli_query($con, $final);
 
 if($finalq){
-    // header("Location: ../../../html/admin.php");
+    header("Location: ../../../html/admin.php");
     echo 'The ticket has been bought. ';
 }
 else{
-    // header("Location: ../../../html/admin.php");
+    header("Location: ../../../html/admin.php");
     echo 'A problem has been encountered. ';
 }
 ?>
