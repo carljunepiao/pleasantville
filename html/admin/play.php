@@ -52,7 +52,7 @@
 						<!-- PLAYWRIGHT -->
 						<input required type="text" placeholder="Playwright" name="playwright"></input>
 						<!-- TITLE -->
-						<input required type="text" placeholder="Title" name="title"></input>				
+						<input required type="text" placeholder="Title" name="title"></input>
 						<!-- START DATE -->
 						<input required type="text" name="start-date" min='2016-05-26' placeholder="Play Start Date"
 						onfocus="this.type='date';this.focus();" onblur="if(this.value == '') this.type='text';"/>
