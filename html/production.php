@@ -78,10 +78,10 @@
         ?>
 
 		<form class="cont" action="../php/admin-php-files/EDIT/editticketHOME.php" method="post" accept-charset="utf-8"/>
-			<!-- <select class="uo" required name="select-user-id">
-				<option selected disabled>Select User ID</option>
-				<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
-			</select> -->
+			<select class="uo" required name="select-user-id">
+				<option selected disabled>Select User Name</option>
+				<?php include '../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
+			</select>
 			<select class="uo" required name="select-title">
 				<option selected disabled>Select Title</option>
 				<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
@@ -95,10 +95,10 @@
 		</form>
 
 		<form class="cont" action="../php/admin-php-files/ADD/addsponsorshipHOME.php" method="post" accept-charset="utf-8"/>
-			<!-- <select class="uo" required name="select-user-id">
-				<option selected disabled>select-user-id</option>
-                <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
-			</select> -->
+			<select class="uo" required name="select-user-id">
+				<option selected disabled>Select User Name</option>
+                <?php include '../php/admin-php-files/EDIT/dropdownUsername.php'; echo $options;?>
+			</select>
 			<select class="uo" required name="select-production">
 				<option selected disabled>select-production</option>
                 <?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>
