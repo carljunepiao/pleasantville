@@ -11,10 +11,12 @@ if($con)
 
 $playwright = $_POST['playwright'];
 $playtitle = $_POST['title'];
+$startdate = $_POST['start-date'];
+$enddate = $_POST['end-date'];
 $time = $_POST['playtime'];
 $poster = $_POST['poster'];
 //di ba mumatter ang lowercase/uppercase? wa koy sure pacheck daw ani mga bai - alfi
-$sql="INSERT INTO play(`Playwright`, `Title`, `Time`, `Poster`) VALUES ('$playwright', '$playtitle','$time', '$poster')";
+$sql="INSERT INTO play(`Playwright`, `Title`, `Time`, `Poster`, StartDate, EndDate) VALUES ('$playwright', '$playtitle','$time', '$poster', '$startdate','$enddate')";
 
 $query=mysqli_query($con,$sql);
 

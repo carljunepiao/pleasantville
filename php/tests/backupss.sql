@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'mysqldump' is not recognized as an internal or external command,
-operable program or batch file.
-=======
-<<<<<<< HEAD
-'mysqldump' is not recognized as an internal or external command,
-operable program or batch file.
-=======
->>>>>>> 9da2bc1049e98adedf1ca5f1e23e75eeb2fc2d0f
--- MySQL dump 10.16  Distrib 10.1.10-MariaDB, for Win32 (AMD64)
+-- MySQL dump 10.16  Distrib 10.1.13-MariaDB, for Win32 (AMD64)
 --
 -- Host: localhost    Database: pleasantville
 -- ------------------------------------------------------
--- Server version	10.1.10-MariaDB
+-- Server version	10.1.13-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -57,9 +46,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonAdministrator` AFTER INSERT ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Administrator", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -72,9 +61,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonAdministrator` AFTER UPDATE ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -87,9 +76,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonAdministrator` AFTER DELETE ON `administrator` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -136,9 +125,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonCasts` AFTER INSERT ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -151,9 +140,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonCasts` AFTER UPDATE ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -166,9 +155,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonCasts` AFTER DELETE ON `casts` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -208,9 +197,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonMember` AFTER INSERT ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Insert on Member", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -223,9 +212,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonMember` AFTER UPDATE ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Users", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -238,9 +227,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonMember` AFTER DELETE ON `member` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Member", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -284,9 +273,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonPlay` AFTER INSERT ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Insert on Play", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -299,9 +288,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonPlay` AFTER UPDATE ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Play", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -314,9 +303,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonPlay` AFTER DELETE ON `play` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Play", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -357,9 +346,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonProduction` AFTER INSERT ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Production", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -372,9 +361,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonProduction` AFTER UPDATE ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Production", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -387,9 +376,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonProduction` AFTER DELETE ON `production` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Production", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -429,9 +418,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonSeats` AFTER INSERT ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Seats", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -444,9 +433,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonSeats` AFTER UPDATE ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Seats", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -459,9 +448,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonSeats` AFTER DELETE ON `seats` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -504,9 +493,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonSponsorship` AFTER INSERT ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Sponsorship", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -519,9 +508,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonSponsorship` AFTER UPDATE ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Sponsorship", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -534,9 +523,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonSponsorship` AFTER DELETE ON `sponsorship` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Sponsorship", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -583,9 +572,9 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonTickets` AFTER INSERT ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Add on Tickets", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -598,9 +587,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonTickets` AFTER UPDATE ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Tickets", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -613,9 +602,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonTickets` AFTER DELETE ON `tickets` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Casts", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -645,7 +634,7 @@ CREATE TABLE `translogs` (
 
 LOCK TABLES `translogs` WRITE;
 /*!40000 ALTER TABLE `translogs` DISABLE KEYS */;
-INSERT INTO `translogs` VALUES ('','Insert on Users','2016-05-25 20:35:22'),('','Add on Administrator','2016-05-25 20:50:17'),('','Delete on Users','2016-05-25 21:14:14'),('','Insert on Users','2016-05-25 21:17:16'),('','Insert on Play','2016-05-25 22:47:14'),('','Insert on Play','2016-05-25 22:48:27'),('','Add on Production','2016-05-25 22:49:25'),('','Add on Production','2016-05-25 22:49:51'),('','Add on Seats','2016-05-25 22:51:54'),('','Delete on Casts','2016-05-25 23:59:29'),('','Update on Casts','2016-05-26 00:35:02'),('','Update on Casts','2016-05-26 00:38:23'),('','Update on Casts','2016-05-26 00:38:41'),('','Update on Casts','2016-05-26 02:50:14'),('','Update on Casts','2016-05-26 02:50:17'),('','Update on Casts','2016-05-26 02:50:57'),('','Update on Casts','2016-05-26 04:15:27'),('','Update on Casts','2016-05-26 04:15:34'),('','Delete on Users','2016-05-26 04:27:24'),('','Update on Casts','2016-05-26 04:37:41'),('','Insert on Users','2016-05-26 04:38:02'),('','Insert on Play','2016-05-26 04:39:29'),('','Insert on Play','2016-05-26 04:43:04'),('','Add on Administrator','2016-05-26 04:44:23'),('','Insert on Member','2016-05-26 04:44:50'),('','Delete on Production','2016-05-26 04:45:45'),('','Delete on Production','2016-05-26 04:45:47'),('','Add on Production','2016-05-26 04:46:07'),('','Add on Casts','2016-05-26 04:46:35'),('','Add on Sponsorship','2016-05-26 04:47:02'),('','Insert on Users','2016-05-26 04:48:39'),('','Add on Production','2016-05-26 04:49:07'),('','Add on Sponsorship','2016-05-26 04:49:23'),('','Insert on Users','2016-05-26 04:59:34');
+INSERT INTO `translogs` VALUES ('','Insert on Users','2016-05-25 20:35:22'),('','Add on Administrator','2016-05-25 20:50:17'),('','Delete on Users','2016-05-25 21:14:14'),('','Insert on Users','2016-05-25 21:17:16'),('','Insert on Play','2016-05-25 22:47:14'),('','Insert on Play','2016-05-25 22:48:27'),('','Add on Production','2016-05-25 22:49:25'),('','Add on Production','2016-05-25 22:49:51'),('','Add on Seats','2016-05-25 22:51:54'),('','Delete on Casts','2016-05-25 23:59:29'),('','Update on Casts','2016-05-26 00:35:02'),('','Update on Casts','2016-05-26 00:38:23'),('','Update on Casts','2016-05-26 00:38:41'),('','Update on Casts','2016-05-26 02:50:14'),('','Update on Casts','2016-05-26 02:50:17'),('','Update on Casts','2016-05-26 02:50:57'),('','Update on Casts','2016-05-26 04:15:27'),('','Update on Casts','2016-05-26 04:15:34'),('','Delete on Users','2016-05-26 04:27:24'),('','Update on Casts','2016-05-26 04:37:41'),('','Insert on Users','2016-05-26 04:38:02'),('','Insert on Play','2016-05-26 04:39:29'),('','Insert on Play','2016-05-26 04:43:04'),('','Add on Administrator','2016-05-26 04:44:23'),('','Insert on Member','2016-05-26 04:44:50'),('','Delete on Production','2016-05-26 04:45:45'),('','Delete on Production','2016-05-26 04:45:47'),('','Add on Production','2016-05-26 04:46:07'),('','Add on Casts','2016-05-26 04:46:35'),('','Add on Sponsorship','2016-05-26 04:47:02'),('','Insert on Users','2016-05-26 04:48:39'),('','Add on Production','2016-05-26 04:49:07'),('','Add on Sponsorship','2016-05-26 04:49:23'),('','Update on Casts','2016-05-26 05:09:32'),('','Insert on Users','2016-05-26 05:10:05'),('','Delete on Users','2016-05-26 05:10:40'),('','Insert on Users','2016-05-26 05:23:48'),('','Update on Casts','2016-05-26 05:35:29'),('','Update on Casts','2016-05-26 12:24:41');
 /*!40000 ALTER TABLE `translogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -668,7 +657,7 @@ CREATE TABLE `users` (
   `LogIn` tinyint(1) NOT NULL,
   PRIMARY KEY (`UserID`),
   KEY `UserID` (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -677,7 +666,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (102,1,0,'oiuytre','hgfds',345678,'Fred','299f9b57c745f3bfe3e78a68fb6ef2732e3a392f',0),(103,1,0,'Greed','Deerg',2345678,'Freed','bf4fbbc38fb029ba3b709faa6ccb828e31ce0b8b',0),(104,1,0,'Derp','sarana',234567890,'Freed','85646dda939846660e96f38044f604a173fa61ee',0);
+INSERT INTO `users` VALUES (102,1,0,'oiuytre','hgfds',345678,'Fred','299f9b57c745f3bfe3e78a68fb6ef2732e3a392f',0),(103,1,0,'Greed','Deerg',2345678,'Freed','bf4fbbc38fb029ba3b709faa6ccb828e31ce0b8b',0),(105,1,0,'Fred','Derf',123456,'greg','2fb78e75d5eeb57cb18e1799b3daedcedea8e83a',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -685,12 +674,11 @@ UNLOCK TABLES;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonUsers` AFTER INSERT ON `users`
- FOR EACH ROW INSERT INTO translogs (Info,Time) VALUES ("Insert on Users", CURRENT_TIMESTAMP) */;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `addonUsers` AFTER INSERT ON `users` FOR EACH ROW INSERT INTO translogs (Info,Time) VALUES ("Insert on Users", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
@@ -701,9 +689,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `updateonUsers` AFTER UPDATE ON `users` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Update on Users", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -716,9 +704,9 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `deleteonUsers` AFTER DELETE ON `users` FOR EACH ROW INSERT INTO translogs (Info, Time) VALUES ("Delete on Users", CURRENT_TIMESTAMP) */;;
 DELIMITER ;
@@ -736,10 +724,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2016-05-26  5:21:56
-=======
--- Dump completed on 2016-05-26  5:16:00
->>>>>>> 1b19d4e1cccba31be1f81536e6629cb286344016
->>>>>>> 3f77e065cea823e8ee7d943217f884a761fc316b
->>>>>>> 9da2bc1049e98adedf1ca5f1e23e75eeb2fc2d0f
+-- Dump completed on 2016-05-26 12:25:22
