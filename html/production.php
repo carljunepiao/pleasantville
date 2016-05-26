@@ -17,9 +17,10 @@
 	</script>
 </head>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+	<audio src="../audio/canon.mp3" autoplay loop controls></audio>
 	<div class="container">
 		<header>
-			<button><a href="login.php">BACK</a></button>
+			<button><a href="login.php">log out</a></button>
 			<img class="logo" src="../images/logo.jpg" alt="PleasantvilleLogo">
 			<nav class="main-navigation">
 				<ul>
@@ -76,33 +77,28 @@
 
         ?>
 
-       	<form class="cont" action="../php/admin-php-files/EDIT/editticketHOME.php" method="post" accept-charset="utf-8"/>
-			
-			<center><input class="user-option" type="submit" value="Buy Ticket"></input></center>
-		</form>
-
-		<form action="../php/admin-php-files/EDIT/editticketHOME.php" method="post" accept-charset="utf-8"/>
-			<select required name="select-user-id">
+		<form class="cont" action="../php/admin-php-files/EDIT/editticketHOME.php" method="post" accept-charset="utf-8"/>
+			<!-- <select class="uo" required name="select-user-id">
 				<option selected disabled>Select User ID</option>
 				<?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
-			</select>
-			<select required name="select-title">
+			</select> -->
+			<select class="uo" required name="select-title">
 				<option selected disabled>Select Title</option>
 				<?php include '../php/admin-php-files/EDIT/dropdownPlay.php'; echo $options;?>
 			</select>
-			<input type="date" name="select-date" min="2016-05-26" max="2016-06-05">
-			<select required name="select-seat">
+			<input class="uo" type="date" name="select-date" min="2016-05-26" max="2016-06-05">
+			<select class="uo" required name="select-seat">
 				<option selected disabled>Select Seat</option>
 				<?php include '../php/admin-php-files/EDIT/dropdownSeat.php'; echo $options;?>
 			</select>
-				<center><input class="user-option" type="submit" value="Buy Ticket"></input></center>
+			<center><input class="user-option" type="submit" value="Buy Ticket"></input></center>
 		</form>
 
 		<form class="cont" action="../php/admin-php-files/ADD/addsponsorshipHOME.php" method="post" accept-charset="utf-8"/>
-			<select class="uo" required name="select-user-id">
+			<!-- <select class="uo" required name="select-user-id">
 				<option selected disabled>select-user-id</option>
                 <?php include '../php/admin-php-files/EDIT/dropdownUserID.php'; echo $options;?>
-			</select>
+			</select> -->
 			<select class="uo" required name="select-production">
 				<option selected disabled>select-production</option>
                 <?php include '../php/admin-php-files/EDIT/dropdownProduction.php'; echo $options;?>

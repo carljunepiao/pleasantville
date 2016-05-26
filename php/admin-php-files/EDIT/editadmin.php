@@ -25,9 +25,11 @@
 	if($query){
 		// header("Location: ../../../html/admin.php");
 	    echo 'Successfully added user.';
+	    header("Location: ../../../html/admin.php");
 	}
 	else{
 		// header("Location: ../../../html/admin.php");
 	    echo 'A problem has been encountered. Pls check edit admin.';
+	    header("Location: ../../../html/admin.php");
 	}
 ?>

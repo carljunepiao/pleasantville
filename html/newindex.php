@@ -19,7 +19,7 @@
 	<audio src="../audio/canon.mp3" autoplay loop controls></audio>
 	<div class="container">
 		<header>
-			<button><a href="login.php">LOG OUT</a></button>
+			<button><a href="login.php">log out</a></button>
 			<img class="logo" src="../images/logo.jpg" alt="PleasantvilleLogo">
 			<nav class="main-navigation">
 				<ul>
