@@ -1,0 +1,3 @@
+# pleasantville
+
+A system that is created for students to tutor or become a tutee. Its objective is to help students with difficulty in their studies and needs a tutor for assistance; and to improve their skills in teaching and at the same time help the community of student in UP Cebu to have a more productive education. This project is a group project and my part was in building a mobile application that works just like the web version of “TutoreCo”. I have a partner and together we built the frontend and backend of the project, we used pair programming as a guide in building this project. My partner and I used lua programming language and Corona Simulator as a tool in building the project.
